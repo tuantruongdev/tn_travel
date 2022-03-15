@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.page-heading {
+  color: #6347F9;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+.section__heading {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: "Baloo 2", cursive;
+  font-weight: 700;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+header a.header-logo {
+  display: block;
+  width: 100%;
+  max-width: 130px;
+}
+header a.header-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header ul.nav li.nav-item a.nav-link {
+  color: #1F3347;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+header ul.nav li.nav-item a.nav-link:hover {
+  color: #6347F9;
+}
+header ul.nav li.nav-item a.nav-link > i {
+  margin-left: 5px;
+}
+header .header-action a {
+  color: #1F3347;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+header .header-action a:hover {
+  color: #6347F9;
+}
+header .header-action a:last-child {
+  background-color: #6347F9;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin-left: 25px;
+  font-weight: 500;
+}
+header .header-action a:last-child:hover {
+  opacity: 0.5;
+}
+
+footer {
+  border-top: solid 1px #cccccc;
+  padding-top: 40px;
+}
+footer p.footer__heading {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #1F3347;
+}
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+footer ul li a i {
+  margin-right: 5px;
+  color: #FC747B;
+}
+footer ul li a:hover {
+  color: #6347F9;
+}
+footer .footer-socials {
+  text-align: center;
+}
+footer .footer-socials .socials {
+  font-size: 40px;
+}
+footer .footer-socials .socials .link-fb {
+  color: #1194F4;
+}
+footer .footer-socials .socials .link-instagram {
+  color: #FC747B;
+}
+footer .footer-socials .socials .link-twitter {
+  color: #1194F4;
+}
+footer .footer-socials .socials .link-youtube {
+  color: #FE2B2B;
+}
+
+body {
+  padding-top: 100px;
+}
+body section.banner {
+  margin-bottom: 20px;
+}
+body section.banner h1 {
+  font-size: 95px;
+  color: #1F3347;
+  font-weight: 700;
+  font-family: "Baloo 2", cursive;
+  line-height: 140px;
+  user-select: none;
+}
+body section.banner p {
+  color: #646464;
+  font-style: italic;
+  font-size: 18px;
+  user-select: none;
+}
+body section.banner .banner__search-bar .form-control {
+  padding: 10px;
+}
+body section.banner .banner__search-bar button {
+  background-color: #6347F9;
+  color: white;
+  width: 100%;
+  text-transform: uppercase;
+  padding-block: 10px;
+}
+body section.banner .banner__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=home.css.map */

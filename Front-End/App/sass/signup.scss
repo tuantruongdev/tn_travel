@@ -1,0 +1,8 @@
+@import './components/varriables';
+@import './components/mixins';
+@import './components/base';
+main{
+    display: grid;
+    align-items: center;  
+    height: 100vh;
+}

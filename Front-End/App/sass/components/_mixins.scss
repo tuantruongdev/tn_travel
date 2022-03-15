@@ -1,0 +1,13 @@
+
+@mixin input-styles {
+    line-height: 35px;
+    outline: none;
+    border-radius: 10px;
+    border: solid 1px $border-color;
+    color: $border-color;
+    &:focus{
+        background-color: white;
+        box-shadow: unset;
+        outline: none;
+    }
+}
