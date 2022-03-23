@@ -9,29 +9,60 @@ main {
 
     #login-form {
         label {
-            color: $border-color;
             font-size: 18px;
+            font-weight: 500;
+            color: $desc-color;
         }
 
         input.form-control {
             @include input-styles;
             font-size: 18px;
+            color: $text-color;
         }
 
         a {
             font-weight: 500;
             color: #1194F4;
+            font-size: 18px;
+
+            &:hover {
+                color: $primary-color;
+            }
         }
-        button.btn-primary{
+
+        button.btn-primary {
             background-color: $primary-color;
             display: block;
             border: none;
             width: 100%;
             line-height: 35px;
             text-transform: uppercase;
+            border-radius: 7px;
+
+            &:hover {
+                opacity: 0.9;
+            }
+
         }
-        span{
-            margin-right: 20px;
+
+        .form-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+
+            a.home-link i {
+                margin-right: 5px;
+            }
+
+            .sign-up-link {
+                span {
+                    font-weight: 500;
+                    font-size: $desc-color;
+                    margin-right: 10px;
+                    color: #646464;
+                }
+            }
         }
     }
 }

@@ -63,13 +63,15 @@ header .header-action a:hover {
 header .header-action a:last-child {
   background-color: #6347F9;
   color: white;
-  padding: 12px 25px;
-  border-radius: 30px;
+  line-height: 40px;
+  width: 110px;
+  text-align: center;
+  border-radius: 10px;
   margin-left: 25px;
   font-weight: 500;
 }
 header .header-action a:last-child:hover {
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 footer {
@@ -146,6 +148,10 @@ body section.banner .banner__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.test .row .col-1 {
+  border: solid 1px black;
 }
 
 /*# sourceMappingURL=home.css.map */

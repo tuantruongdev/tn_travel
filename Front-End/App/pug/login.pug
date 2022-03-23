@@ -16,21 +16,27 @@ html(lang="en")
         main
             .container 
                 .row.justify-content-center.align-items-center 
-                    .col-4
+                    .col-5
                         form(action="#" method="post" id="login-form")
                             h1.mb-5.page-heading Đăng Nhập
                             .mb-4 
                                 label(for="username" class="form-label") Tên tài khoản
-                                input(type="text" name="username" id="username" class="form-control" placeholder="Nhập ở đây..." required)
+                                input(type="email" name="username" id="username" class="form-control" placeholder="nguyenvana@gmail.com" required)
                             .mb-4 
                                 label(for="password" class="form-label") Mật khẩu 
                                 input(type="password" name="password" id="password" class="form-control" placeholder="Nhập ở đây..." required)
-                                #passwordHelpBlock.form-text Mật khẩu của bạn phải dài 8-20 ký tự, chứa các chữ cái và số, đồng thời không được chứa dấu cách, ký tự đặc biệt hoặc biểu tượng cảm xúc. 
+                                .form-text.password-message Mật khẩu của bạn phải dài 8-20 ký tự, chứa các chữ cái và số, đồng thời không được chứa dấu cách, ký tự đặc biệt hoặc biểu tượng cảm xúc. 
                             .mb-4 
                                 a(href="./forgot_password.html") Quên mật khẩu ? 
                             .mb-5
                                 button(type="submit" class="btn btn-primary") Đăng nhập
-                            .mb-4
-                                span Chưa có tài khoản?
-                                a(href="./signup.html") Đăng Ký 
+                            .mb-4 
+                                hr
+                            .form-footer
+                                a.home-link(href="") 
+                                    i.fa-solid.fa-house-chimney
+                                    | Trang chủ
+                                .sign-up-link
+                                    span Chưa có tài khoản?
+                                    a(href="./signup.html") Đăng ký
         script(src="./assets/scripts/login.js") 

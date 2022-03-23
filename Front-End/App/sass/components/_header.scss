@@ -4,6 +4,7 @@ header {
     left: 0;
     right: 0;
     background-color: white;
+
     a.header-logo {
         display: block;
         width: 100%;
@@ -35,23 +36,28 @@ header {
     }
 
     .header-action {
-        a{
+        a {
             color: $text-color;
             text-transform: uppercase;
             font-weight: 600;
+
             &:hover {
                 color: $primary-color;
             }
         }
+
         a:last-child {
             background-color: $primary-color;
             color: white;
-            padding: 12px 25px;
-            border-radius: 30px;
+            line-height: 40px;
+            width: 110px;
+            text-align: center;
+            border-radius: 10px;
             margin-left: 25px;
             font-weight: 500;
-            &:hover{
-                opacity: 0.5;
+
+            &:hover {
+                opacity: 0.9;
             }
         }
     }

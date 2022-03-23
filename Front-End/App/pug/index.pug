@@ -11,6 +11,8 @@ html(lang="en")
         script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js' integrity='sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB' crossorigin='anonymous')
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js' integrity='sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13' crossorigin='anonymous')
         script(src='https://code.jquery.com/jquery-3.6.0.js' integrity='sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=' crossorigin='anonymous')
+        link(rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
+        script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
         link(rel="stylesheet", href="./assets/styles/home.css")
     body 
         include components/header
@@ -35,14 +37,20 @@ html(lang="en")
                                 button(type="submit" class="btn") Tìm kiếm
                         .col-6
                             .banner__img 
-                                img(src="./assets/images/banner.png", alt="banner")
-            section.tours-hot
-                .container 
-                    .row 
-                        h2.col-3.section__heading Các tours nổi bật 
-                        .col-1 
-                    .row 
-                        .col-12 
-                            
+                                img(src="./assets/images/banner.png", alt="banner")            
+        section.container.test 
+            .row 
+                .col-1  1
+                .col-1  2
+                .col-1  3
+                .col-1  4
+                .col-1  5
+                .col-1  6
+                .col-1  7
+                .col-1  8
+                .col-1  9
+                .col-1  10
+                .col-1  11
+                .col-1  12                 
         include components/footer
         script(src="./assets/scripts/home.js") 

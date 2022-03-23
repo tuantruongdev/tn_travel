@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap");
 * {
   font-family: "Roboto", sans-serif;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .page-heading {
@@ -15,22 +17,31 @@ a {
   font-weight: 600;
 }
 
+.section__heading {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: "Baloo 2", cursive;
+  font-weight: 700;
+}
+
 main {
   height: 100vh;
   display: grid;
   align-items: center;
 }
 main #login-form label {
-  color: #585862;
   font-size: 18px;
+  font-weight: 500;
+  color: #646464;
 }
 main #login-form input.form-control {
   line-height: 35px;
   outline: none;
   border-radius: 10px;
-  border: solid 1px #585862;
-  color: #585862;
+  border: solid 1px #cccccc;
+  color: #cccccc;
   font-size: 18px;
+  color: #1F3347;
 }
 main #login-form input.form-control:focus {
   background-color: white;
@@ -40,6 +51,10 @@ main #login-form input.form-control:focus {
 main #login-form a {
   font-weight: 500;
   color: #1194F4;
+  font-size: 18px;
+}
+main #login-form a:hover {
+  color: #6347F9;
 }
 main #login-form button.btn-primary {
   background-color: #6347F9;
@@ -48,9 +63,25 @@ main #login-form button.btn-primary {
   width: 100%;
   line-height: 35px;
   text-transform: uppercase;
+  border-radius: 7px;
 }
-main #login-form span {
-  margin-right: 20px;
+main #login-form button.btn-primary:hover {
+  opacity: 0.9;
+}
+main #login-form .form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+main #login-form .form-footer a.home-link i {
+  margin-right: 5px;
+}
+main #login-form .form-footer .sign-up-link span {
+  font-weight: 500;
+  font-size: #646464;
+  margin-right: 10px;
+  color: #646464;
 }
 
 /*# sourceMappingURL=login.css.map */

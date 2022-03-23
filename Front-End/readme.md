@@ -12,4 +12,3 @@ sass ./home.scss ../../assets/styles/home.css --watch
 sass ./login.scss ../../assets/styles/login.css --watch
 sass ./signup.scss ../../assets/styles/signup.css --watch
 sass ./forgot_password.scss ../../assets/styles/forgot_password.css --watch
-xuantruong
