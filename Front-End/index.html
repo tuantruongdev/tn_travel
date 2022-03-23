@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel</title>
     <link rel="stylesheet" href="./assets/styles/reset.css">
     <script src="https://kit.fontawesome.com/3fc531ce88.js" crossorigin="anonymous"></script>
@@ -15,29 +15,55 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="./assets/styles/home.css">
   </head>
-  <body> 
+  <body>
     <header>
       <div class="container">
         <div class="row align-items-center justify-content-between">
-          <div class="col-5 d-flex justify-content-start align-items-center"><a class="header-logo" href="#"> <img src="./assets/images/logo.png" alt="Logo"></a>
+          <div class="col-5 d-flex justify-content-start align-items-center">
+            <a class="header-logo" href="#">
+              <img src="./assets/images/logo.png" alt="Logo"
+            /></a>
             <ul class="nav nav-pills">
-              <li class="nav-item"><a class="nav-link" href="#">Tours<i class="fa-solid fa-angle-down"></i></a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  >Tours<i class="fa-solid fa-angle-down"></i
+                ></a>
+              </li>
               <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Giới thiệu</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Giới thiệu</a>
+              </li>
             </ul>
           </div>
-          <div class="col-3 d-flex justify-content-end align-items-center header-action"> <a href="./login.html">Đăng nhập </a><a href="./signup.html">Đăng ký</a></div>
+          <div
+            id="header-action"
+            class="col-3 d-flex justify-content-end align-items-center header-action"
+          >
+            <a href="./login.html">Đăng nhập </a
+            ><a href="./signup.html">Đăng ký</a>
+          </div>
+          <div
+            id="header-action-logged-in"
+            class="d-none col-4 d-flex justify-content-end align-items-center header-action"
+          >
+            <button id="name" type="button" class="btn btn-primary">
+              userName
+            </button>
+          </div>
         </div>
       </div>
     </header>
-    <main> 
-      <section class="banner"> 
-        <div class="container"> 
-          <div class="row justify-content-between"> 
+    <main>
+      <section class="banner">
+        <div class="container">
+          <div class="row justify-content-between">
             <div class="col-4">
               <h1>Đi du lịch Thôi nào !</h1>
-              <p class="mb-5">Chúng tôi luôn làm cho khách hàng hài lòng bằng cách cung cấp những dịch vụ tốt nhất có thể <3</p>
-              <form class="banner__search-bar" action="#" method="GET"> 
+              <p class="mb-5">
+                Chúng tôi luôn làm cho khách hàng hài lòng bằng cách cung cấp
+                những dịch vụ tốt nhất có thể <3
+              </p>
+              <form class="banner__search-bar" action="#" method="GET">
                 <div class="mb-3">
                   <label class="form-label" for="">Địa điểm </label>
                   <select class="form-select">
@@ -49,13 +75,15 @@
                 </div>
                 <div class="mb-4">
                   <label class="form-label" for="date">Ngày khởi hành </label>
-                  <input class="form-control" type="date" name="date">
+                  <input class="form-control" type="date" name="date" />
                 </div>
                 <button class="btn" type="submit">Tìm kiếm</button>
               </form>
             </div>
             <div class="col-6">
-              <div class="banner__img"> <img src="./assets/images/banner.png" alt="banner"></div>
+              <div class="banner__img">
+                <img src="./assets/images/banner.png" alt="banner" />
+              </div>
             </div>
           </div>
         </div>
@@ -84,9 +112,24 @@
             <div class="footer-contacts">
               <p class="footer__heading">Về chúng tôi</p>
               <ul>
-                <li><a href=""> <i class="fa-solid fa-location-dot"></i><span>CÔNG TY TNHH DU LỊCH THÁI NGUYÊN</span></a></li>
-                <li><a href=""> <i class="fa-solid fa-phone"></i><span>037.508.3463</span></a></li>
-                <li><a href=""><i class="fa-solid fa-envelope"></i><span>lexuantruong.contacts@gmail.com </span></a></li>
+                <li>
+                  <a href="">
+                    <i class="fa-solid fa-location-dot"></i
+                    ><span>CÔNG TY TNHH DU LỊCH THÁI NGUYÊN</span></a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-solid fa-phone"></i
+                    ><span>037.508.3463</span></a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><i class="fa-solid fa-envelope"></i
+                    ><span>lexuantruong.contacts@gmail.com </span></a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -103,19 +146,42 @@
           <div class="col-2 ms-auto">
             <div class="footer-certifications">
               <p class="footer__heading">Chứng nhận</p>
-              <div class="certification"><img src="./assets/images/certification1.png" alt="certification"></div>
-              <div class="certification"> <img src="./assets/images/certification2.png" alt="certification"></div>
+              <div class="certification">
+                <img
+                  src="./assets/images/certification1.png"
+                  alt="certification"
+                />
+              </div>
+              <div class="certification">
+                <img
+                  src="./assets/images/certification2.png"
+                  alt="certification"
+                />
+              </div>
             </div>
           </div>
           <div class="col-3">
             <div class="footer-socials">
               <p class="footer__heading">Kết nối với chúng tôi</p>
-              <div class="socials d-flex justify-content-around align-items-center"><a class="social-link" href="#"><i class="fa-brands fa-facebook-square link-fb"></i></a><a class="social-link" href="#"> <i class="fa-brands fa-instagram link-instagram"></i></a><a class="social-link" href="#"> <i class="fa-brands fa-twitter link-twitter"></i></a><a class="social-link" href="#"> <i class="fa-brands fa-youtube link-youtube"></i></a></div>
+              <div
+                class="socials d-flex justify-content-around align-items-center"
+              >
+                <a class="social-link" href="#"
+                  ><i class="fa-brands fa-facebook-square link-fb"></i></a
+                ><a class="social-link" href="#">
+                  <i class="fa-brands fa-instagram link-instagram"></i></a
+                ><a class="social-link" href="#">
+                  <i class="fa-brands fa-twitter link-twitter"></i></a
+                ><a class="social-link" href="#">
+                  <i class="fa-brands fa-youtube link-youtube"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
-    <script src="./assets/scripts/home.js"> </script>
+    <script src="./assets/scripts/checkLogin.js"></script>
+    <script src="./assets/scripts/home.js"></script>
   </body>
 </html>
