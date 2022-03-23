@@ -43,6 +43,7 @@
 Nếu màn hình của bạn như này thì chúc mừng bạn đã chạy thành công **back-end**
 
 ![enter image description here](https://i.imgur.com/liHiyIL.png)
+
 **Front-End requirement: VS code và live server extension**
 
  1. Sau khi cài live server xong vui lòng config lại port cố định thành  **5555**
