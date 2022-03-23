@@ -50,5 +50,7 @@ Nếu màn hình của bạn như này thì chúc mừng bạn đã chạy thàn
  2. Chọn file index.html và nhấn "**Open with live server**"
  
 ![enter image description here](https://i.imgur.com/QmuQQFR.png)
+
  3. Chúc mừng! bạn đã chạy thành công sản phẩm tuyệt vời này!!
+ 
  ![enter image description here](https://i.imgur.com/0XMtdFR.png)
