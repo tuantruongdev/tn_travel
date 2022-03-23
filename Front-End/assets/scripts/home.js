@@ -12,8 +12,21 @@ document.addEventListener(
         "d-none ",
         ""
       );
-      fullname.innerHTML = "Nguyen Tuan Truong";
+      const userData = JSON.parse(await localStorage.getItem("userData"));
+      fullname.innerHTML = userData.name;
     }
   },
   false
 );
+
+function deleteAllCookies() {
+  document.cookie.split(";").forEach(function (c) {
+    document.cookie = c
+      .replace(/^ +/, "")
+      .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+  });
+}
+fullname.addEventListener("click", () => {
+  deleteAllCookies();
+  location.reload();
+});
