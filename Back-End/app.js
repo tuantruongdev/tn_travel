@@ -9,13 +9,15 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const tourRoute = require("./routes/tourRoute");
 const userRoute = require("./routes/userRoute");
+const locationRoute = require("./routes/locationRoute");
 const AppError = require("./utils/appError");
 
 const globalErrHandler = require("./controller/errorController");
 
+// eslint-disable-next-line no-shadow
 function getcookie(req) {
   if (req.headers.cookie) {
-    const cookie = req.headers.cookie;
+    const { cookie } = req.headers;
     //console.log(cookie);
     return cookie.split("; ");
   }
@@ -41,6 +43,7 @@ app.use(mongoSanitize());
 //data protect against xss
 app.use(xss());
 
+// eslint-disable-next-line no-shadow
 app.use("*", (req, res, next) => {
   const cookie = getcookie(req);
   if (cookie) {
@@ -52,8 +55,10 @@ app.use("*", (req, res, next) => {
 });
 app.use(hpp({ whitelist: ["duration"] }));
 app.use("/api/v1/tours", tourRoute);
+app.use("/api/v1/localtions", locationRoute);
 app.use("/api/v1/users", userRoute);
 
+// eslint-disable-next-line no-shadow
 app.all("*", (req, res, next) => {
   next(new AppError(`acan't find ${req.originalUrl} on this server`));
 });

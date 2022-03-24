@@ -6,6 +6,10 @@ const userRoute = express.Router();
 userRoute.route("/signup").post(authController.signup);
 userRoute.route("/login").post(authController.login);
 userRoute
+  .route("/updateme")
+  .post(authController.protect, userController.updateMe);
+userRoute.route("/showme").get(authController.protect, userController.showMe);
+userRoute
   .route("/auth")
   .post(authController.protect, authController.isLoggedIn);
 userRoute
