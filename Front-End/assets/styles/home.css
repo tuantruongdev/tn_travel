@@ -10,7 +10,7 @@ a {
 }
 
 .page-heading {
-  color: #6347F9;
+  color: #6347f9;
   font-size: 40px;
   text-transform: uppercase;
   text-align: center;
@@ -42,26 +42,26 @@ header a.header-logo img {
   object-fit: cover;
 }
 header ul.nav li.nav-item a.nav-link {
-  color: #1F3347;
+  color: #1f3347;
   text-transform: uppercase;
   font-weight: 600;
 }
 header ul.nav li.nav-item a.nav-link:hover {
-  color: #6347F9;
+  color: #6347f9;
 }
 header ul.nav li.nav-item a.nav-link > i {
   margin-left: 5px;
 }
 header .header-action a {
-  color: #1F3347;
+  color: #1f3347;
   text-transform: uppercase;
   font-weight: 600;
 }
 header .header-action a:hover {
-  color: #6347F9;
+  color: #6347f9;
 }
 header .header-action a:last-child {
-  background-color: #6347F9;
+  background-color: #6347f9;
   color: white;
   line-height: 40px;
   width: 110px;
@@ -82,7 +82,7 @@ footer p.footer__heading {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #1F3347;
+  color: #1f3347;
 }
 footer ul {
   padding: 0;
@@ -90,10 +90,10 @@ footer ul {
 }
 footer ul li a i {
   margin-right: 5px;
-  color: #FC747B;
+  color: #fc747b;
 }
 footer ul li a:hover {
-  color: #6347F9;
+  color: #6347f9;
 }
 footer .footer-socials {
   text-align: center;
@@ -102,27 +102,28 @@ footer .footer-socials .socials {
   font-size: 40px;
 }
 footer .footer-socials .socials .link-fb {
-  color: #1194F4;
+  color: #1194f4;
 }
 footer .footer-socials .socials .link-instagram {
-  color: #FC747B;
+  color: #fc747b;
 }
 footer .footer-socials .socials .link-twitter {
-  color: #1194F4;
+  color: #1194f4;
 }
 footer .footer-socials .socials .link-youtube {
-  color: #FE2B2B;
+  color: #fe2b2b;
 }
 
 body {
-  padding-top: 100px;
+  margin-top: 150px;
+  padding-top: 0px;
 }
 body section.banner {
   margin-bottom: 20px;
 }
 body section.banner h1 {
   font-size: 95px;
-  color: #1F3347;
+  color: #1f3347;
   font-weight: 700;
   font-family: "Baloo 2", cursive;
   line-height: 140px;
@@ -138,7 +139,7 @@ body section.banner .banner__search-bar .form-control {
   padding: 10px;
 }
 body section.banner .banner__search-bar button {
-  background-color: #6347F9;
+  background-color: #6347f9;
   color: white;
   width: 100%;
   text-transform: uppercase;
