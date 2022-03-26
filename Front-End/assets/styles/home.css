@@ -16,6 +16,7 @@ header {
   right: 0;
   background-color: white;
   border-bottom: solid 1px #cccccc;
+  z-index: 100;
 }
 header a.header-logo {
   display: block;
@@ -64,9 +65,12 @@ header .header-action a:last-child {
   font-size: 18px;
   line-height: 40px;
   background-color: #FC747B;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border: solid 1px #FC747B;
 }
 header .header-action a:last-child:hover {
-  opacity: 0.9;
+  background-color: white;
+  color: #FC747B;
 }
 header .account-wrapper {
   display: none;
@@ -99,6 +103,7 @@ footer h5 {
   font-weight: 600;
   text-transform: uppercase;
   color: #1F3347;
+  margin-bottom: 20px;
 }
 footer ul {
   padding: 0;
@@ -106,6 +111,7 @@ footer ul {
 }
 footer ul li a {
   font-size: 14px;
+  font-weight: 500;
 }
 footer ul li a i {
   margin-right: 5px;
@@ -118,7 +124,9 @@ footer .footer-socials {
   text-align: center;
 }
 footer .footer-socials .socials {
-  font-size: 40px;
+  font-size: 35px;
+  width: 80%;
+  margin-inline: auto;
 }
 footer .footer-socials .socials .link-fb {
   color: #1194F4;
@@ -165,6 +173,9 @@ body section.banner .banner__search-bar .date-wrapper {
   width: 35%;
   margin-bottom: 15px;
 }
+body section.banner .banner__search-bar label {
+  font-weight: 500;
+}
 body section.banner .banner__search-bar .form-control,
 body section.banner .banner__search-bar select#places {
   line-height: 36px;
@@ -193,11 +204,199 @@ body section.banner .banner__search-bar button {
   width: 25%;
   height: 52px;
   margin-bottom: 15px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+body section.banner .banner__search-bar button:hover {
+  background-color: white;
+  color: #FC747B;
+  border: solid 1px #FC747B;
 }
 body section.banner .banner__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+body h2.section-heading {
+  font-size: 40px;
+  font-family: "Baloo 2", cursive;
+  margin-bottom: 15px;
+  font-weight: 900;
+  color: #1F3347;
+}
+body .list-product {
+  margin-inline: -15px;
+  margin-bottom: 25px;
+}
+body .list-product article.tour {
+  padding-inline: 15px;
+  position: relative;
+  margin-bottom: 50px;
+  max-height: 500px;
+}
+body .list-product article.tour a.tour-image {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 10px;
+}
+body .list-product article.tour a.tour-image img.tour__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .list-product article.tour a.tour-image p.tour-province {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  padding-inline: 10px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #064473;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+body .list-product article.tour a.tour-image p.tour-province i {
+  color: #FC747B;
+  margin-right: 5px;
+  font-size: 14px;
+}
+body .list-product article.tour .tour-detail {
+  padding: 5px;
+}
+body .list-product article.tour .tour-detail a.tour__name {
+  font-size: 18px;
+  text-decoration: none;
+  color: #1F3347;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+}
+body .list-product article.tour .tour-detail a.tour__name:hover {
+  color: #FC747B;
+}
+body .list-product article.tour .tour-detail p.tour-time {
+  margin-bottom: 5px;
+  color: #1F3347;
+}
+body .list-product article.tour .tour-detail p.tour-time i {
+  margin-right: 5px;
+  font-size: 14px;
+}
+body .list-product article.tour .tour-detail p.tour-time span.tour__time {
+  font-size: 12px;
+  font-weight: 500;
+}
+body .list-product article.tour .tour-detail p.tour__overview {
+  color: #1194F4;
+  font-weight: 500;
+  font-size: 12px;
+}
+body .list-product article.tour .tour-detail h3.tour__price {
+  color: #FC747B;
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
+  float: right;
+  margin-bottom: 0;
+}
+body .list-product article.tour .tour-detail h3.tour__price span {
+  font-size: 14px;
+}
+body .list-product article.tour span.tour__hot {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 7px;
+  font-weight: 500;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+body .list-product button.slick-prev {
+  position: absolute;
+  top: -70px;
+  right: 50px;
+  background-color: transparent;
+  font-size: 40px;
+  color: #1F3347;
+}
+body .list-product button.slick-prev:hover {
+  color: #FC747B;
+}
+body .list-product button.slick-next {
+  position: absolute;
+  top: -70px;
+  right: 12px;
+  background-color: transparent;
+  font-size: 40px;
+  color: #1F3347;
+}
+body .list-product button.slick-next:hover {
+  color: #FC747B;
+}
+body a.show-all {
+  display: block;
+  width: 15%;
+  text-align: center;
+  margin-inline: auto;
+  background-color: #FC747B;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border: solid 1px #FC747B;
+}
+body a.show-all:hover {
+  background-color: white;
+  color: #FC747B;
+}
+body section.hot-tours,
+body section.tours-first,
+body section.tours-secound {
+  margin-bottom: 70px;
+}
+body section.places {
+  margin-bottom: 100px;
+}
+body section.places a.place {
+  display: block;
+  width: 100%;
+  position: relative;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+body section.places a.place img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.95;
+}
+body section.places a.place p.place__name {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  font-size: 40px;
+  color: #f3f3f3;
+  font-weight: 900;
+  font-family: "Baloo 2", cursive;
+  margin-bottom: 0;
+}
+body section.places .sub-places {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body section.places .sub-places a.place {
+  width: 49%;
 }
 
 /*# sourceMappingURL=home.css.map */

@@ -32,10 +32,15 @@ body {
             justify-content: space-between;
             align-items: flex-end;
             width: 90%;
+
             .places-wrapper,
             .date-wrapper {
                 width: 35%;
                 margin-bottom: 15px
+            }
+
+            label {
+                font-weight: 500;
             }
 
             .form-control,
@@ -50,7 +55,15 @@ body {
                 background-color: $primary-color;
                 width: 25%;
                 height: 52px;
-                margin-bottom: 15px
+                margin-bottom: 15px;
+                font-size: 16px;
+                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: white;
+                    color: $primary-color;
+                    border: solid 1px $primary-color;
+                }
             }
         }
 
@@ -59,6 +72,222 @@ body {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+        }
+    }
+
+
+    h2.section-heading {
+        font-size: 40px;
+        font-family: "Baloo 2", cursive;
+        margin-bottom: 15px;
+        font-weight: 900;
+        color: $text-color;
+    }
+
+    .list-product {
+        margin-inline: -15px;
+        margin-bottom: 25px;
+
+        article.tour {
+            padding-inline: 15px;
+            position: relative;
+            margin-bottom: 50px;
+            max-height: 500px;
+
+            a.tour-image {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                margin-bottom: 10px;
+
+                img.tour__image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                p.tour-province {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    color: white;
+                    padding-inline: 10px;
+                    text-align: center;
+                    font-size: 12px;
+                    background-color: #064473;
+                    line-height: 30px;
+                    margin-bottom: 0;
+
+                    i {
+                        color: $primary-color;
+                        margin-right: 5px;
+                        font-size: 14px;
+                    }
+                }
+
+            }
+
+            .tour-detail {
+                padding: 5px;
+
+                a.tour__name {
+                    font-size: 18px;
+                    text-decoration: none;
+                    color: $text-color;
+                    font-weight: 500;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-bottom: 5px;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+
+                p.tour-time {
+                    margin-bottom: 5px;
+                    color: $text-color;
+
+                    i {
+                        margin-right: 5px;
+                        font-size: 14px;
+                    }
+
+                    span.tour__time {
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                }
+
+                p.tour__overview {
+                    color: #1194F4;
+                    font-weight: 500;
+                    font-size: 12px;
+                }
+
+                h3.tour__price {
+                    color: $primary-color;
+                    font-size: 18px;
+                    font-weight: 600;
+                    display: inline-block;
+                    float: right;
+                    margin-bottom: 0;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+
+
+            }
+
+            span.tour__hot {
+                background-color: red;
+                color: white;
+                font-size: 12px;
+                padding: 2px 7px;
+                font-weight: 500;
+                position: absolute;
+                top: 10px;
+                right: 5px;
+            }
+        }
+
+        button.slick-prev {
+            position: absolute;
+            top: -70px;
+            right: 50px;
+            background-color: transparent;
+            font-size: 40px;
+            color: $text-color;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        button.slick-next {
+            position: absolute;
+            top: -70px;
+            right: 12px;
+            background-color: transparent;
+            font-size: 40px;
+            color: $text-color;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    a.show-all {
+        display: block;
+        width: 15%;
+        text-align: center;
+        margin-inline: auto;
+        background-color: $primary-color;
+        color: white;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 40px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        border: solid 1px $primary-color;
+
+        &:hover {
+            background-color: white;
+            color: $primary-color;
+        }
+    }
+
+    section.hot-tours,
+    section.tours-first,
+    section.tours-secound {
+        margin-bottom: 70px;
+    }
+
+    section.places {
+        margin-bottom: 100px;
+
+        a.place {
+            display: block;
+            width: 100%;
+            position: relative;
+            margin-bottom: 12px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.95;
+            }
+
+            p.place__name {
+                position: absolute;
+                bottom: 5px;
+                left: 10px;
+                font-size: 40px;
+                color: rgb(243, 243, 243);
+                font-weight: 900;
+                font-family: "Baloo 2", cursive;
+                margin-bottom: 0;
+            }
+
+        }
+
+        .sub-places {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            a.place {
+                width: 49%;
             }
         }
     }

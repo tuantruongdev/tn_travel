@@ -7,6 +7,7 @@ footer {
         font-weight: 600;
         text-transform: uppercase;
         color: $text-color;
+        margin-bottom: 20px;
     }
 
     ul {
@@ -15,7 +16,7 @@ footer {
 
         li a {
             font-size: 14px;
-
+            font-weight: 500;
             i {
                 margin-right: 5px;
                 color: $primary-color;
@@ -31,7 +32,9 @@ footer {
         text-align: center;
 
         .socials {
-            font-size: 40px;
+            font-size: 35px;
+            width: 80%;
+            margin-inline: auto;
 
             .link-fb {
                 color: #1194F4;

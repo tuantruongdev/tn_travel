@@ -5,6 +5,7 @@ header {
     right: 0;
     background-color: white;
     border-bottom: solid 1px $border-color;
+    z-index: 100;
 
     a.header-logo {
         display: block;
@@ -59,9 +60,12 @@ header {
             font-size: 18px;
             line-height: 40px;
             background-color: $primary-color;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            border: solid 1px $primary-color;
 
             &:hover {
-                opacity: 0.9;
+                background-color: white;
+                color: $primary-color;
             }
         }
     }
