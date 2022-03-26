@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-bottom: solid 1px #cccccc;
+  z-index: 100;
+}
+header a.header-logo {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+}
+header a.header-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header ul.nav li.nav-item a.nav-link {
+  color: #1F3347;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+}
+header ul.nav li.nav-item a.nav-link:hover {
+  color: #FC747B;
+}
+header ul.nav li.nav-item a.nav-link > i {
+  margin-left: 5px;
+}
+header .header-action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .header-action a {
+  color: #1F3347;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 40%;
+}
+header .header-action a:hover {
+  color: #FC747B;
+}
+header .header-action a:last-child {
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  padding: 0;
+  text-transform: uppercase;
+  display: block;
+  font-size: 18px;
+  line-height: 40px;
+  background-color: #FC747B;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border: solid 1px #FC747B;
+}
+header .header-action a:last-child:hover {
+  background-color: white;
+  color: #FC747B;
+}
+header .account-wrapper {
+  display: none;
+}
+header .account-wrapper a.account-link {
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #1F3347;
+}
+header .account-wrapper a.account-link i:first-child {
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+header .account-wrapper a.account-link span.username {
+  padding-left: 5px;
+  padding-right: 10px;
+}
+header .account-wrapper a.account-link:hover {
+  color: #FC747B;
+}
+
+section.Breadcrumb nav ol.breadcrumb li.breadcrumb-item {
+  font-size: 16px;
+  font-weight: 500;
+}
+section.Breadcrumb nav ol.breadcrumb li.breadcrumb-item a {
+  font-size: 16px;
+  font-weight: 500;
+}
+section.Breadcrumb nav ol.breadcrumb li.breadcrumb-item a:hover {
+  color: #FC747B;
+}
+
+footer {
+  border-top: solid 1px #cccccc;
+  padding-top: 40px;
+}
+footer h5 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #1F3347;
+  margin-bottom: 20px;
+}
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+footer ul li a {
+  font-size: 14px;
+  font-weight: 500;
+}
+footer ul li a i {
+  margin-right: 5px;
+  color: #FC747B;
+}
+footer ul li a:hover {
+  color: #FC747B;
+}
+footer .footer-socials {
+  text-align: center;
+}
+footer .footer-socials .socials {
+  font-size: 35px;
+  width: 80%;
+  margin-inline: auto;
+}
+footer .footer-socials .socials .link-fb {
+  color: #1194F4;
+}
+footer .footer-socials .socials .link-instagram {
+  color: #FC747B;
+}
+footer .footer-socials .socials .link-twitter {
+  color: #1194F4;
+}
+footer .footer-socials .socials .link-youtube {
+  color: #FE2B2B;
+}
+
+body {
+  padding-top: 135px;
+}
+body main .page-cover {
+  position: relative;
+  margin-bottom: 30px;
+}
+body main .page-cover .cover-text {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+}
+body main .page-cover .cover-text h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+body main .page-cover .cover-text p {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+body main .page-overview {
+  margin-bottom: 30px;
+}
+body main .page-overview h3 {
+  font-size: 36px;
+  color: #1F3347;
+  font-weight: 900;
+  font-family: "Baloo 2", cursive;
+  margin-bottom: 15px;
+}
+body main .page-overview p.page-desc {
+  font-size: 24px;
+}
+body main aside .side {
+  border: solid 1px #cccccc;
+}
+body main aside .side h5 {
+  margin-bottom: 0;
+  text-align: center;
+  line-height: 80px;
+}
+body main aside .side .list-group .list-group-item-action {
+  border: unset;
+  border-top: solid 1px #cccccc;
+  border-radius: unset;
+}
+body main .sort-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border: solid 1px #cccccc;
+  margin-bottom: 12px;
+}
+body main .sort-bar span {
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #1F3347;
+}
+body main .sort-bar .form-floating {
+  width: 30%;
+  margin-right: 10px;
+  font-size: 18px;
+}
+body main .sort-bar .form-floating .form-control:focus,
+body main .sort-bar .form-floating .form-select:focus {
+  border-color: #FC747B;
+  box-shadow: unset;
+}
+body main .tours {
+  width: 100%;
+  margin-bottom: 50px;
+}
+body main .tours article.tour {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  border: solid 1px #cccccc;
+  margin-bottom: 12px;
+}
+body main .tours article.tour a.tour__img {
+  display: block;
+  text-decoration: none;
+  width: 25%;
+  max-height: 210px;
+  position: relative;
+}
+body main .tours article.tour a.tour__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main .tours article.tour a.tour__img p.tour-province {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  padding-inline: 10px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #10698fa1;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+body main .tours article.tour a.tour__img p.tour-province i {
+  color: #FC747B;
+  margin-right: 5px;
+  font-size: 14px;
+}
+body main .tours article.tour .tour-inner {
+  flex: 1;
+  padding-inline: 10px;
+}
+body main .tours article.tour .tour-inner a.tour__name {
+  font-size: 24px;
+  width: 70%;
+  color: #1F3347;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+body main .tours article.tour .tour-inner a.tour__name:hover {
+  color: #FC747B;
+}
+body main .tours article.tour .tour-inner .d-flex {
+  margin-bottom: 15px;
+  color: #4b4a4a;
+}
+body main .tours article.tour .tour-inner .d-flex span.tour__id {
+  font-weight: 400;
+  font-size: 18px;
+  display: inline;
+  margin-right: 15px;
+  line-height: 24px;
+  font-style: italic;
+}
+body main .tours article.tour .tour-inner .d-flex i {
+  line-height: 23px;
+  margin-right: 5px;
+}
+body main .tours article.tour .tour-inner .d-flex span.tour__time {
+  line-height: 23px;
+  font-style: italic;
+  font-size: 17px;
+}
+body main .tours article.tour .tour-inner ul.tour__overview {
+  padding-left: 20px;
+}
+body main .tours article.tour .tour-inner ul.tour__overview li.overview {
+  color: #1194F4;
+}
+body main .tours article.tour .tour-inner p.tour__start {
+  position: absolute;
+  right: 12px;
+  bottom: 30px;
+  font-style: italic;
+  font-weight: 400;
+}
+body main .tours article.tour .tour-inner h3.tour__price {
+  color: #FC747B;
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+  font-weight: 700;
+}
+body main ul.pagination {
+  margin-bottom: 50px;
+}
+body main ul.pagination li a {
+  color: #1F3347;
+  font-weight: 500;
+}
+body main ul.pagination li a:hover {
+  color: white;
+  background-color: #FC747B;
+}
+
+/*# sourceMappingURL=list_tour.css.map */

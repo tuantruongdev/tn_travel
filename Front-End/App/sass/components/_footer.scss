@@ -1,27 +1,29 @@
 footer {
     border-top: solid 1px $border-color;
     padding-top: 40px;
-    p.footer__heading {
+
+    h5 {
         font-size: 18px;
         font-weight: 600;
         text-transform: uppercase;
         color: $text-color;
+        margin-bottom: 20px;
     }
 
     ul {
         padding: 0;
         list-style: none;
 
-        li {
-            a {
-                i {
-                    margin-right: 5px;
-                    color: $secondary-color;
-                }
+        li a {
+            font-size: 14px;
+            font-weight: 500;
+            i {
+                margin-right: 5px;
+                color: $primary-color;
+            }
 
-                &:hover {
-                    color: $primary-color;
-                }
+            &:hover {
+                color: $primary-color;
             }
         }
     }
@@ -30,7 +32,9 @@ footer {
         text-align: center;
 
         .socials {
-            font-size: 40px;
+            font-size: 35px;
+            width: 80%;
+            margin-inline: auto;
 
             .link-fb {
                 color: #1194F4;
