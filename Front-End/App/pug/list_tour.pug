@@ -1,0 +1,163 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title SaPa
+        link(rel="shortcut icon", href="./assets/images/banner.png", type="image/x-icon")
+        link(rel="stylesheet", href="./assets/styles/reset.css")
+        script(src='https://kit.fontawesome.com/3fc531ce88.js' crossorigin='anonymous')
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous')
+        script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js' integrity='sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB' crossorigin='anonymous')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js' integrity='sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13' crossorigin='anonymous')
+        link(rel="stylesheet", href="./assets/styles/list_tour.css")
+    body
+        include components/header
+        main
+            include components/breadcrumb
+            section.container
+                .row 
+                    .col-12 
+                        .page-cover
+                            img(src="./assets/images/page_cover.jpg", alt="Cover")
+                            .cover-text 
+                                h1.cover__name Sa Pa 
+                                p.cover__slogan Khám phá điểm vui chơi , ưu đãi , kinh nghiệm du lịch Sa Pa. 
+            section.container 
+                .row 
+                    .col-12 
+                        .page-overview
+                            h3 Du lịch Sa Pa 
+                            p.page-desc
+                                b Du Lịch Sa Pa 
+                                | - 
+                                i "Thành phố trong sương" 
+                                | nổi tiếng với với cảnh quan núi non hùng vĩ, khí hậu trong lành hoang sơ, quanh năm mát mẻ sẽ giúp bạn có được những giờ phút nghỉ dưỡng đúng nghĩa. Đến với 
+                                b tour Sapa 
+                                | bạn sẽ được trải nghiệm ngắm tuyết rơi vào mùa Đông, trèo lên đỉnh núi Fansipan - nơi được mệnh danh là nóc nhà Đông Dương, và được dạo quanh thung lũng Mường Hoa làm say lòng người. Thông qua 
+                                b tour du lịch Sapa 
+                                | du khách còn có dịp được trải nghiệm nhiều nét văn hóa độc đáo với cuộc sống của đồng bào dân tộc thiểu số vùng Miền núi phía Bắc, thưởng thức các món ăn truyền thống đặc sắc nơi đây. Nếu bạn đang tìm kiếm cho mình một kỳ nghỉ trải nghiệm đầy thú vị vậy hãy cùng Chúng tôi khám phá vùng đất được mệnh danh "Thành phố trong sương" ngay thôi!
+            section
+                .container
+                    .row 
+                        aside.col-3
+                            .side
+                                h5 Các địa điểm nổi tiếng 
+                                .list-group 
+                                    a.list-group-item.list-group-item-action(href='#' aria-current='true') Hà Nội
+                                    a.list-group-item.list-group-item-action(href='#') Phú Quốc
+                                    a.list-group-item.list-group-item-action(href='#') Hạ Long
+                                    a.list-group-item.list-group-item-action(href='#') Đà Nẵng
+                        .col-9 
+                            .sort-bar
+                                span Sắp Xếp:
+                                .form-floating
+                                    input#trip-start(type="date", name="trip-start" ,value="2022-03-01",class="form-control")
+                                    label(for="trip-start") Theo ngày khởi hành
+                                .form-floating
+                                    select#sort.form-select
+                                        option(value='up') Từ Thấp đến Cao 
+                                        option(value="down") Từ Cao đến Thấp
+                                    label(for='sort') Theo giá cả
+                            .tours
+                                article.tour 
+                                    a.tour__img(href="#") 
+                                        img(src="./assets/images/NhaTrang.jpg", alt="Tour")
+                                        p.tour-province
+                                            i.fa-solid.fa-location-dot
+                                            span.tour__province Nha Trang
+                                    .tour-inner 
+                                        a.tour__name(href="#") Tour Miền Bắc 4N3D: HCM - Hạ Long - Ninh Bình - Sapa - Hà Nội (TN) 
+                                        .d-flex.align-items.center.justify-content-start
+                                            span.tour__id Mã: T01
+                                            i.fa-solid.fa-clock
+                                            span.tour__time 3 ngày 2 đêm
+                                        ul.tour__overview 
+                                            li.overview Di chuyển bằng xe lửa 
+                                            li.overview Khách sạn 4 sao phú yên
+                                            li.overview Khách sạn 4 sao phú yên
+                                        p.tour__start Khởi hành: 06/03/2022
+                                        h3.tour__price 1.590.000 vnđ
+                                article.tour 
+                                    a.tour__img(href="#") 
+                                        img(src="./assets/images/NhaTrang.jpg", alt="Tour")
+                                        p.tour-province
+                                            i.fa-solid.fa-location-dot
+                                            span.tour__province Nha Trang
+                                    .tour-inner 
+                                        a.tour__name(href="#") Tour Miền Bắc 4N3D: HCM - Hạ Long - Ninh Bình - Sapa - Hà Nội (TN) 
+                                        .d-flex.align-items.center.justify-content-start
+                                            span.tour__id Mã: T01
+                                            i.fa-solid.fa-clock
+                                            span.tour__time 3 ngày 2 đêm
+                                        ul.tour__overview 
+                                            li.overview Di chuyển bằng xe lửa 
+                                            li.overview Khách sạn 4 sao phú yên
+                                            li.overview Khách sạn 4 sao phú yên
+                                        p.tour__start Khởi hành: 06/03/2022
+                                        h3.tour__price 1.590.000 vnđ
+                                article.tour 
+                                    a.tour__img(href="#") 
+                                        img(src="./assets/images/NhaTrang.jpg", alt="Tour")
+                                        p.tour-province
+                                            i.fa-solid.fa-location-dot
+                                            span.tour__province Nha Trang
+                                    .tour-inner 
+                                        a.tour__name(href="#") Tour Miền Bắc 4N3D: HCM - Hạ Long - Ninh Bình - Sapa - Hà Nội (TN) 
+                                        .d-flex.align-items.center.justify-content-start
+                                            span.tour__id Mã: T01
+                                            i.fa-solid.fa-clock
+                                            span.tour__time 3 ngày 2 đêm
+                                        ul.tour__overview 
+                                            li.overview Di chuyển bằng xe lửa 
+                                            li.overview Khách sạn 4 sao phú yên
+                                            li.overview Khách sạn 4 sao phú yên
+                                        p.tour__start Khởi hành: 06/03/2022
+                                        h3.tour__price 1.590.000 vnđ
+                                article.tour 
+                                    a.tour__img(href="#") 
+                                        img(src="./assets/images/NhaTrang.jpg", alt="Tour")
+                                        p.tour-province
+                                            i.fa-solid.fa-location-dot
+                                            span.tour__province Nha Trang
+                                    .tour-inner 
+                                        a.tour__name(href="#") Tour Miền Bắc 4N3D: HCM - Hạ Long - Ninh Bình - Sapa - Hà Nội (TN) 
+                                        .d-flex.align-items.center.justify-content-start
+                                            span.tour__id Mã: T01
+                                            i.fa-solid.fa-clock
+                                            span.tour__time 3 ngày 2 đêm
+                                        ul.tour__overview 
+                                            li.overview Di chuyển bằng xe lửa 
+                                            li.overview Khách sạn 4 sao phú yên
+                                            li.overview Khách sạn 4 sao phú yên
+                                        p.tour__start Khởi hành: 06/03/2022
+                                        h3.tour__price 1.590.000 vnđ
+            section.container 
+                .row.justify-content-end
+                    .col-6
+                        ul.pagination.justify-content-end
+                            li.page-item.disabled
+                                a.page-link <
+                            li.page-item
+                                a.page-link(href='#') 1
+                            li.page-item
+                                a.page-link(href='#') 2
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') 4
+                            li.page-item
+                                a.page-link(href='#') 5
+                            li.page-item
+                                a.page-link(href='#') >
+
+              
+                      
+
+
+
+
+
+        include components/footer
+        script(src="./assets/scripts/list_tour.js")
