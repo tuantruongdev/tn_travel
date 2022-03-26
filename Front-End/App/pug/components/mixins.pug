@@ -1,6 +1,23 @@
-mixin tour(image,name,time,price) 
+mixin tour-hot-grid(image,province,name,time,overview,price) 
     article.tour 
-        .tour__img 
-            img(src=img, alt="")
+        a.tour__img(href="#") 
+            img(src=image, alt="Tour")
+            span.tour__province=province
         h3.tour__name=name 
-        p.tour__time=time
+        p.tour__time
+            i.fa-solid.fa-clock
+            span.time 
+        p.tour__overview=overview
+        h3.tour__price=price
+        span Tour bán chạy 
+mixin tour-grid(image,province,name,time,overview,price) 
+    article.tour 
+        a.tour__img(href="#") 
+            img(src=image, alt="Tour")
+            span.tour__province=province
+        h3.tour__name=name 
+        p.tour__time
+            i.fa-solid.fa-clock
+            span.time=time 
+        p.tour__overview=overview
+        h3.tour__price=price

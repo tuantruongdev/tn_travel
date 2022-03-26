@@ -4,11 +4,12 @@ header {
     left: 0;
     right: 0;
     background-color: white;
+    border-bottom: solid 1px $border-color;
 
     a.header-logo {
         display: block;
         width: 100%;
-        max-width: 130px;
+        max-width: 120px;
 
         img {
             width: 100%;
@@ -23,6 +24,7 @@ header {
                 color: $text-color;
                 text-transform: uppercase;
                 font-weight: 600;
+                font-size: 18px;
 
                 &:hover {
                     color: $primary-color;
@@ -36,28 +38,56 @@ header {
     }
 
     .header-action {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
         a {
             color: $text-color;
             text-transform: uppercase;
             font-weight: 600;
+            width: 40%;
 
             &:hover {
                 color: $primary-color;
             }
         }
 
+
         a:last-child {
-            background-color: $primary-color;
-            color: white;
+            @include button-styles;
+            font-size: 18px;
             line-height: 40px;
-            width: 110px;
-            text-align: center;
-            border-radius: 10px;
-            margin-left: 25px;
-            font-weight: 500;
+            background-color: $primary-color;
 
             &:hover {
                 opacity: 0.9;
+            }
+        }
+    }
+
+    .account-wrapper {
+        display: none;
+
+        a.account-link {
+            font-size: 18px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: $text-color;
+
+            i:first-child {
+                font-size: 30px;
+                padding-bottom: 5px;
+            }
+
+            span.username {
+                padding-left: 5px;
+                padding-right: 10px;
+            }
+
+            &:hover {
+                color: $primary-color;
             }
         }
     }

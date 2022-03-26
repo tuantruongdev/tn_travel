@@ -8,6 +8,14 @@ main {
     align-items: center;
 
     #login-form {
+        h1 {
+            font-size: 40px;
+            text-align: start;
+            color: $primary-color;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
         label {
             font-size: 18px;
             font-weight: 500;
@@ -18,49 +26,47 @@ main {
             @include input-styles;
             font-size: 18px;
             color: $text-color;
+            border-radius: 0;
         }
 
-        a {
+        a.forgot-link {
+            float: right;
+            color: $secondary-color;
             font-weight: 500;
-            color: #1194F4;
             font-size: 18px;
 
             &:hover {
-                color: $primary-color;
+                color: $primary-color
             }
         }
 
-        button.btn-primary {
-            background-color: $primary-color;
-            display: block;
-            border: none;
-            width: 100%;
-            line-height: 35px;
-            text-transform: uppercase;
-            border-radius: 7px;
-
-            &:hover {
+        a.back-link,
+        button {
+            @include button-styles;
+            width: 49%;
+            line-height: 45px;
+            &:hover{
                 opacity: 0.9;
             }
-
         }
 
-        .form-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        a.back-link {
+            background-color: $secondary-color;
+        }
+
+        button {
+            background-color: $primary-color;
+        }
+
+        .sign-up-link{
             font-size: 18px;
-
-            a.home-link i {
-                margin-right: 5px;
-            }
-
-            .sign-up-link {
-                span {
-                    font-weight: 500;
-                    font-size: $desc-color;
-                    margin-right: 10px;
-                    color: #646464;
+            font-weight: 500;
+            color: $desc-color;;
+            a{
+                margin-left: 10px;
+                color: $secondary-color;
+                &:hover{
+                    color: $primary-color;
                 }
             }
         }

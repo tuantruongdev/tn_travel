@@ -9,25 +9,17 @@ a {
   color: black;
 }
 
-.page-heading {
-  color: #6347F9;
-  font-size: 40px;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 600;
-}
-
-.section__heading {
-  font-size: 30px;
-  text-transform: uppercase;
-  font-family: "Baloo 2", cursive;
-  font-weight: 700;
-}
-
 main {
   height: 100vh;
   display: grid;
   align-items: center;
+}
+main #login-form h1 {
+  font-size: 40px;
+  text-align: start;
+  color: #FC747B;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 main #login-form label {
   font-size: 18px;
@@ -35,53 +27,61 @@ main #login-form label {
   color: #646464;
 }
 main #login-form input.form-control {
-  line-height: 35px;
+  line-height: 36px;
   outline: none;
-  border-radius: 10px;
+  border-radius: 0;
   border: solid 1px #cccccc;
-  color: #cccccc;
+  color: #1F3347;
   font-size: 18px;
   color: #1F3347;
+  border-radius: 0;
 }
 main #login-form input.form-control:focus {
   background-color: white;
   box-shadow: unset;
   outline: none;
 }
-main #login-form a {
+main #login-form a.forgot-link {
+  float: right;
+  color: #11B0F4;
   font-weight: 500;
-  color: #1194F4;
   font-size: 18px;
 }
-main #login-form a:hover {
-  color: #6347F9;
+main #login-form a.forgot-link:hover {
+  color: #FC747B;
 }
-main #login-form button.btn-primary {
-  background-color: #6347F9;
-  display: block;
-  border: none;
-  width: 100%;
-  line-height: 35px;
+main #login-form a.back-link,
+main #login-form button {
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  padding: 0;
   text-transform: uppercase;
-  border-radius: 7px;
+  width: 49%;
+  line-height: 45px;
 }
-main #login-form button.btn-primary:hover {
+main #login-form a.back-link:hover,
+main #login-form button:hover {
   opacity: 0.9;
 }
-main #login-form .form-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+main #login-form a.back-link {
+  background-color: #11B0F4;
+}
+main #login-form button {
+  background-color: #FC747B;
+}
+main #login-form .sign-up-link {
   font-size: 18px;
-}
-main #login-form .form-footer a.home-link i {
-  margin-right: 5px;
-}
-main #login-form .form-footer .sign-up-link span {
   font-weight: 500;
-  font-size: #646464;
-  margin-right: 10px;
   color: #646464;
+}
+main #login-form .sign-up-link a {
+  margin-left: 10px;
+  color: #11B0F4;
+}
+main #login-form .sign-up-link a:hover {
+  color: #FC747B;
 }
 
 /*# sourceMappingURL=login.css.map */

@@ -1,8 +1,96 @@
 @import './components/varriables';
 @import './components/mixins';
 @import './components/base';
-main{
+
+main {
     display: grid;
-    align-items: center;  
+    align-items: center;
     height: 100vh;
+
+    form {
+        h1 {
+            font-size: 40px;
+            text-align: start;
+            color: $primary-color;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: 500;
+            color: $desc-color;
+        }
+
+        input.form-control,
+        select#gender {
+            @include input-styles;
+            font-size: 18px;
+            color: $text-color;
+            border-radius: 0;
+        }
+
+        a.back-link,
+        button {
+            @include button-styles;
+            width: 49%;
+            line-height: 45px;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        a.back-link {
+            background-color: $secondary-color;
+        }
+
+        button {
+            background-color: $primary-color;
+        }
+
+        .fullname-wrapper {
+            width: 65%;
+        }
+
+        .gender-wrapper {
+            width: 33%;
+        }
+
+        .dateofbirth-wrapper,
+        .phone-wrapper {
+            width: 49%;
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: 18px;
+            font-weight: 500;
+            color: $desc-color;
+
+            a.login-link {
+                margin-left: 5px;
+                color: $secondary-color;
+                font-weight: 500;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        a.home-link {
+            font-size: 18px;
+            font-weight: 500;
+            color: $secondary-color;
+
+            i {
+                margin-right: 5px;
+            }
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
 }

@@ -5,18 +5,18 @@
 @import './components/footer';
 
 body {
-    padding-top: 100px;
+    padding-top: 150px;
 
     section.banner {
         margin-bottom: 20px;
 
         h1 {
-            font-size: 95px;
-            color: $text-color;
-            font-weight: 700;
-            font-family: 'Baloo 2', cursive;
-            line-height: 140px;
-            user-select: none;
+            font-size: 60px;
+            color: #1F3347;
+            font-weight: 900;
+            font-family: "Baloo 2", cursive;
+            letter-spacing: 2px;
+            line-height: 85px;
         }
 
         p {
@@ -27,16 +27,30 @@ body {
         }
 
         .banner__search-bar {
-            .form-control {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 90%;
+            .places-wrapper,
+            .date-wrapper {
+                width: 35%;
+                margin-bottom: 15px
+            }
+
+            .form-control,
+            select#places {
+                @include input-styles;
                 padding: 10px;
+                line-height: 30px;
             }
 
             button {
+                @include button-styles;
                 background-color: $primary-color;
-                color: white;
-                width: 100%;
-                text-transform: uppercase;
-                padding-block: 10px;
+                width: 25%;
+                height: 52px;
+                margin-bottom: 15px
             }
         }
 
@@ -46,14 +60,6 @@ body {
                 height: 100%;
                 object-fit: cover;
             }
-        }
-    }
-}
-
-.test {
-    .row {
-        .col-1 {
-            border: solid 1px black;
         }
     }
 }

@@ -1,7 +1,8 @@
 footer {
     border-top: solid 1px $border-color;
     padding-top: 40px;
-    p.footer__heading {
+
+    h5 {
         font-size: 18px;
         font-weight: 600;
         text-transform: uppercase;
@@ -12,16 +13,16 @@ footer {
         padding: 0;
         list-style: none;
 
-        li {
-            a {
-                i {
-                    margin-right: 5px;
-                    color: $secondary-color;
-                }
+        li a {
+            font-size: 14px;
 
-                &:hover {
-                    color: $primary-color;
-                }
+            i {
+                margin-right: 5px;
+                color: $primary-color;
+            }
+
+            &:hover {
+                color: $primary-color;
             }
         }
     }
