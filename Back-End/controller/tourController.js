@@ -1,6 +1,10 @@
 /* eslint-disable prefer-object-spread */
 const catchAsync = require("../utils/catchAsync");
 const Tour = require("../models/tourModel");
+const Location = require("../models/locationModel");
+const User = require("../models/userModel");
+const Request = require("../models/requestModel");
+const AppError = require("../utils/appError");
 
 class APIFeatures {
   constructor(query, queryString) {
@@ -58,7 +62,20 @@ exports.getAllTour = catchAsync(async (req, res) => {
     .fields()
     .sortBy()
     .paging();
+
   const tours = await features.query;
+  // await tours.forEach(async (tour) => {
+  //   const location = await location.findById(tour.locationId);
+
+  //   tour.location = location;
+  // });
+
+  // eslint-disable-next-line no-restricted-syntax
+  for await (const tour of tours) {
+    const mylocation = await Location.findById(tour.locationId);
+    tour.location = mylocation;
+  }
+  //console.log(tours[0].name);
   res.status(200).json({
     status: "success",
     results: tours.length,
@@ -78,10 +95,15 @@ exports.addNewTour = catchAsync(async (req, res) => {
 exports.getTour = catchAsync(
   async (req, res) => {
     const tour = await Tour.findById(req.params.id);
+
+    const mylocation = await Location.findById(tour.locationId);
+    tour.location = mylocation;
+
+    //console.log(tours[0].name);
     res.status(200).json({
       status: "success",
-
-      data: { tour },
+      results: tour.length,
+      data: { tours: tour },
     });
   }
 
@@ -111,5 +133,29 @@ exports.deleteTour = catchAsync(async (req, res) => {
     data: {
       editTour,
     },
+  });
+});
+exports.checkoutTour = catchAsync(async (req, res, next) => {
+  const userId = req.user.id;
+  const tourId = req.params.id;
+  const tour = await Tour.findById(tourId);
+  const user = await User.findById(userId);
+  if (!user || !tour) {
+    return next(new AppError("some error appear!"), 400);
+  }
+  if (tour.status === "ended") {
+    return next(new AppError("tour has ended"), 403);
+  }
+
+  const request = await Request.create({
+    tourId: tourId,
+    userId: userId,
+  });
+
+  res.status(200).json({
+    status: "success",
+    message: "checkout successfully",
+    data: { request },
+    //updatedUser,
   });
 });

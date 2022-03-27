@@ -35,7 +35,7 @@ exports.signup = catchAsync(async (req, res, next) => {
     email: req.body.email,
     userName: req.body.userName,
     password: req.body.password,
-    confirmPassword: req.body.confirmPassword,
+
     address: req.body.address,
     phoneNum: req.body.phoneNum,
   });
@@ -44,7 +44,7 @@ exports.signup = catchAsync(async (req, res, next) => {
   createSendToken(newUser, 201, res);
 });
 exports.login = catchAsync(async (req, res, next) => {
-  //  console.log("lg");
+  console.log("lg");
   const { email, password } = req.body;
   //if no email or passsword then throw a error
   if (!email || !password) {

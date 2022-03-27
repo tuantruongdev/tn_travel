@@ -35,12 +35,14 @@ const userSchema = mongoose.Schema({
     required: [true, "user must have a email"],
     trim: true,
     lowercase: true,
+    unique: [true, "this email has been taken"],
     validate: [validator.isEmail, "please enter a valid email"],
   },
   phoneNum: {
     type: String,
     required: [true, "user must have a phone number"],
     trim: true,
+    validate: [validator.isMobilePhone, "please enter a valid phone number"],
   },
   address: {
     type: String,
@@ -53,18 +55,7 @@ const userSchema = mongoose.Schema({
     trim: true,
     select: false,
   },
-  confirmPassword: {
-    type: String,
-    required: [true, "user must have a confirm password"],
-    trim: true,
-    minlength: 6,
-    validate: {
-      validator: function (el) {
-        return el === this.password;
-      },
-      message: "password not match",
-    },
-  },
+
   passwordChangeAt: Date,
   //role problem
   role: {
@@ -79,7 +70,6 @@ userSchema.pre("save", async function (next) {
     return next();
   }
   this.password = await bcrypt.hash(this.password, 12);
-  this.confirmPassword = undefined;
 });
 userSchema.methods.checkPassword = async (userPassword, encryptedPassword) => {
   return await bcrypt.compare(userPassword, encryptedPassword);

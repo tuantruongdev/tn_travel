@@ -1,8 +1,13 @@
 const express = require("express");
 const tourController = require("../controller/tourController");
 const authController = require("../controller/authController");
+const random = require("../utils/randomTourGenerator");
 
 const tourRoute = express.Router();
+tourRoute.post("/addrandom", random.addRandomTour);
+tourRoute
+  .route("/checkout/:id")
+  .post(authController.protect, tourController.checkoutTour);
 
 tourRoute
   .route("/")
