@@ -51,6 +51,7 @@ main form button {
   text-align: center;
   padding: 0;
   text-transform: uppercase;
+  display: block;
   width: 49%;
   line-height: 45px;
 }
@@ -86,17 +87,6 @@ main form p a.login-link {
   font-weight: 500;
 }
 main form p a.login-link:hover {
-  color: #FC747B;
-}
-main form a.home-link {
-  font-size: 18px;
-  font-weight: 500;
-  color: #11B0F4;
-}
-main form a.home-link i {
-  margin-right: 5px;
-}
-main form a.home-link:hover {
   color: #FC747B;
 }
 

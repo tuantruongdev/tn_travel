@@ -35,7 +35,7 @@ html(lang="en")
                                     input(type="date", name="dateofbirth" class="form-control" required)
                                 .phone-wrapper 
                                     label(for="phone" class="form-label") Số điện thoại
-                                    input(type="tel", name="phone" class="form-control" placeholder="Phone" required)
+                                    input(type="tel", name="phone" class="form-control" placeholder="Số điện thoại" required)
                             .mb-3 
                                 label(for="email" class="form-label") Địa chỉ email
                                 input(type="email" name="email" class="form-control" placeholder="Email" required)
@@ -46,14 +46,10 @@ html(lang="en")
                                 label(for="confirm-password" class="form-label") Xác nhận mật khẩu
                                 input(type="password" name="confirm-password" class="form-control" placeholder="Xác nhận mật khẩu")
                             .mb-5.d-flex.justify-content-between.align-items-center 
-                                a.back-link(href="./login.html") Trở lại 
+                                a.back-link(href="./index.html") Trở lại trang chủ 
                                 button(type="submit") Đăng ký
-                            hr.mb-3
-                            .d-flex.justify-content-between.align-items-center
-                                p Đã có tài khoản 
-                                    a.login-link(href="./login.html") Đăng nhập
-                                a.home-link(href="index.html")
-                                    i.fa-solid.fa-house-chimney
-                                    | Trang chủ 
+                            hr.mb-4
+                            p Đã có tài khoản ?
+                                a.login-link(href="./login.html") Đăng nhập 
         script(src="./assets/scripts/signup.js") 
         

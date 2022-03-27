@@ -58,18 +58,27 @@ main #login-form button {
   text-align: center;
   padding: 0;
   text-transform: uppercase;
+  display: block;
   width: 49%;
   line-height: 45px;
 }
-main #login-form a.back-link:hover,
-main #login-form button:hover {
-  opacity: 0.9;
-}
 main #login-form a.back-link {
   background-color: #11B0F4;
+  border: solid 1px #11B0F4;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+main #login-form a.back-link:hover {
+  background-color: white;
+  color: #11B0F4;
 }
 main #login-form button {
   background-color: #FC747B;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+main #login-form button:hover {
+  background-color: white;
+  color: #FC747B;
+  border: solid 1px #FC747B;
 }
 main #login-form .sign-up-link {
   font-size: 18px;
