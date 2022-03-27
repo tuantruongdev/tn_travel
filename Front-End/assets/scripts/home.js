@@ -1,5 +1,5 @@
-const handleSlider = (list) => {
-  $(list).slick({
+const handleSlider = () => {
+  $(".list-product").slick({
     rows: 2,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -10,6 +10,19 @@ const handleSlider = (list) => {
   });
 };
 
-$(document).ready(() => {
-  handleSlider(".list-product ");
-});
+const handleSearch = () => {
+  let form = document.querySelector("form.banner__search-bar");
+  form.addEventListener("submit", (e) => {
+    let place = $("select#places").val();
+    let tripStart = $("input.trip-start").val();
+    let search = $("input.search").val();
+
+    e.preventDefault();
+  });
+};
+
+// Hàm main, chạy các hàm vào đây nhé
+(() => {
+  handleSlider();
+  handleSearch();
+})();

@@ -93,13 +93,14 @@ body {
             padding-inline: 15px;
             position: relative;
             margin-bottom: 50px;
-            max-height: 500px;
+            overflow: hidden;
 
             a.tour-image {
                 display: block;
                 text-decoration: none;
                 position: relative;
-                margin-bottom: 10px;
+                border: solid 1px $border-color;
+                border-bottom: unset;
 
                 img.tour__image {
                     width: 100%;
@@ -130,7 +131,12 @@ body {
             }
 
             .tour-detail {
-                padding: 5px;
+                height: 100%;
+                border: solid 1px $border-color;
+                padding-bottom: 30px;
+                padding-inline: 5px;
+                padding-top: 10px;
+                border-top: unset;
 
                 a.tour__name {
                     font-size: 18px;
@@ -166,6 +172,7 @@ body {
 
                 ul.tour__overview {
                     padding-left: 16px;
+                    margin-bottom: 10px;
 
                     li {
                         color: #1194F4;
@@ -181,13 +188,7 @@ body {
                     display: inline-block;
                     float: right;
                     margin-bottom: 0;
-
-                    span {
-                        font-size: 14px;
-                    }
                 }
-
-
             }
 
             span.tour__hot {
