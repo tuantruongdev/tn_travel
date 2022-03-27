@@ -55,15 +55,23 @@ main form button {
   width: 49%;
   line-height: 45px;
 }
-main form a.back-link:hover,
-main form button:hover {
-  opacity: 0.9;
-}
 main form a.back-link {
   background-color: #11B0F4;
+  border: solid 1px #11B0F4;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+main form a.back-link:hover {
+  background-color: white;
+  color: #11B0F4;
 }
 main form button {
   background-color: #FC747B;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+main form button:hover {
+  background-color: white;
+  color: #FC747B;
+  border: solid 1px #FC747B;
 }
 main form .fullname-wrapper {
   width: 65%;

@@ -35,18 +35,28 @@ main {
             @include button-styles;
             width: 49%;
             line-height: 45px;
-
-            &:hover {
-                opacity: 0.9;
-            }
         }
 
         a.back-link {
             background-color: $secondary-color;
+            border: solid 1px $secondary-color;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: white;
+                color: $secondary-color;
+            }
         }
 
         button {
             background-color: $primary-color;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: white;
+                color: $primary-color;
+                border: solid 1px $primary-color;
+            }
         }
 
         .fullname-wrapper {
