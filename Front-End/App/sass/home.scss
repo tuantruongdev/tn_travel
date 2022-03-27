@@ -164,10 +164,14 @@ body {
                     }
                 }
 
-                p.tour__overview {
-                    color: #1194F4;
-                    font-weight: 500;
-                    font-size: 12px;
+                ul.tour__overview {
+                    padding-left: 16px;
+
+                    li {
+                        color: #1194F4;
+                        font-weight: 500;
+                        font-size: 12px;
+                    }
                 }
 
                 h3.tour__price {

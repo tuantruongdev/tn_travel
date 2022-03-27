@@ -293,7 +293,10 @@ body .list-product article.tour .tour-detail p.tour-time span.tour__time {
   font-size: 12px;
   font-weight: 500;
 }
-body .list-product article.tour .tour-detail p.tour__overview {
+body .list-product article.tour .tour-detail ul.tour__overview {
+  padding-left: 16px;
+}
+body .list-product article.tour .tour-detail ul.tour__overview li {
   color: #1194F4;
   font-weight: 500;
   font-size: 12px;
