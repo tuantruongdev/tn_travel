@@ -5,4 +5,25 @@ main{
     display: grid;
     align-items: center;  
     height: 100vh;
+
+    .signup-page{
+        .main-signup{
+            width: 50%;
+            margin: 0 auto;
+        }
+            h2{ 
+                color: $primary-color;
+                font-size: 300px;
+            
+            }
+            .form-group{ 
+                margin-bottom: 15px;
+            }
+                span{ 
+                    margin-right: 10px;
+                }
+                a{
+                    text-decoration: none;
+                }
+    }
 }

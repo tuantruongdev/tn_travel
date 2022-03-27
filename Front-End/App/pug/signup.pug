@@ -14,10 +14,42 @@ html(lang="en")
         link(rel="stylesheet", href="./assets/styles/signup.css")
     body 
         main
-            .container 
-                .row.justify-content-center.align-items-center  
-                    .col-6
-                        form(action="#" id="signup-form") 
-                            h1.mb-5.page-heading Đăng ký thành viên 
-        script(src="./assets/scripts/signup.js") 
+            .main-signup.container-md
+            h2.text-center.mt-5.mb-5 Đăng ký thành viên
+            .d-flex.justify-content-center.mt-3
+            form.mr-5(action="" method="post" id="signup-form")
+            .row
+                .col-6.form-left
+                    .form-group
+                        label(for='') Họ và tên:
+                        input.form-control(type='text' placeholder='Nguyễn Văn A' required='')
+                    .form-group
+                        .row 
+                            .col-6
+                                label(for='') Ngày sinh:
+                                input.form-control(type='date' placeholder='mm/dd/yyy' required='required')
+                            .col-6
+                                label(for='') Giới tính:
+                                select.form-select
+                                    option(value='Male') Nam
+                                    option(value='Female') Nữ
+                    .form-group
+                        label(for='') Số điện thoại:
+                        input.form-control(type='tel:0988021931' placeholder='0988021931' required='')                    
+                .col-6.form-right
+                    .form-group
+                        label(for='') Địa chỉ mail:
+                        input.form-control(type='email' placeholder='nguyenvana@gmail.com')
+                    .form-group
+                        label(for='') Mật khẩu:
+                        input.form-control(type='text' placeholder='************************' required='')
+                    .form-group
+                        label(for='') Xác nhận mật khẩu:
+                        input.form-control(type='password' placeholder='************************' required='')
+            .mt-5.text-center.row 
+                .col-12 
+                    button.btn.mr-5.mb-4.my-btn.text-white Đăng ký thành viên
+                .col-12
+                    span.mt-3 Đã có tài khoản?
+                    a.link-Login(href='#') Đăng nhập
         
