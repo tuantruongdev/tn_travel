@@ -195,11 +195,16 @@ body main aside .side h5 {
   margin-bottom: 0;
   text-align: center;
   line-height: 80px;
+  user-select: none;
 }
 body main aside .side .list-group .list-group-item-action {
   border: unset;
   border-top: solid 1px #cccccc;
   border-radius: unset;
+  font-weight: 500;
+}
+body main aside .side .list-group .list-group-item-action:hover {
+  color: #FC747B;
 }
 body main .sort-bar {
   display: flex;
@@ -216,9 +221,13 @@ body main .sort-bar span {
   color: #1F3347;
 }
 body main .sort-bar .form-floating {
-  width: 30%;
+  width: 25%;
   margin-right: 10px;
   font-size: 18px;
+}
+body main .sort-bar .form-floating .form-control,
+body main .sort-bar .form-floating .form-select {
+  cursor: pointer;
 }
 body main .sort-bar .form-floating .form-control:focus,
 body main .sort-bar .form-floating .form-select:focus {
@@ -333,6 +342,10 @@ body main ul.pagination li a {
 body main ul.pagination li a:hover {
   color: white;
   background-color: #FC747B;
+}
+body main ul.pagination .current-page {
+  background-color: #FC747B;
+  color: white;
 }
 
 /*# sourceMappingURL=list_tour.css.map */

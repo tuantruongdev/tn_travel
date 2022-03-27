@@ -51,18 +51,27 @@ main form button {
   text-align: center;
   padding: 0;
   text-transform: uppercase;
+  display: block;
   width: 49%;
   line-height: 45px;
 }
-main form a.back-link:hover,
-main form button:hover {
-  opacity: 0.9;
-}
 main form a.back-link {
   background-color: #11B0F4;
+  border: solid 1px #11B0F4;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+main form a.back-link:hover {
+  background-color: white;
+  color: #11B0F4;
 }
 main form button {
   background-color: #FC747B;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+main form button:hover {
+  background-color: white;
+  color: #FC747B;
+  border: solid 1px #FC747B;
 }
 main form .fullname-wrapper {
   width: 65%;
@@ -86,17 +95,6 @@ main form p a.login-link {
   font-weight: 500;
 }
 main form p a.login-link:hover {
-  color: #FC747B;
-}
-main form a.home-link {
-  font-size: 18px;
-  font-weight: 500;
-  color: #11B0F4;
-}
-main form a.home-link i {
-  margin-right: 5px;
-}
-main form a.home-link:hover {
   color: #FC747B;
 }
 

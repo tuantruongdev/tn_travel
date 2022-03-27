@@ -20,7 +20,9 @@
         <div class="row align-items-center justify-content-between">
           <div class="col-5 d-flex justify-content-start align-items-center"><a class="header-logo" href="#"> <img src="./assets/images/logo.png" alt="Logo"></a>
             <ul class="nav nav-pills">
-              <li class="nav-item"><a class="nav-link" href="#">Tours<i class="fa-solid fa-angle-down"></i></a></li>
+              <li class="nav-item tour-dropdown"><a class="nav-link" href="#">Tours<i class="fa-solid fa-angle-down"></i></a>
+                <div class="list-group"><a class="list-group-item" href="#">Hà Nội</a><a class="list-group-item" href="#">Phú Quốc</a><a class="list-group-item" href="#">Hạ Long </a><a class="list-group-item" href="#">Đà Nẵng</a></div>
+              </li>
               <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Giới thiệu</a></li>
             </ul>
@@ -42,17 +44,17 @@
                   <label class="form-label" for="places">Địa điểm </label>
                   <select class="form-select" id="places" name="places">
                     <option selected>Hà Nội</option>
-                    <option value="1">SaPa</option>
-                    <option value="2">Nha Trang</option>
-                    <option value="3">Phú Quốc</option>
+                    <option value="Sapa">SaPa</option>
+                    <option value="NhaTrang">Nha Trang</option>
+                    <option value="PuQuoc">Phú Quốc</option>
                   </select>
                 </div>
                 <div class="date-wrapper">
                   <label class="form-label" for="date">Ngày khởi hành </label>
-                  <input class="form-control" type="date" name="date">
+                  <input class="form-control trip-start" type="date" name="tripStart">
                 </div>
                 <button type="submit">Tìm kiếm</button>
-                <input class="form-control" type="text" name="search" placeholder="Bạn muốn đi đâu ?">
+                <input class="form-control search" type="text" name="search" placeholder="Bạn muốn đi đâu ?">
               </form>
             </div>
             <div class="col-6">
@@ -71,7 +73,11 @@
                     <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
                   <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
                     <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
+                    <ul class="tour__overview">
+                      <li>Thưởng Thức BBQ Hải Sản</li>
+                      <li>Vịnh Vĩnh Hy Tuyệt Đẹp </li>
+                      <li>Trải Nghiệm Xe Giường Nằm</li>
+                    </ul>
                     <h3 class="tour__price">1.590.000 VND</h3>
                   </div><span class="tour__hot">Tour bán chạy</span>
                 </article>
@@ -79,7 +85,11 @@
                     <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
                   <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
                     <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
+                    <ul class="tour__overview">
+                      <li>Thưởng Thức BBQ Hải Sản</li>
+                      <li>Vịnh Vĩnh Hy Tuyệt Đẹp </li>
+                      <li>Trải Nghiệm Xe Giường Nằm</li>
+                    </ul>
                     <h3 class="tour__price">1.590.000 VND</h3>
                   </div><span class="tour__hot">Tour bán chạy</span>
                 </article>
@@ -87,7 +97,11 @@
                     <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
                   <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
                     <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
+                    <ul class="tour__overview">
+                      <li>Thưởng Thức BBQ Hải Sản</li>
+                      <li>Vịnh Vĩnh Hy Tuyệt Đẹp </li>
+                      <li>Trải Nghiệm Xe Giường Nằm</li>
+                    </ul>
                     <h3 class="tour__price">1.590.000 VND</h3>
                   </div><span class="tour__hot">Tour bán chạy</span>
                 </article>
@@ -95,7 +109,11 @@
                     <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
                   <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
                     <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
+                    <ul class="tour__overview">
+                      <li>Thưởng Thức BBQ Hải Sản</li>
+                      <li>Vịnh Vĩnh Hy Tuyệt Đẹp </li>
+                      <li>Trải Nghiệm Xe Giường Nằm</li>
+                    </ul>
                     <h3 class="tour__price">1.590.000 VND</h3>
                   </div><span class="tour__hot">Tour bán chạy</span>
                 </article>
@@ -103,7 +121,11 @@
                     <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
                   <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
                     <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
+                    <ul class="tour__overview">
+                      <li>Thưởng Thức BBQ Hải Sản</li>
+                      <li>Vịnh Vĩnh Hy Tuyệt Đẹp </li>
+                      <li>Trải Nghiệm Xe Giường Nằm</li>
+                    </ul>
                     <h3 class="tour__price">1.590.000 VND</h3>
                   </div><span class="tour__hot">Tour bán chạy</span>
                 </article>
@@ -111,87 +133,11 @@
                     <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
                   <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
                     <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
+                    <ul class="tour__overview">
+                      <li>Thưởng Thức BBQ Hải Sản</li>
+                      <li>Vịnh Vĩnh Hy Tuyệt Đẹp </li>
+                      <li>Trải Nghiệm Xe Giường Nằm</li>
+                    </ul>
                     <h3 class="tour__price">1.590.000 VND</h3>
                   </div><span class="tour__hot">Tour bán chạy</span>
                 </article>
@@ -210,121 +156,13 @@
                     <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
                   <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
                     <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
+                    <ul class="tour__overview">
+                      <li>Thưởng Thức BBQ Hải Sản</li>
+                      <li>Vịnh Vĩnh Hy Tuyệt Đẹp </li>
+                      <li>Trải Nghiệm Xe Giường Nằm</li>
+                    </ul>
                     <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
+                  </div>
                 </article>
               </div><a class="show-all" href="#">Xem tất cả</a>
             </div>
@@ -341,121 +179,13 @@
                     <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
                   <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
                     <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
+                    <ul class="tour__overview">
+                      <li>Thưởng Thức BBQ Hải Sản</li>
+                      <li>Vịnh Vĩnh Hy Tuyệt Đẹp </li>
+                      <li>Trải Nghiệm Xe Giường Nằm</li>
+                    </ul>
                     <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
-                </article>
-                <article class="tour"> <a class="tour-image" href="#"> <img class="tour__image" src="./assets/images/NhaTrang.jpg" alt="Tour">
-                    <p class="tour-province"><i class="fa-solid fa-location-dot"></i><span class="tour__province">Nha Trang</span></p></a>
-                  <div class="tour-detail"><a class="tour__name" href="#">Tour Bình Hưng 2N2D: Ninh Chữ - Vịnh Vĩnh Hy - Ngắm San Hô - BBQ Hải Sản</a>
-                    <p class="tour-time"><i class="fa-solid fa-clock"></i><span class="tour__time">2 ngày 2 đêm </span></p>
-                    <p class="tour__overview">+ Thưởng Thức BBQ Hải Sản<br>+ Vịnh Vĩnh Hy Tuyệt Đẹp <br>+ Trải Nghiệm Xe Giường Nằm</p>
-                    <h3 class="tour__price">1.590.000 VND</h3>
-                  </div><span class="tour__hot">Tour bán chạy</span>
+                  </div>
                 </article>
               </div><a class="show-all" href="#">Xem tất cả</a>
             </div>
