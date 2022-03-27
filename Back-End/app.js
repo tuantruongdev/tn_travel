@@ -10,6 +10,7 @@ const xss = require("xss-clean");
 const tourRoute = require("./routes/tourRoute");
 const userRoute = require("./routes/userRoute");
 const locationRoute = require("./routes/locationRoute");
+const requestRoute = require("./routes/requestRoute");
 const AppError = require("./utils/appError");
 
 const globalErrHandler = require("./controller/errorController");
@@ -57,7 +58,7 @@ app.use(hpp({ whitelist: ["duration"] }));
 app.use("/api/v1/tours", tourRoute);
 app.use("/api/v1/localtions", locationRoute);
 app.use("/api/v1/users", userRoute);
-
+app.use("/api/v1/requests", requestRoute);
 // eslint-disable-next-line no-shadow
 app.all("*", (req, res, next) => {
   next(new AppError(`acan't find ${req.originalUrl} on this server`));

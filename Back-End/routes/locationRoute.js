@@ -3,9 +3,9 @@ const locationController = require("../controller/locationController");
 const authController = require("../controller/authController");
 const random = require("../utils/randomTourGenerator");
 
-const tourRoute = express.Router();
+const localtionRoute = express.Router();
 // tourRoute.post("/addrandom", random.addRandomTour);
-tourRoute
+localtionRoute
   .route("/")
   .get(locationController.getAllLocation)
   .post(
@@ -14,7 +14,7 @@ tourRoute
     locationController.addNewLocation
   );
 
-tourRoute
+localtionRoute
   .route("/:id")
   .get(locationController.getLocation)
   .patch(
@@ -28,4 +28,4 @@ tourRoute
     locationController.deleteLocation
   );
 
-module.exports = tourRoute;
+module.exports = localtionRoute;

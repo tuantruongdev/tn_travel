@@ -7,7 +7,7 @@ const tourRoute = express.Router();
 tourRoute.post("/addrandom", random.addRandomTour);
 tourRoute
   .route("/checkout/:id")
-  .patch(authController.protect, tourController.checkoutTour);
+  .post(authController.protect, tourController.checkoutTour);
 
 tourRoute
   .route("/")

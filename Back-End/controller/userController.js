@@ -1,5 +1,6 @@
 const catchAsync = require("../utils/catchAsync");
 const User = require("../models/userModel");
+const AppError = require("../utils/appError");
 
 const filterObj = (obj, ...alowedFields) => {
   const newObj = {};
@@ -35,20 +36,12 @@ exports.getUser = catchAsync(async (req, res) => {
 
 exports.updateUser = catchAsync(async (req, res) => {
   const user = await User.findById(req.params.id);
-  const newHistory = user.history;
-  newHistory.push({ test: "oke" });
-  console.log(newHistory);
-  //const updatedHistory = user.history.push({ abc: "Hi" });
-  const updatedUser = await User.findByIdAndUpdate(
-    req.params.id,
-    { history: newHistory },
-    { new: false, runValidators: true }
-  );
 
   // const update = await updatedUser.save({ validateBeforeSave: false });
   res.status(200).json({
     status: "success",
-    data: { updatedUser },
+    message: "this function on develop",
+    data: { user },
   });
 });
 exports.deleteUser = (req, res) => {
@@ -80,6 +73,27 @@ exports.showMe = catchAsync(async (req, res, next) => {
     status: "success",
     data: {
       user: myUser,
+    },
+  });
+});
+exports.adminPromote = catchAsync(async (req, res, next) => {
+  if (!req.body.email || !req.body.role) {
+    return next(new AppError("request not vaild", 401));
+  }
+  // console.log(req.body.email + req.body.role);
+
+  const updatedUser = await User.findOneAndUpdate(
+    { email: req.body.email },
+    { role: req.body.role },
+    { new: true, runValidators: true }
+  );
+  if (!updatedUser) {
+    return next(new AppError("user with that email not found!", 404));
+  }
+  res.status(200).json({
+    status: "success",
+    data: {
+      user: updatedUser,
     },
   });
 });

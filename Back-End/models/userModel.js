@@ -64,10 +64,6 @@ const userSchema = mongoose.Schema({
     default: "user",
   },
   dob: Date,
-  history: {
-    type: Array,
-    default: [],
-  },
 });
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
