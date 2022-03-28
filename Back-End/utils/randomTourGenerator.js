@@ -111,7 +111,7 @@ function randomIntFromInterval(min, max) {
 //     // locals,
 //   });
 // });
-
+/*
 exports.addRandomTour = catchAsync(async (req, res) => {
   const provincelist = [
     "623c5ff9c6ef994f1ff3f622",
@@ -181,6 +181,46 @@ exports.addRandomTour = catchAsync(async (req, res) => {
     await Tour.create(dummytour);
   }
   //  const newTour = await Tour.create(req.body);
+
+  res.status(201).json({
+    status: "success",
+  });
+});
+*/
+exports.addRandomTour = catchAsync(async (req, res) => {
+  const notelist = [
+    "Xe giường nằm",
+    "Vé máy bay hạng thương gia",
+    "Phòng V.I.P",
+    "Vé sân golf",
+    "Thời tiết đẹp",
+    "Xe đưa đón hạng sang",
+    "Thiên nhiên hùng vĩ",
+    "Thưởng thức BBQ hải sản",
+    "View biển tuyệt đẹp",
+    "Thời gian đẹp trong năm",
+    "Danh lam thắng cảnh",
+    "Khu vực lịch sử",
+  ];
+  const priceList = [
+    5000000, 6000000, 7500000, 8000000, 8500000, 9000000, 10000000, 12000000,
+    15000000, 13500000, 20000000,
+  ];
+
+  const tours = await Tour.find();
+  const toursArray = tours.map((tour) => {
+    return tour.id;
+  });
+  console.log(toursArray);
+  for (let i = 0; i < 34; i += 1) {
+    await Tour.findByIdAndUpdate(toursArray[i], {
+      overView: `${notelist[randomIntFromInterval(0, notelist.length - 1)]}|${
+        notelist[randomIntFromInterval(0, notelist.length - 1)]
+      }|${notelist[randomIntFromInterval(0, notelist.length - 1)]}`,
+      price: priceList[randomIntFromInterval(0, priceList.length - 1)],
+    });
+  }
+  const newTour = await Tour.create(req.body);
 
   res.status(201).json({
     status: "success",

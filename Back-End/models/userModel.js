@@ -17,9 +17,9 @@ mongoose
 const userSchema = mongoose.Schema({
   userName: {
     type: String,
-    required: [true, "user must have a username"],
+    required: [false, "user must have a username"],
     trim: true,
-    unique: [true, "this username has been taken"],
+    unique: [false, "this username has been taken"],
     validate: [
       validator.isAlphanumeric,
       "username only contains character and number",
