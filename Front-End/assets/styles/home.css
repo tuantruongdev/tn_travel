@@ -37,7 +37,7 @@ header ul.nav li.nav-item a.nav-link {
   font-size: 16px;
 }
 header ul.nav li.nav-item a.nav-link:hover {
-  color: #FC747B;
+  color: #fc747b;
 }
 header ul.nav li.nav-item a.nav-link > i {
   margin-left: 5px;
@@ -57,7 +57,7 @@ header ul.nav .tour-dropdown .list-group a.list-group-item {
   font-size: 15px;
 }
 header ul.nav .tour-dropdown .list-group a.list-group-item:hover {
-  color: #FC747B;
+  color: #fc747b;
   background-color: #f7f7f7;
 }
 header ul.nav .tour-dropdown:hover .list-group {
@@ -75,7 +75,7 @@ header .header-action a {
   width: 40%;
 }
 header .header-action a:hover {
-  color: #FC747B;
+  color: #fc747b;
 }
 header .header-action a:last-child {
   font-weight: 500;
@@ -87,13 +87,13 @@ header .header-action a:last-child {
   display: block;
   font-size: 16px;
   line-height: 35px;
-  background-color: #FC747B;
+  background-color: #fc747b;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  border: solid 1px #FC747B;
+  border: solid 1px #fc747b;
 }
 header .header-action a:last-child:hover {
   background-color: white;
-  color: #FC747B;
+  color: #fc747b;
 }
 header .account-wrapper {
   display: none;
@@ -103,7 +103,7 @@ header .account-wrapper a.account-link {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: #1F3347;
+  color: #1f3347;
 }
 header .account-wrapper a.account-link i:first-child {
   font-size: 30px;
@@ -114,7 +114,7 @@ header .account-wrapper a.account-link span.username {
   padding-right: 10px;
 }
 header .account-wrapper a.account-link:hover {
-  color: #FC747B;
+  color: #fc747b;
 }
 
 footer {
@@ -125,7 +125,7 @@ footer h5 {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #1F3347;
+  color: #1f3347;
   margin-bottom: 20px;
 }
 footer ul {
@@ -141,7 +141,7 @@ footer ul li a i {
   color: #fc747b;
 }
 footer ul li a:hover {
-  color: #FC747B;
+  color: #fc747b;
 }
 footer .footer-socials {
   text-align: center;
@@ -172,7 +172,7 @@ body section.banner {
 }
 body section.banner h1 {
   font-size: 60px;
-  color: #1F3347;
+  color: #1f3347;
   font-weight: 900;
   font-family: "Baloo 2", cursive;
   letter-spacing: 2px;
@@ -205,7 +205,7 @@ body section.banner .banner__search-bar select#places {
   outline: none;
   border-radius: 0;
   border: solid 1px #cccccc;
-  color: #1F3347;
+  color: #1f3347;
   padding: 10px;
   line-height: 30px;
 }
@@ -223,7 +223,7 @@ body section.banner .banner__search-bar button {
   padding: 0;
   text-transform: uppercase;
   display: block;
-  background-color: #FC747B;
+  background-color: #fc747b;
   width: 25%;
   height: 52px;
   margin-bottom: 15px;
@@ -232,8 +232,8 @@ body section.banner .banner__search-bar button {
 }
 body section.banner .banner__search-bar button:hover {
   background-color: white;
-  color: #FC747B;
-  border: solid 1px #FC747B;
+  color: #fc747b;
+  border: solid 1px #fc747b;
 }
 body section.banner .banner__img img {
   width: 100%;
@@ -245,13 +245,14 @@ body h2.section-heading {
   font-family: "Baloo 2", cursive;
   margin-bottom: 15px;
   font-weight: 900;
-  color: #1F3347;
+  color: #1f3347;
 }
 body .list-product {
   margin-inline: -15px;
   margin-bottom: 25px;
 }
 body .list-product article.tour {
+  width: fit-content;
   padding-inline: 15px;
   position: relative;
   margin-bottom: 50px;
@@ -264,16 +265,22 @@ body .list-product article.tour a.tour-image {
   border: solid 1px #cccccc;
   border-bottom: unset;
 }
-body .list-product article.tour a.tour-image img.tour__image {
-  width: 100%;
-  height: 100%;
+body .list-product article.tour a.tour-image {
+  max-width: 100%;
   object-fit: cover;
 }
+body img.tour__image {
+  width: 100%;
+  height: 218px;
+  object-fit: cover;
+}
+
 body .list-product article.tour a.tour-image p.tour-province {
   display: inline-block;
   position: absolute;
   bottom: 0;
   left: 0;
+
   color: white;
   padding-inline: 10px;
   text-align: center;
@@ -283,7 +290,7 @@ body .list-product article.tour a.tour-image p.tour-province {
   margin-bottom: 0;
 }
 body .list-product article.tour a.tour-image p.tour-province i {
-  color: #FC747B;
+  color: #fc747b;
   margin-right: 5px;
   font-size: 14px;
 }
@@ -298,7 +305,7 @@ body .list-product article.tour .tour-detail {
 body .list-product article.tour .tour-detail a.tour__name {
   font-size: 18px;
   text-decoration: none;
-  color: #1F3347;
+  color: #1f3347;
   font-weight: 500;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -308,11 +315,11 @@ body .list-product article.tour .tour-detail a.tour__name {
   margin-bottom: 5px;
 }
 body .list-product article.tour .tour-detail a.tour__name:hover {
-  color: #FC747B;
+  color: #fc747b;
 }
 body .list-product article.tour .tour-detail p.tour-time {
   margin-bottom: 5px;
-  color: #1F3347;
+  color: #1f3347;
 }
 body .list-product article.tour .tour-detail p.tour-time i {
   margin-right: 5px;
@@ -327,12 +334,12 @@ body .list-product article.tour .tour-detail ul.tour__overview {
   margin-bottom: 10px;
 }
 body .list-product article.tour .tour-detail ul.tour__overview li {
-  color: #1194F4;
+  color: #1194f4;
   font-weight: 500;
   font-size: 12px;
 }
 body .list-product article.tour .tour-detail h3.tour__price {
-  color: #FC747B;
+  color: #fc747b;
   font-size: 18px;
   font-weight: 600;
   display: inline-block;
@@ -355,10 +362,10 @@ body .list-product button.slick-prev {
   right: 50px;
   background-color: transparent;
   font-size: 40px;
-  color: #1F3347;
+  color: #1f3347;
 }
 body .list-product button.slick-prev:hover {
-  color: #FC747B;
+  color: #fc747b;
 }
 body .list-product button.slick-next {
   position: absolute;
@@ -366,28 +373,28 @@ body .list-product button.slick-next {
   right: 12px;
   background-color: transparent;
   font-size: 40px;
-  color: #1F3347;
+  color: #1f3347;
 }
 body .list-product button.slick-next:hover {
-  color: #FC747B;
+  color: #fc747b;
 }
 body a.show-all {
   display: block;
   width: 15%;
   text-align: center;
   margin-inline: auto;
-  background-color: #FC747B;
+  background-color: #fc747b;
   color: white;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 40px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  border: solid 1px #FC747B;
+  border: solid 1px #fc747b;
 }
 body a.show-all:hover {
   background-color: white;
-  color: #FC747B;
+  color: #fc747b;
 }
 body section.hot-tours,
 body section.tours-first,

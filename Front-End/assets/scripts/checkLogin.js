@@ -18,8 +18,11 @@ const red = async () => {
   console.log(loggedin);
   if (loggedin.status === "success") {
     // dang nhap thanh cong
+    //   console.log("loggedin");
+
     return true;
   } else {
+    // console.log("not logged in");
     //chua dang nhap
     return false;
   }
