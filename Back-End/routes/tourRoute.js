@@ -18,6 +18,10 @@ tourRoute
     authController.restricTo("admin", "support"),
     tourController.addNewTour
   );
+
+tourRoute.route("/find").get(tourController.find);
+tourRoute.route("/find/:id").get(tourController.findbyTourId);
+
 tourRoute
   .route("/:id")
   .get(tourController.getTour)

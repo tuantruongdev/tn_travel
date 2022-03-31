@@ -159,3 +159,71 @@ exports.checkoutTour = catchAsync(async (req, res, next) => {
     //updatedUser,
   });
 });
+exports.find = catchAsync(async (req, res) => {
+  //create indexes first!!
+  //db.locations.createIndex({ "name": "text", "description": "text" });
+  const searchString = req.query.text;
+  let query = ``;
+  if (req.query.startAt) {
+    const querydate = new Date(req.query.startAt);
+    querydate.setHours(0, 0, 0, 0);
+    query = {
+      $text: { $search: searchString },
+      startDate: {
+        $gte: new Date(querydate.getTime() - 86400000),
+        $lt: new Date(querydate.getTime() + 86400000),
+      },
+    };
+  } else {
+    query = {
+      $text: { $search: searchString },
+    };
+  }
+
+  // console.log(searchString);
+  const tours = await Tour.find(query);
+  // eslint-disable-next-line no-restricted-syntax
+  for await (const tour of tours) {
+    const mylocation = await Location.findById(tour.locationId);
+    tour.location = mylocation;
+  }
+
+  res.status(200).json({
+    status: "success",
+    data: { tours },
+    //updatedUser,
+  });
+});
+exports.findbyTourId = catchAsync(async (req, res) => {
+  let query = ``;
+  if (req.query.startAt) {
+    const querydate = new Date(req.query.startAt);
+    querydate.setHours(0, 0, 0, 0);
+    query = {
+      locationId: req.params.id,
+      startDate: {
+        $gte: new Date(querydate.getTime() - 86400000),
+        $lt: new Date(querydate.getTime() + 86400000),
+      },
+    };
+  } else {
+    query = {
+      locationId: req.params.id,
+    };
+  }
+
+  const tours = await Tour.find(query);
+  //  console.log(new Date(querydate.getTime() - 86400000));
+  // eslint-disable-next-line no-restricted-syntax
+  for await (const tour of tours) {
+    const mylocation = await Location.findById(tour.locationId);
+    tour.location = mylocation;
+  }
+
+  // console.log(tours);
+  res.status(200).json({
+    status: "success",
+    results: tours.length,
+    data: { tours },
+  });
+});
