@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý tour</title>
+
+  <!-- BS4 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- FONT AWESOME  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+  <!-- FONT GOOGLE -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+
+  <!-- OWL CAROUSEL -->
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body>
+
+  <!-- MENU LEFT -->
+  <div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>Admin</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+        <p>Trang chủ</p>
+        <li class="active">
+            <a href="#">Quản lý tour</a>
+        </li>
+        <li>
+            <a href="../view-dia-danh/QLdiadanh.html">Quản lý địa danh</a>
+        </li>
+        <li>
+          <a href="../view-tai-khoan/QLtaikhoan.html">Quản lý tài khoản</a>
+        </li>
+        <li>
+          <a href="#">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <a href="#">Đăng xuất</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content" class="container">
+
+      <div class="right">
+        <div class="input-group">
+          <input type="text" id="tukhoa" onkeyup="TimKiemTour()" onchange="TimKiemTour()" class="form-control"
+            placeholder="Nhập để tìm kiếm">
+          <span class="input-group-btn">
+            <button class="btn button-search mx-2" onclick="TimKiemTour()" type="button">Tìm kiếm</button>
+          </span>
+          <button class=" btn btn-primary mx-2" onclick="ThemTour()" type="button">Thêm</button>
+          <button class=" btn btn-danger mx-2" onclick="XoaTour()" type="button">Xoá </button>
+        </div>
+        <br />
+        <div class="alert alert-success" id="ThongBao"></div>
+        <h2>Danh sách Tour</h2>
+                <p> </p>
+                <table id="TableTour" class="table" >
+                  <thead>
+                    <tr>
+                        <th></th>
+                      <th><input type="checkbox"></th>
+                      <th>Mã tour</th>
+                      <th>Tên tour</th>
+                      <th>Tiêu đề</th>
+                      <th>Mô tả</th>
+                      <th>Giá</th>
+                      <th>Số lượng</th>
+                      <th>Tình trạng</th>
+                      <th>Link hiển thị</th>
+                      <th>Ngày tạo tour</th>
+                      <th>Ngày bắt đầu</th>
+                      <th>
+                        <ul class="" id="">
+                            <li><a href="#">Xoá</a></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbodyTour">
+                    <tr>
+                      <td></td>
+                      <th><input type="checkbox"></th>
+                      <td>giatri cot 1</td>
+                      <td>giatri cot 2</td>
+                      <td>giatri cot 3</td>
+                      <td>giatri cot 1</td>
+                      <td>giatri cot 2</td>
+                      <td>giatri cot 3</td>
+                      <td>giatri cot 3</td>
+                      <td>giatri cot 1</td>
+                      <td>giatri cot 2</td>
+                      <td>giatri cot 3</td>
+                      <td>
+                        <ul class="" id="">
+                            <li><a href="#">Xoá</a></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                      </td>
+                    </tr>      
+                  </tbody>
+                </table>
+      </div>
+
+      </table>
+    </div>
+  </div>
+
+
+
+</body>
+<!-- jquery  -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<!-- popper -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<!-- BS4 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- OWL JS     -->
+<script src="./js/owl.carousel.min.js"></script>
+
+</html>

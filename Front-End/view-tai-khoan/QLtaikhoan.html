@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Quản lý tài khoản</title>
+
+         <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+
+
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Admin</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <p>Trang chủ</p>
+                    <li>
+                        <a href="../view-tour/QLtour.html">Quản lý tour</a>
+                    </li>
+                    <li>
+                        <a href="../view-dia-danh/QLdiadanh.html">Quản lý địa danh</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Quản lý tài khoản</a>
+                    </li>
+                    <li>
+                        <a href="../view-don-hang/QLdonhang.html">Quản lý đơn hàng</a>
+                    </li>
+                    <li>
+                        <a href="#">Đăng xuất</a>
+                    </li>
+                </ul>
+             </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content" class="container">
+
+                <div class="right">
+                    <div class="input-group">
+                        <input type="text" id="tukhoa" onkeyup="TimKiemTour()" onchange="TimKiemTour()" class="form-control" placeholder="Nhập để tìm kiếm">
+                        <span class="input-group-btn">
+                            <button class="btn button-search" onclick="TimKiemTour()" type="button">Tìm kiếm</button>
+                          </span>
+                    </div>
+                    <br />
+                    <div class="alert alert-success" id="ThongBao"></div>
+                </div>
+                <h2>Danh sách Tài khoản</h2>
+                <p> </p>
+                <table id="TableTour" class="table" >
+                  <thead>
+                    <tr>
+                        <th></th>
+                      <th><input type="checkbox"></th>
+                      <th>Mã tài khoản</th>
+                      <th>Tên tài khoản</th>
+                      <th>Email</th>
+                      <th>Phân quyền</th>
+                      <th>Tình trạng</th>
+                      <th>
+                          <ul class="" id="">
+                        <li><a href="#">Xoá</a></li>
+                        <li><a href="#">Sửa phân quyền</a></li>
+                    </ul></th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbodyTaiKhoan">
+                    <tr>
+                      <td></td>
+                      <th><input type="checkbox"></th>
+                      <td>giatri cot 1</td>
+                      <td>giatri cot 2</td>
+                      <td>giatri cot 3</td>
+                      <td>giatri cot 4</td>
+                      <td>giatri cot 5</td>
+                      <td>
+                        <ul class="" id="">
+                            <li class="text-primary"><a href="#">Xoá</a></li>
+                            <li class="text-primary"><a href="#">Sửa phân quyền</a></li>
+                        </ul>
+                      </td>
+                    </tr>      
+                  </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+         
+         <script type="text/javascript" src="js/Tour.js"></script>
+         <script type="text/javascript" src="js/DanhSachTour.js"></script>
+         <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
