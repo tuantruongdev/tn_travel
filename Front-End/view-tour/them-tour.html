@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sửa tour</title>
+    <title>Thêm tour du lịch</title>
 
 
     <!-- BS4 CSS -->
@@ -40,7 +40,7 @@
             <ul class="list-unstyled components">
                 <p>Trang chủ</p>
                 <li class="active">
-                    <a href="#">Quản lý tour</a>
+                    <a href="./QLtour.html">Quản lý tour</a>
                 </li>
                 <li>
                     <a href="../view-dia-danh/QLdiadanh.html">Quản lý địa danh</a>
@@ -49,7 +49,7 @@
                     <a href="../view-tai-khoan/QLtaikhoan.html">Quản lý tài khoản</a>
                 </li>
                 <li>
-                    <a href="#">Quản lý đơn hàng</a>
+                    <a href="../view-don-hang/">Quản lý đơn hàng</a>
                 </li>
                 <li>
                     <a href="#">Đăng xuất</a>
@@ -57,7 +57,7 @@
             </ul>
         </nav>
         <div class="container m-2">
-            <a href="./QLtour.html"Quản lý tour >Quản lý tour </a><span> > Thêm tour du lịch</span>
+            <a href="./QLtour.html" >Quản lý tour </a><span> > Thêm tour du lịch</span>
             <!-- Form nhập liệu thông tin tour -->
             <h3 class="display-4 text-center">Thêm tour du lịch</h3>
             <div class="form-group">
@@ -74,10 +74,30 @@
                 <span id="error_tenTour_all_letter" class="text text-danger"></span>
             </div>
             <div class="form-group">
-                <p>Thời gian</p>
-                <input id="thoiGian" type="date" class="form-control" value="" min="" max="" />
-                <span id="error_thoiGian_required" class="text text-danger"></span>
-                <span id="error_thoiGian_all_letter" class="text text-danger"></span>
+                <p>Tiêu đề</p>
+                <input id="tieuDe" class="form-control" />
+                <span id="error_tieuDe_required" class="text text-danger"></span>
+                <span id="error_tieuDe_all_letter" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Mô tả</p> 
+                <textarea name="moTa" id="" cols="110" rows="5"></textarea>
+                <span id="error_tieuDe_required" class="text text-danger"></span>
+                <span id="error_tieuDe_all_letter" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Giá tour</p>
+                <input id="giaTour" type="number" class="form-control" />
+                <span id="error_giaTour_all_number" class="text text-danger"></span>
+                <span id="error_giaTour_required" class="text text-danger"></span>
+                <span id="error_giaTour_min_max_value" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Số lượng</p>
+                <input id="soLuong" type="number" class="form-control" />
+                <span id="error_soLuong_all_number" class="text text-danger"></span>
+                <span id="error_soLuong_required" class="text text-danger"></span>
+                <span id="error_soLuong_min_max_value" class="text text-danger"></span>
             </div>
             <div class="form-group">
                 <p>Tình trạng tour</p>
@@ -87,22 +107,26 @@
                 </select>
             </div>
             <div class="form-group">
-                <p>Địa điểm</p>
-                <select id="diaDiem" class="form-control">
-                    <option>SaPa</option>
-                    <option>Quy Nhơn</option>
-                </select>
+                <p>Link hiển thị</p>
+                <input id="linkHienThi" class="form-control" />
+                <span id="error_linkHienThi_required" class="text text-danger"></span>
+                <span id="error_linkHienThi_all_letter" class="text text-danger"></span>
             </div>
             <div class="form-group">
-                <p>Giá tour</p>
-                <input id="giaTour" type="number" class="form-control" />
-                <span id="error_giaTour_all_number" class="text text-danger"></span>
-                <span id="error_giaTour_required" class="text text-danger"></span>
-                <span id="error_giaTour_min_max_value" class="text text-danger"></span>
+                <p>Ngày tạo tour</p>
+                <input id="ngayTaoTour" type="date" class="form-control" value="" min="" max="" />
+                <span id="error_ngayTaoTour_required" class="text text-danger"></span>
+                <span id="error_ngayTaoTour_all_letter" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Ngày bắt đầu</p>
+                <input id="ngayBatDau" type="date" class="form-control" value="" min="" max="" />
+                <span id="error_ngayBatDau_required" class="text text-danger"></span>
+                <span id="error_ngayBatDau_all_letter" class="text text-danger"></span>
             </div>
             <div class="form-group ">
                 <button id="btnXacNhan" class="btn btn-success">Xác nhận</button>
-
+                <a href="./QLtour.html" class="btn btn-danger">Huỷ</a>
                 <br />
                 <br />
                 <div class="alert alert-success" id="ThongBao"></div>

@@ -66,8 +66,8 @@
           <span class="input-group-btn">
             <button class="btn button-search mx-2" onclick="TimKiemTour()" type="button">Tìm kiếm</button>
           </span>
-          <button class=" btn btn-primary mx-2" onclick="ThemTour()" type="button">Duyệt toàn bộ </button>
-          <button class=" btn btn-danger mx-2" onclick="XoaTour()" type="button">Huỷ toàn bộ </button>
+          <button class=" btn btn-primary mx-2" onclick="ThemTour()" type="button">Duyệt đơn hàng</button>
+          <button class=" btn btn-danger mx-2" onclick="XoaTour()" type="button">Huỷ đơn hàng</button>
         </div>
         <br />
         <div class="alert alert-success" id="ThongBao"></div>
@@ -99,7 +99,10 @@
                 <td>giatri cot 1</td>
                 <td>giatri cot 2</td>
                 <td>
-                  <a href="#">xem chi tiết đơn hàng</a>
+                  <ul>
+                    <li><a href="#">Huỷ</a></li>
+                    <li><a href="#">Duyệt</a></li>
+                  </ul>                  
                 </td>
               </tr> 
           </tbody>
