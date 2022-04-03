@@ -3,6 +3,12 @@ const userController = require("../controller/userController");
 const authController = require("../controller/authController");
 
 const userRoute = express.Router();
+userRoute
+  .route("/changePassword")
+  .patch(authController.protect, authController.updatePassword);
+userRoute.route("/forgotPassword").post(authController.forgotPassword);
+userRoute.route("/resetPassword/:token").patch(authController.resetPassword);
+
 userRoute.route("/signup").post(authController.signup);
 userRoute.route("/login").post(authController.login);
 userRoute

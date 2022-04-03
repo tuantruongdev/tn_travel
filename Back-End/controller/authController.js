@@ -1,8 +1,10 @@
 const jwt = require("jsonwebtoken");
+const crypto = require("crypto");
 const util = require("util");
 const User = require("../models/userModel");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
+const sendEmail = require("../utils/email");
 
 const signToken = (id) => {
   return jwt.sign({ id: id }, process.env.JWT_SECRET, {
@@ -109,3 +111,88 @@ exports.restricTo = (...roles) => {
     next();
   };
 };
+
+exports.forgotPassword = catchAsync(async (req, res, next) => {
+  //get email
+  //  console.log(req.body.email);
+  const user = await User.findOne({ email: req.body.email });
+  // console.log(user);
+  if (!user) {
+    return next(new AppError("no user with that email", 404));
+  }
+  //generate random token
+  const resetToken = user.createPasswordResetToken();
+
+  // console.log(resetToken);
+  await user.save({ validateBeforeSave: false });
+
+  //send email
+
+  //specify for both development and product
+  const resetUrl = `${req.protocol}://${req.get(
+    "host"
+  )}/api/v1/users/resetPassword/${resetToken}`;
+  const newResetURl = `http://127.0.0.1:5555/Front-End/forgot_password.html?code=${resetToken}`;
+  const message = `forgot password? click this link: ${newResetURl}\n , and enter your password, if you not requesting this, please ignore this email!`;
+  try {
+    await sendEmail({
+      email: user.email,
+      subject: "TnTravel: password reset",
+      message,
+    });
+    res.status(200).json({
+      status: "success",
+      message: "token sent to email",
+    });
+  } catch (err) {
+    user.passwordResetToken = undefined;
+    user.passwordResetExpries = undefined;
+    await user.save({ validateBeforeSave: false });
+    return new AppError("there was an error while sending the email.", 500);
+  }
+});
+exports.resetPassword = catchAsync(async (req, res, next) => {
+  //1 get user with that token
+  const hasedToken = crypto
+    .createHash("sha256")
+    .update(req.params.token)
+    .digest("hex");
+  const user = await User.findOne({
+    passwordResetToken: hasedToken,
+    passwordResetExpries: { $gt: Date.now() },
+  });
+
+  //2 if token not expried. set the new password
+  if (!user) {
+    return next(new AppError("token expried", 400));
+  }
+  user.password = req.body.password;
+  user.confirmPassword = req.body.password;
+  user.photo = " ";
+  user.passwordResetToken = undefined;
+  user.passwordResetExpries = undefined;
+
+  await user.save();
+
+  createSendToken(user, 201, res);
+
+  //4 log the user in. send jwt
+});
+exports.updatePassword = catchAsync(async (req, res, next) => {
+  console.log(req.user.id);
+  const user = await User.findOne({
+    id: req.user.id,
+  }).select("+password");
+  if (!user) {
+    return next(new AppError("no user with that id", 403));
+  }
+
+  if (!(await user.checkPassword(req.body.password, user.password))) {
+    return next(new AppError("password is incorrect", 403));
+  }
+  user.password = req.body.newpassword;
+  user.confirmPassword = req.body.newpassword;
+  user.photo = " ";
+  await user.save();
+  createSendToken(user, 201, res);
+});
