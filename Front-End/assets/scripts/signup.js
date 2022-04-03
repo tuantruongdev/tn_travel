@@ -26,7 +26,7 @@ const signup = async (name, userName, password, email, phoneNum, dob) => {
     })
     .catch((error) => console.log("error222", error));
 };
-const handleLogin = async () => {
+const handleSignUp = async () => {
   document
     .getElementById("signup-form")
     .addEventListener("submit", async (event) => {
@@ -68,5 +68,5 @@ const handleLogin = async () => {
     });
 };
 (() => {
-  handleLogin();
+  handleSignUp();
 })();
