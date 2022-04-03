@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm tour du lịch</title>
+
+
+    <!-- BS4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- FONT AWESOME  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!-- FONT GOOGLE -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body>
+
+    <!-- MENU LEFT -->
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Trang chủ</p>
+                <li class="active">
+                    <a href="./QLtour.html">Quản lý tour</a>
+                </li>
+                <li>
+                    <a href="../view-dia-danh/QLdiadanh.html">Quản lý địa danh</a>
+                </li>
+                <li>
+                    <a href="../view-tai-khoan/QLtaikhoan.html">Quản lý tài khoản</a>
+                </li>
+                <li>
+                    <a href="../view-don-hang/">Quản lý đơn hàng</a>
+                </li>
+                <li>
+                    <a href="#">Đăng xuất</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container m-2">
+            <a href="./QLtour.html" >Quản lý tour </a><span> > Thêm tour du lịch</span>
+            <!-- Form nhập liệu thông tin tour -->
+            <h3 class="display-4 text-center">Thêm tour du lịch</h3>
+            <div class="form-group">
+                <p>Mã tour</p>
+                <input id="maTour" class="form-control" />
+                <span id="error_maTour_required" class="text text-danger"></span>
+                <span id="error_maTour_min_max_length" class="text text-danger"></span>
+                <span id="error_maTour_all_number" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Tên tour</p>
+                <input id="tenTour" class="form-control" />
+                <span id="error_tenTour_required" class="text text-danger"></span>
+                <span id="error_tenTour_all_letter" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Tiêu đề</p>
+                <input id="tieuDe" class="form-control" />
+                <span id="error_tieuDe_required" class="text text-danger"></span>
+                <span id="error_tieuDe_all_letter" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Mô tả</p> 
+                <textarea name="moTa" id="" cols="110" rows="5"></textarea>
+                <span id="error_tieuDe_required" class="text text-danger"></span>
+                <span id="error_tieuDe_all_letter" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Giá tour</p>
+                <input id="giaTour" type="number" class="form-control" />
+                <span id="error_giaTour_all_number" class="text text-danger"></span>
+                <span id="error_giaTour_required" class="text text-danger"></span>
+                <span id="error_giaTour_min_max_value" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Số lượng</p>
+                <input id="soLuong" type="number" class="form-control" />
+                <span id="error_soLuong_all_number" class="text text-danger"></span>
+                <span id="error_soLuong_required" class="text text-danger"></span>
+                <span id="error_soLuong_min_max_value" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Tình trạng tour</p>
+                <select id="tinhTrangTour" class="form-control">
+                    <option>Sẵn sàng</option>
+                    <option>Chưa sẵn sàng</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Link hiển thị</p>
+                <input id="linkHienThi" class="form-control" />
+                <span id="error_linkHienThi_required" class="text text-danger"></span>
+                <span id="error_linkHienThi_all_letter" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Ngày tạo tour</p>
+                <input id="ngayTaoTour" type="date" class="form-control" value="" min="" max="" />
+                <span id="error_ngayTaoTour_required" class="text text-danger"></span>
+                <span id="error_ngayTaoTour_all_letter" class="text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <p>Ngày bắt đầu</p>
+                <input id="ngayBatDau" type="date" class="form-control" value="" min="" max="" />
+                <span id="error_ngayBatDau_required" class="text text-danger"></span>
+                <span id="error_ngayBatDau_all_letter" class="text text-danger"></span>
+            </div>
+            <div class="form-group ">
+                <button id="btnXacNhan" class="btn btn-success">Xác nhận</button>
+                <a href="./QLtour.html" class="btn btn-danger">Huỷ</a>
+                <br />
+                <br />
+                <div class="alert alert-success" id="ThongBao"></div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+<!-- jquery  -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+
+<!-- popper -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+<!-- BS4 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+<!-- OWL JS     -->
+<script src="./js/owl.carousel.min.js"></script>
+
+</html>
