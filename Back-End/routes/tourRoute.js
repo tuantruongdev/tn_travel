@@ -19,6 +19,15 @@ tourRoute
     tourController.addNewTour
   );
 
+tourRoute
+  .route("/raw")
+  // .get(authController.protect, tourController.getAllTour)
+  .get(
+    authController.protect,
+    authController.restricTo("admin", "support"),
+    tourController.getAllRawTour
+  );
+
 tourRoute.route("/find").get(tourController.find);
 tourRoute.route("/find/:id").get(tourController.findbyTourId);
 

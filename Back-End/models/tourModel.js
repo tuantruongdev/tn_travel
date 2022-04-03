@@ -38,7 +38,8 @@ const tourSchema = mongoose.Schema({
     required: [true, "tour must have location id"],
   },
   location: { type: Object, default: undefined },
-
+  waiting: { type: Number, default: undefined },
+  accepted: { type: Number, default: undefined },
   duration: {
     type: Number,
     required: [true, "tour must have a durations"],

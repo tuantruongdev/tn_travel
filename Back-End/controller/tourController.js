@@ -82,6 +82,47 @@ exports.getAllTour = catchAsync(async (req, res) => {
     data: { tours: tours },
   });
 });
+const countby = (id, stt, list) => {
+  let count = 0;
+  list.forEach((req) => {
+    if (req.tourId === id && req.status === stt) {
+      count += 1;
+    }
+  });
+  return count;
+};
+exports.getAllRawTour = catchAsync(async (req, res) => {
+  const features = new APIFeatures(Tour.find().select("+createdAt"), req.query)
+    .filter()
+    .fields()
+    .sortBy()
+    .paging();
+
+  const tours = await features.query;
+  // await tours.forEach(async (tour) => {
+  //   const location = await location.findById(tour.locationId);
+
+  //   tour.location = location;
+  // });
+  const reqlist = await Request.find();
+  // eslint-disable-next-line no-restricted-syntax
+  for await (const tour of tours) {
+    // console.log(tour.id);
+    // const waiting = await Request.count({ tourId: tour.id, status: 1 });
+    // const accepted = await Request.count({ tourId: tour.id, status: 4 });
+    // console.log(countby(tour.id, 4, reqlist));
+    tour.waiting = countby(tour.id, 1, reqlist);
+    tour.accepted = countby(tour.id, 4, reqlist);
+  }
+  // eslint-disable-next-line no-restricted-syntax
+
+  //console.log(tours[0].name);
+  res.status(200).json({
+    status: "success",
+    results: tours.length,
+    data: { tours: tours },
+  });
+});
 exports.addNewTour = catchAsync(async (req, res) => {
   const newTour = await Tour.create(req.body);
 

@@ -19,8 +19,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
 
   <!-- OWL CAROUSEL -->
-  <link rel="stylesheet" href="./css/owl.carousel.min.css">
-  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
 
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="../css/main.css">
@@ -60,45 +59,70 @@
       <h2>Sửa thông tin tour</h2>
       <form>
         <div class="form-group">
-          <label for="MaTour">Mã Tour:</label>
-          <input type="text" class="form-control" id="MaTour"   name="MaTour">
+          <label for="tourId">Mã Tour:</label>
+          <input disabled type="text" class="form-control" id="tourId"  >
         </div>
         <div class="form-group">
-          <label for="TenTour">Họ tên:</label>
-          <input type="text" class="form-control" id="hoten" placeholder="Nhập Họ tên" name="hoten">
+          <label for="tourName">Tên tour:</label>
+          <input type="text" class="form-control" id="tourName" placeholder="Tên tour" >
         </div>
-        <div class="form-group">
-          <label for="cmnd">CMND:</label>
-          <input type="text" class="form-control" id="cmnd" placeholder="Nhập CMND" name="cmnd">
+        <div class="form-group" style="display: flex; flex-direction: column;">
+       
+          <label for="overView">OverView</label>
+          <input type="text" class="form-control" id="overView" placeholder="OverView" >
+       
         </div>
+
         <div class="form-group">
-          <label for="sdt">Điện thoại:</label>
-          <input type="text" class="form-control" id="sdt" placeholder="Nhập SDT" name="sdt">
+          <label for="des">Mô tả:</label>
+          <textarea  class="form-control" id="des" placeholder="Mô tả"  rows="4" cols="50" ></textarea>
+     
         </div> 
   
         <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Nhập Email" name="email">
+          <label for="price">Giá</label>
+          <input type="number" step="500000" class="form-control" id="price" placeholder="Giá tour" >
         </div>
         <div class="form-group">
-          <label for="Toan">Toán:</label>
-          <input type="number" class="form-control" id="Toan" placeholder="Nhập Toán" name="Toan">
+          <label for="duration">Thời gian (ngày):</label>
+          <input type="number" class="form-control" id="duration" placeholder="Thời gian tour" >
         </div>
         <div class="form-group">
-          <label for="Ly">Lý:</label>
-          <input type="number" class="form-control" id="Ly" placeholder="Nhập Lý" name="Ly">
+          <label for="location">Địa điểm:</label>
+          <select class="form-control" name="location" id="location">
+            <option value="select">Chọn</option>
+            
+          </select>
         </div>
         <div class="form-group">
-          <label for="Hoa">Hoa:</label>
-          <input type="number" class="form-control" id="Hoa" placeholder="Nhập Hóa" name="Hoa">
+          <label for="recommend">Recommend (số càng cao vị trí ở trang chủ càng cao):</label>
+          <input type="number" class="form-control" id="recommend" placeholder="Recommend" >
         </div>
-        <button type="button" class="btn btn-success py-10px" onclick="ThemSinhVien()"> Sửa tour</button>
-        <button type="button" class="btn btn-primary" onclick="LuuThongTin()"> Lưu</button>
+        <div class="form-group">
+          <label for="status">Trạng thái:</label>
+          <input type="text" class="form-control" id="status" placeholder="Trạng thái tour" >
+        </div>
+        <div class="form-group">
+          <label for="startAt">Khởi hành:</label>
+          <input type="date" class="form-control" id="startAt" placeholder="dd/mm/yy" >
+        </div>
+        <div class="alert alert-danger" id="alert" hidden role="alert">
+          
+        </div>
+        <div class="alert alert-success" id="success" hidden role="alert">
+          
+        </div>
+        <button type="button" id="submit" class="btn btn-primary py-10px"> Sửa tour</button>
+        <button type="button" onclick="window.location.href='http://127.0.0.1:5555/Front-End/view-tour/QLtour.html'" class="btn btn-danger"> Huỷ</button>
       </form>
     </div>
 
 
 </body>
+<!-- js  -->
+ <script src="../assets/scripts/apiCall.js"></script>
+    <script src="../assets/scripts/editTour.js"></script>
+   
 <!-- jquery  -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
   integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -112,6 +136,6 @@
   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <!-- OWL JS     -->
-<script src="./js/owl.carousel.min.js"></script>
+
 
 </html>

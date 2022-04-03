@@ -56,7 +56,7 @@ app.use("*", (req, res, next) => {
 });
 app.use(hpp({ whitelist: ["duration"] }));
 app.use("/api/v1/tours", tourRoute);
-app.use("/api/v1/localtions", locationRoute);
+app.use("/api/v1/locations", locationRoute);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/requests", requestRoute);
 // eslint-disable-next-line no-shadow
