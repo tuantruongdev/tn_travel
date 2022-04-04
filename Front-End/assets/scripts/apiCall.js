@@ -13,7 +13,7 @@ const ftechAPI = async (url, method, raw = {}) => {
     redirect: "follow",
     credentials: "include",
   };
-  if (method !== "GET") {
+  if (method !== "GET" && method !== "DELETE") {
     requestOptions.body = raw;
   }
 

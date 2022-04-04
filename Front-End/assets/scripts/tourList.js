@@ -10,10 +10,42 @@ const getTours = async () => {
   }
   return fetchRawTour;
 };
+const showModalDeleteTour = async (id) => {
+  // alert(id);
+  // const fetchdelete = await ftechAPI(
+  //   "http://127.0.0.1:3000/api/v1/tours/" + id,
+  //   "DELETE",
+  //   JSON.stringify({})
+  // );
+  // if (fetchRawTour.status !== "success") {
+  //   console.log("get tour failed");
+  //   return;
+  // }
+  //$(".toast").toast("show");
+  // $(".toast-body").html("xoá thành công tour ..." + id.substr(-8));
+  $(".modal-body").html("Bạn có chắc chắn muốn xoá tour với id: \n" + id);
+  $("#confirmBtn").attr("onClick", `deleteTour( "${id}" )`);
+};
+const deleteTour = async (id) => {
+  // alert(id);
+  const fetchdelete = await ftechAPI(
+    "http://127.0.0.1:3000/api/v1/tours/" + id,
+    "DELETE",
+    JSON.stringify({})
+  );
+  if (fetchdelete.status !== "success") {
+    $(".toast").toast("show");
+    $(".toast-body").html("xoá tour thất bại ..." + id.substr(-8));
+    return;
+  }
+  $(`#${id}`).attr("hidden", "");
+  $(".toast").toast("show");
+  $(".toast-body").html("xoá thành công tour ..." + id.substr(-8));
+};
 const showTours = async () => {
   const tours = await getTours();
   console.log(tours);
-  const tourTemplate = ` <tr>
+  const tourTemplate = ` <tr id="{@uuid@}">
   <td></td>
   <th><input type="checkbox"></th>
  
@@ -29,14 +61,16 @@ const showTours = async () => {
 
   <td>
     <ul class="" id="">
-      <li><a href="{@delete@}">Xoá</a></li>
-      <li><a href="{@edit@}">Sửa </a></li>
+      <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteTour('{@uid@}')" >Xoá</div></li>
+      <li><a  href="{@edit@}">Sửa </a></li>
     </ul>
   </td>
 </tr>`;
   let listTourHtml = ``;
   tours.data.tours.forEach((tour) => {
     let tempTour = tourTemplate.replace("{@id@}", "..." + tour._id.substr(-8));
+    tempTour = tempTour.replace("{@uid@}", tour._id);
+    tempTour = tempTour.replace("{@uuid@}", tour._id);
     tempTour = tempTour.replace("{@name@}", tour.name);
     tempTour = tempTour.replace("{@price@}", tour.price);
     tempTour = tempTour.replace("{@waiting@}", tour.waiting);
@@ -62,4 +96,6 @@ const showTours = async () => {
 };
 (() => {
   showTours();
+  // $(".toast").attr("class", "cac");
+  //toast.show();
 })();

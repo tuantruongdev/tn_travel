@@ -109,8 +109,12 @@ const editTour = async () => {
   }
   document.getElementById("alert").setAttribute("hidden", "");
   document.getElementById("success").removeAttribute("hidden");
-  document.getElementById("success").innerHTML = "Sửa tour thành công!";
-  console.log(_updateTour);
+  document.getElementById("success").innerHTML =
+    "Sửa tour thành công! Về danh sách tour sau 3 giây...";
+  await new Promise((r) => setTimeout(r, 3000));
+  window.location.href =
+    "http://127.0.0.1:5555/Front-End/view-tour/QLtour.html";
+  //console.log(_updateTour);
 };
 (() => {
   tourFetch();
