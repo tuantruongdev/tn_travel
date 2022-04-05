@@ -11,18 +11,6 @@ const getTours = async () => {
   return fetchRawTour;
 };
 const showModalDeleteTour = async (id) => {
-  // alert(id);
-  // const fetchdelete = await ftechAPI(
-  //   "http://127.0.0.1:3000/api/v1/tours/" + id,
-  //   "DELETE",
-  //   JSON.stringify({})
-  // );
-  // if (fetchRawTour.status !== "success") {
-  //   console.log("get tour failed");
-  //   return;
-  // }
-  //$(".toast").toast("show");
-  // $(".toast-body").html("xoá thành công tour ..." + id.substr(-8));
   $(".modal-body").html("Bạn có chắc chắn muốn xoá tour với id: \n" + id);
   $("#confirmBtn").attr("onClick", `deleteTour( "${id}" )`);
 };

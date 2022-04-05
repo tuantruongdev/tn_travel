@@ -1,130 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sửa địa danh</title>
 
-
     <!-- BS4 CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
     <!-- FONT AWESOME  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
 
     <!-- FONT GOOGLE -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- OWL CAROUSEL -->
-    <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
 
-</head>
-
-<body>
-    
+  <body>
     <!-- MENU LEFT -->
     <div class="wrapper">
-        <!-- Sidebar Holder -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Admin</h3>
-            </div>
-
-            <ul class="list-unstyled components">
-                <p>Trang chủ</p>
-                <li>
-                    <a href="../view-tour/QLtour.html">Quản lý tour</a>
-                </li>
-                <li class="active">
-                    <a href="./QLdiadanh.html">Quản lý địa danh</a>
-                </li>
-                <li>
-                    <a href="../view-tai-khoan/QLtaikhoan.html">Quản lý tài khoản</a>
-                </li>
-                <li>
-                    <a href="../view-don-hang/QLdonhang.html">Quản lý đơn hàng</a>
-                </li>
-                <li>
-                    <a href="#">Đăng xuất</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="container m-2">
-            <a href="./QLdiadanh.html">Quản lý địa danh</a><span>> Sửa địa danh</span>
-            <p> </p>
-            <!-- Form nhập liệu địa danh -->
-
-            <h3 class="display-4 text-center">Sửa địa điểm du lịch</h3>
-            <div class="form-group">
-                <p>Mã địa danh</p>
-                <input id="maTour" class="form-control" />
-                <span id="error_maTour_required" class="text text-danger"></span>
-                <span id="error_maTour_all_letter" class="text text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <p>Tên địa danh</p>
-                <input id="tenDiaDanh" class="form-control" />
-                <span id="error_tenDiaDanh_required" class="text text-danger"></span>
-                <span id="error_tenDiaDanh_all_letter" class="text text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <p>Mô tả</p>
-                <textarea id="moTa" class="form-control" rows="9" cols="70">
-
-                </textarea>
-                <span id="error_moTa_all_number" class="text text-danger"></span>
-                <span id="error_moTa_required" class="text text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <p>Tỉnh thành</p>
-                <input id="tinhThanh" class="form-control" />
-                <span id="error_tinhThanh_required" class="text text-danger"></span>
-                <span id="error_tinhThanh_all_letter" class="text text-danger"></span>
-            </div>
-
-            <div class="form-group ">
-                
-                <button id="btnSua" class="btn btn-success">Sửa địa danh</button>
-                <a href="./QLdiadanh.html" class="btn btn-danger">Huỷ</a>
-
-                <br />
-                <br />
-                <div class="alert alert-success" id="ThongBao"></div>
-                
-            </div>
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Admin</h3>
         </div>
+
+        <ul class="list-unstyled components">
+          <p>Trang chủ</p>
+          <li>
+            <a href="../view-tour/QLtour.html">Quản lý tour</a>
+          </li>
+          <li class="active">
+            <a href="./QLdiadanh.html">Quản lý địa danh</a>
+          </li>
+          <li>
+            <a href="../view-tai-khoan/QLtaikhoan.html">Quản lý tài khoản</a>
+          </li>
+          <li>
+            <a href="../view-don-hang/QLdonhang.html">Quản lý đơn hàng</a>
+          </li>
+          <li>
+            <a href="#">Đăng xuất</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container">
+        <a href="./QLdiadanh.html">Quản lý địa danh</a
+        ><span>> Sửa địa danh</span>
+        <p></p>
+        <!-- Form nhập liệu địa danh -->
+
+        <h3 class="display-4 text-center">Sửa địa điểm du lịch</h3>
+        <div class="form-group">
+          <p>Mã địa danh</p>
+          <input disabled id="maTour" class="form-control" />
+          <span id="error_maTour_required" class="text text-danger"></span>
+          <span id="error_maTour_all_letter" class="text text-danger"></span>
+        </div>
+
+        <div class="form-group">
+          <p>Tên địa danh</p>
+          <input
+            id="tenDiaDanh"
+            class="form-control"
+            placeholder="Tên địa danh"
+          />
+          <span id="error_tenDiaDanh_required" class="text text-danger"></span>
+          <span
+            id="error_tenDiaDanh_all_letter"
+            class="text text-danger"
+          ></span>
+        </div>
+
+        <div class="form-group">
+          <p>OverView</p>
+          <input id="overView" class="form-control" placeholder="OverView" />
+          <span id="error_overView_required" class="text text-danger"></span>
+          <span id="error_overView_all_letter" class="text text-danger"></span>
+        </div>
+
+        <div class="form-group">
+          <p>Mô tả</p>
+          <textarea
+            id="moTa"
+            class="form-control"
+            rows="9"
+            cols="70"
+            placeholder="Mô tả"
+          ></textarea>
+          <span id="error_moTa_all_number" class="text text-danger"></span>
+          <span id="error_moTa_required" class="text text-danger"></span>
+        </div>
+
+        <div class="form-group">
+          <p>Link ảnh bìa</p>
+          <input
+            id="imageCover"
+            class="form-control"
+            placeholder="https://images.unsplash.com/photo-1536086845112-89de23aa4772?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+          />
+          <span id="error_imageCover_required" class="text text-danger"></span>
+          <span
+            id="error_imageCover_all_letter"
+            class="text text-danger"
+          ></span>
+        </div>
+
+        <div class="form-group">
+          <p>Link ảnh địa điểm, nhiều ảnh cách nhau Một dòng</p>
+          <textarea
+            id="listImage"
+            class="form-control"
+            rows="9"
+            cols="70"
+            placeholder="https://images.unsplash.com/photo-1536086845112-89de23aa4772?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80  https://images.unsplash.com/photo-1504457047772-27faf1c00561?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1547&q=80"
+          ></textarea>
+          <span id="error_listImage_all_number" class="text text-danger"></span>
+          <span id="error_listImage_required" class="text text-danger"></span>
+        </div>
+
+        <div class="form-group">
+          <div class="alert alert-danger" id="alert" hidden role="alert"></div>
+          <div
+            class="alert alert-success"
+            id="success"
+            hidden
+            role="alert"
+          ></div>
+
+          <button id="btnSua" class="btn btn-success">Sửa địa danh</button>
+          <a href="./QLdiadanh.html" class="btn btn-danger">Huỷ</a>
+
+          <br />
+          <br />
+        </div>
+      </div>
     </div>
-
-
-
-
-</body>
-<!-- jquery  -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  </body>
+  <!-- jquery  -->
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"
+  ></script>
 
-<!-- popper -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  <!-- popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"
+  ></script>
 
-<!-- BS4 -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  <!-- BS4 -->
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"
+  ></script>
 
-<!-- OWL JS     -->
-<script src="./js/owl.carousel.min.js"></script>
-
+  <!-- OWL JS     -->
+  <!-- js  -->
+  <script src="../assets/scripts/apiCall.js"></script>
+  <script src="../assets/scripts/editLocation.js"></script>
 </html>

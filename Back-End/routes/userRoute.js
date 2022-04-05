@@ -4,6 +4,14 @@ const authController = require("../controller/authController");
 
 const userRoute = express.Router();
 userRoute
+  .route("/find")
+  .get(
+    authController.protect,
+    authController.restricTo("admin"),
+    userController.find
+  );
+
+userRoute
   .route("/changePassword")
   .patch(authController.protect, authController.updatePassword);
 userRoute.route("/forgotPassword").post(authController.forgotPassword);
@@ -27,12 +35,28 @@ userRoute
   .post(authController.protect, authController.isLoggedIn);
 userRoute
   .route("/")
-  .get(userController.getAllUser)
+  .get(
+    authController.protect,
+    authController.restricTo("admin"),
+    userController.getAllUser
+  )
   .post(userController.addNewUser);
 userRoute
   .route("/:id")
-  .get(userController.getUser)
-  .patch(userController.updateUser)
-  .delete(userController.deleteUser);
+  .get(
+    authController.protect,
+    authController.restricTo("admin"),
+    userController.getUser
+  )
+  .patch(
+    authController.protect,
+    authController.restricTo("admin"),
+    userController.updateUser
+  )
+  .delete(
+    authController.protect,
+    authController.restricTo("admin"),
+    userController.deleteUser
+  );
 
 module.exports = userRoute;

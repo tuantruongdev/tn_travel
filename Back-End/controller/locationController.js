@@ -53,7 +53,10 @@ class APIFeatures {
 }
 
 exports.getAllLocation = catchAsync(async (req, res) => {
-  const features = new APIFeatures(Location.find(), req.query)
+  const features = new APIFeatures(
+    Location.find().select("+createdAt"),
+    req.query
+  )
     .filter()
     .fields()
     .sortBy()
@@ -111,5 +114,33 @@ exports.deleteLocation = catchAsync(async (req, res) => {
     data: {
       location,
     },
+  });
+});
+exports.find = catchAsync(async (req, res) => {
+  //create indexes first!!
+  //db.locations.createIndex({ "name": "text","overView":"text", "description": "text" });
+  const searchString = req.query.text;
+  let query = ``;
+
+  query = {
+    $text: { $search: searchString },
+  };
+
+  // console.log(searchString);
+  let location = ``;
+  if (searchString === "") {
+    location = await Location.find().select("+createdAt").sort("-createdAt");
+  } else {
+    location = await Location.find(query)
+      .select("+createdAt")
+      .sort("+createdAt");
+  }
+
+  // eslint-disable-next-line no-restricted-syntax
+
+  res.status(200).json({
+    status: "success",
+    data: { location },
+    //updatedUser,
   });
 });

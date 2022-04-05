@@ -224,7 +224,12 @@ exports.findRawTour = catchAsync(async (req, res) => {
   //console.log(searchString);
   // console.log(searchString);
 
-  tours = await Tour.find(query).select("+createdAt");
+  tours = ``;
+  if (searchString === "") {
+    tours = await Tour.find().select("+createdAt").sort("-createdAt");
+  } else {
+    tours = await Tour.find(query).select("+createdAt").sort("-createdAt");
+  }
 
   // eslint-disable-next-line no-restricted-syntax
   const reqlist = await Request.find();

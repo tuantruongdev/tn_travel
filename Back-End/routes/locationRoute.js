@@ -14,6 +14,7 @@ localtionRoute
     locationController.addNewLocation
   );
 
+localtionRoute.route("/find").get(locationController.find);
 localtionRoute
   .route("/:id")
   .get(locationController.getLocation)

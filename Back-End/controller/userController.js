@@ -97,3 +97,29 @@ exports.adminPromote = catchAsync(async (req, res, next) => {
     },
   });
 });
+exports.find = catchAsync(async (req, res) => {
+  //create indexes first!!
+  //db.locations.createIndex({ "name": "text","overView":"text", "description": "text" });
+  const searchString = req.query.text;
+  let query = ``;
+
+  query = {
+    $text: { $search: searchString },
+  };
+
+  // console.log(searchString);
+  let users = ``;
+  if (searchString === "") {
+    users = await User.find();
+  } else {
+    users = await User.find(query);
+  }
+
+  // eslint-disable-next-line no-restricted-syntax
+
+  res.status(200).json({
+    status: "success",
+    data: { users },
+    //updatedUser,
+  });
+});
