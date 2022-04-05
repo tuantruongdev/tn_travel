@@ -21,11 +21,17 @@ tourRoute
 
 tourRoute
   .route("/raw")
-  // .get(authController.protect, tourController.getAllTour)
   .get(
     authController.protect,
     authController.restricTo("admin", "support"),
     tourController.getAllRawTour
+  );
+tourRoute
+  .route("/raw/find")
+  .get(
+    authController.protect,
+    authController.restricTo("admin", "support"),
+    tourController.findRawTour
   );
 
 tourRoute.route("/find").get(tourController.find);

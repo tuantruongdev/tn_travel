@@ -42,8 +42,7 @@ const deleteTour = async (id) => {
   $(".toast").toast("show");
   $(".toast-body").html("xoá thành công tour ..." + id.substr(-8));
 };
-const showTours = async () => {
-  const tours = await getTours();
+const showTours = async (tours) => {
   console.log(tours);
   const tourTemplate = ` <tr id="{@uuid@}">
   <td></td>
@@ -94,8 +93,26 @@ const showTours = async () => {
   });
   document.getElementById("tbodyTour").innerHTML = listTourHtml;
 };
+const findTour = async () => {
+  const data = await ftechAPI(
+    `http://127.0.0.1:3000/api/v1/tours/raw/find?text=${
+      document.getElementById("tukhoa").value
+    }`,
+    "GET",
+    JSON.stringify({})
+  );
+  if (data.status !== "success") {
+    console.log("có lỗi sảy ra! " + data.message);
+    return;
+  }
+  showTours(data);
+  //  console.log(data.data.tours);
+};
+const getAllTour = async () => {
+  const tours = await getTours();
+  showTours(tours);
+};
+
 (() => {
-  showTours();
-  // $(".toast").attr("class", "cac");
-  //toast.show();
+  getAllTour();
 })();

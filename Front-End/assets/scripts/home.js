@@ -147,7 +147,7 @@ const getTour = async () => {
 
 const getLocations = async () => {
   const data = await ftechAPI(
-    "http://127.0.0.1:3000/api/v1/localtions?fields=name"
+    "http://127.0.0.1:3000/api/v1/locations?fields=name"
   );
 
   if (data.status !== "success") {

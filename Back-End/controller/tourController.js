@@ -200,6 +200,46 @@ exports.checkoutTour = catchAsync(async (req, res, next) => {
     //updatedUser,
   });
 });
+exports.findRawTour = catchAsync(async (req, res) => {
+  //create indexes first!!
+  //db.locations.createIndex({ "name": "text", "description": "text" });
+  const searchString = req.query.text;
+  let query = ``;
+  if (req.query.startAt) {
+    const querydate = new Date(req.query.startAt);
+    querydate.setHours(0, 0, 0, 0);
+    query = {
+      $text: { $search: searchString },
+      startDate: {
+        $gte: new Date(querydate.getTime() - 86400000),
+        $lt: new Date(querydate.getTime() + 86400000),
+      },
+    };
+  } else {
+    query = {
+      $text: { $search: searchString },
+    };
+  }
+  let tours = ``;
+  //console.log(searchString);
+  // console.log(searchString);
+
+  tours = await Tour.find(query).select("+createdAt");
+
+  // eslint-disable-next-line no-restricted-syntax
+  const reqlist = await Request.find();
+  // eslint-disable-next-line no-restricted-syntax
+  for await (const tour of tours) {
+    tour.waiting = countby(tour.id, 1, reqlist);
+    tour.accepted = countby(tour.id, 4, reqlist);
+  }
+
+  res.status(200).json({
+    status: "success",
+    data: { tours },
+    //updatedUser,
+  });
+});
 exports.find = catchAsync(async (req, res) => {
   //create indexes first!!
   //db.locations.createIndex({ "name": "text", "description": "text" });
