@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour</title>
+    <link rel="shortcut icon" href="./assets/images/banner.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <script src="https://kit.fontawesome.com/3fc531ce88.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/styles/tour.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-5 d-flex justify-content-start align-items-center">
+                    <a class="header-logo" href="#">
+                        <img src="./assets/images/logo.png" alt="Logo" /></a>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item tour-dropdown">
+                            <a class="nav-link" href="#">Tours<i class="fa-solid fa-angle-down"></i></a>
+                            <div id="xxnxx" class="list-group">
+                                <a class="list-group-item" href="#">Hà Nội</a><a class="list-group-item" href="#">Phú
+                                    Quốc</a><a class="list-group-item" href="#">Hạ Long </a><a class="list-group-item"
+                                    href="#">Đà Nẵng</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Giới thiệu</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="header-action" class="col-3 header-action">
+                    <a href="./login.html">Đăng nhập </a>
+                    <a href="./signup.html">Đăng ký</a>
+                </div>
+
+                <div id="header-action-logged-in" class="col-2 account-wrapper">
+                    <a class="account-link" href="#"><i class="fa-solid fa-circle-user"></i><span id="username"
+                            class="username">Xuân Trường</span><i class="fa-solid fa-caret-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="Breadcrumb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+                                <li class="breadcrumb-item"><a href="#">Địa điểm</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Tên tour</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="row">
+                <aside class="col-4">
+                    <form action="#">
+                        <h3>Đặt ngay chỉ 2 phút, Hoặc gọi <a href="tel:+84375083463">037.508.3463</a></h3>
+                        <div class="mb-3 form-control">
+                            <span>Chọn ngày khởi hành</span>
+                            <input type="date" name="trip-start" id="trip-start" value="2022-08-04">
+                        </div>
+                        <div class="mb-3 form-control">
+                            <span>Số người</span>
+                            <div class="stepper-input">
+                                <button class="decrement" type="button"
+                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()"> -
+                                </button>
+                                <input type="number" name="quantity" id="quantity" min="1" max="20" value="1">
+                                <button class="increment" type="button"
+                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()"> + </button>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-control total-layout">
+                            <span>Tổng Tiền:</span>
+                            <span class="total">6.300.000 <small>VND</small></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đặt tour</button>
+                    </form>
+                    <div id="list-data" class="list-group">
+                        <a class="list-group-item list-group-item-action" href="#tour-overview">Tổng Quan <i
+                                class="fa-solid fa-angle-right"></i></a>
+                        <a class="list-group-item list-group-item-action" href="#tour-description">Chương trình Tour <i
+                                class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </aside>
+                <article class="col-8">
+                    <div class="tour-img">
+                        <img src="https://cdn2.ivivu.com/2020/05/29/14/ivivu-bai-bien-dn-750x390.gif" alt="img">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span id="tour-">Đà Nẵng</span>
+                                </div>
+                                <div class="col-3">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span id="tour-time">3 Ngày 2 Đêm</span>
+                                </div>
+                                <div class="col-3 ms-auto" style="text-align: end;">
+                                    Mã Tour: <span id="tour-id">T01274</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollspy-example tour-inner" data-bs-spy="scroll" data-bs-target="#list-data"
+                        data-bs-offset="0" tabindex="0">
+                        <div id="tour-overview">
+                            <h3>Cung Đường Di Sản Miền Trung</h3>
+                            <p>
+                                Miền Trung, dải đất thân thương nối liền hai miền Nam - Bắc của Việt Nam. “Cung đường di
+                                sản
+                                miền Trung” sẽ kết nối du khách với các di sản văn hóa của nhân loại được UNESCO công
+                                nhận
+                                bao gồm: Huế với hai di sản là Quần thể di tích Cố đô Huế và Nhã Nhạc cung đình; Quảng
+                                Nam
+                                với hai di sản là Thánh địa Mỹ Sơn và đô thị cổ Hội An. Trên mỗi bước đi, du khách còn
+                                có
+                                thể khám phá cho mình nhiều điểm đến hấp dẫn: Bà Nà Hill, Làng Chài Lăng Cô, và nhiều
+                                bãi
+                                tắm tuyệt đẹp: Cửa Đại, Non Nước, Lăng Cô, Nhật Lệ, cùng với những nét ẩm thực độc đáo
+                                của
+                                Miền Trung. Cùng iVIVU khám phá cung đường tuyệt vời này ngay hôm nay!
+                            </p>
+                            <h3>Những trải nghiệm thú vị trong chương trình</h3>
+                            <p>Đà Nẵng hút khách bởi: <br>
+                                - Hội An với Chùa Cầu Nhật Bản, Nhà Cổ hàng trăm năm tuổi, Hội Quán Phước Kiến & Xưởng
+                                thủ
+                                công mỹ nghệ.<br>
+                                - Lưu lại những bức ảnh để đời ở cầu Bàn Tay Vàng trên Bà Nà Hills.<br>
+                                - Cù Lao Chàm khu dự trữ sinh quyển thế giới, gồm cụm đảo ngoài khơi biển Đông cách Hội
+                                An
+                                12 hải lý.</p>
+                        </div>
+                        <div id="tour-description">
+                            <h3>Chương trình tour</h3>
+                            <h4>NGÀY 1: ĐÓN KHÁCH - SƠN TRÀ - MỸ KHÊ - SUNWHEEL ( ĂN TRƯA, CHIỀU)</h4>
+                            <p>
+                                <b>Sáng:</b> Đón quý khách tại Đà Nẵng ( Sân bay, Ga, điểm hẹn trung tâm) từ 07h00 đến
+                                13h00
+                                (sau
+                                thời gian này, quý khách tự túc nhập đoàn) đưa đi ăn trưa với đặc sản nổi tiếng Đà Nẵng
+                                “Bánh tráng thịt heo 2 đầu da & Mỳ Quảng”. Nhận phòng Khách sạn 3* nghỉ ngơi. <br>
+                                <b>Chiều:</b> Khởi hành đi Bán Đảo Sơn Trà mục kích phố biển Đà Nẵng trên cao, viếng
+                                Linh
+                                Ứng Tự -
+                                nơi có tượng Phật Bà 67m cao nhất Việt Nam và tắm biển Mỹ Khê Đà Nẵng.
+                                <img src="https://cdn2.ivivu.com/2016/09/13/15/ivivu-tour-da-nang-1n-ban-dao-son-tra-chua-linh-ung.jpg"
+                                    alt="" class="d-block w-100">
+                            <p class="text-center">Bán đảo sơn trà</p>
+                            Tối: Ăn tối nhà hàng. Thưởng ngoạn du thuyền trên sông Hàn ngắm cảnh Đà Thành về đêm, chụp
+                            ảnh
+                            Cầu Quay Sông Hàn, cầu Rồng phun lửa và nước vào cuối tuần. <br>
+                            Tự do trải nghiệm Công viên Châu Á - Asia Park Đà Nẵng là sự kết hợp những nét độc đáo, mới
+                            lạ
+                            của các mô hình giải trí trên thế giới với những nét văn hóa đặc sắc đậm chất Á Đông.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col-3">
+                    <div class="footer-contacts">
+                        <h5>Về chúng tôi</h5>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <i class="fa-solid fa-location-dot"></i><span>CÔNG TY TNHH DU LỊCH THÁI
+                                        NGUYÊN</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-solid fa-phone"></i><span>037.508.3463</span></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-solid fa-envelope"></i><span>lexuantruong.contacts@gmail.com
+                                    </span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-licenses">
+                        <h5>điều khoản sử dụng</h5>
+                        <ul>
+                            <li><a href="">Chính sách bảo mật</a></li>
+                            <li><a href="">Chính sách bồi thường</a></li>
+                            <li><a href="">Chính sách quản trị</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-2 ms-auto">
+                    <div class="footer-certifications">
+                        <h5>Chứng nhận</h5>
+                        <div class="certification">
+                            <img src="./assets/images/certification2.png" alt="certification" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="footer-socials">
+                        <h5>Kết nối với chúng tôi</h5>
+                        <div class="socials d-flex justify-content-around align-items-center">
+                            <a class="social-link" href="#"><i class="fa-brands fa-facebook-square link-fb"></i></a><a
+                                class="social-link" href="#">
+                                <i class="fa-brands fa-instagram link-instagram"></i></a><a class="social-link"
+                                href="#">
+                                <i class="fa-brands fa-twitter link-twitter"></i></a><a class="social-link" href="#">
+                                <i class="fa-brands fa-youtube link-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/scripts/detailTour.js"></script>
+</body>
+
+</html>

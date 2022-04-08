@@ -1,14 +1,15 @@
-section.Breadcrumb{
-    nav{
-        ol.breadcrumb{
-            li.breadcrumb-item{
+section.Breadcrumb {
+    nav {
+        ol.breadcrumb {
+            li.breadcrumb-item {
                 font-size: 16px;
                 font-weight: 500;
 
-                a{
+                a {
                     font-size: 16px;
                     font-weight: 500;
-                    &:hover{
+
+                    &:hover {
                         color: $primary-color;
                     }
                 }

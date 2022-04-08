@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-bottom: solid 1px #cccccc;
+  z-index: 100;
+}
+header a.header-logo {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  overflow: hidden;
+}
+header a.header-logo img {
+  width: 100%;
+  height: 100%;
+  max-height: 100px;
+  object-fit: cover;
+}
+header ul.nav li.nav-item a.nav-link {
+  color: #1F3347;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+}
+header ul.nav li.nav-item a.nav-link:hover {
+  color: #FC747B;
+}
+header ul.nav li.nav-item a.nav-link > i {
+  margin-left: 5px;
+}
+header ul.nav .tour-dropdown {
+  position: relative;
+}
+header ul.nav .tour-dropdown .list-group {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 150%;
+  display: none;
+}
+header ul.nav .tour-dropdown .list-group a.list-group-item {
+  font-weight: 400;
+  font-size: 15px;
+}
+header ul.nav .tour-dropdown .list-group a.list-group-item:hover {
+  color: #FC747B;
+  background-color: #f7f7f7;
+}
+header ul.nav .tour-dropdown:hover .list-group {
+  display: block;
+}
+header .header-action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .header-action a {
+  color: #1F3347;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 40%;
+}
+header .header-action a:hover {
+  color: #FC747B;
+}
+header .header-action a:last-child {
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  padding: 0;
+  text-transform: uppercase;
+  display: block;
+  font-size: 16px;
+  line-height: 35px;
+  background-color: #FC747B;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border: solid 1px #FC747B;
+}
+header .header-action a:last-child:hover {
+  background-color: white;
+  color: #FC747B;
+}
+header .account-wrapper {
+  display: none;
+}
+header .account-wrapper a.account-link {
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #1F3347;
+}
+header .account-wrapper a.account-link i:first-child {
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+header .account-wrapper a.account-link span.username {
+  padding-left: 5px;
+  padding-right: 10px;
+}
+header .account-wrapper a.account-link:hover {
+  color: #FC747B;
+}
+
+section.Breadcrumb nav ol.breadcrumb li.breadcrumb-item {
+  font-size: 16px;
+  font-weight: 500;
+}
+section.Breadcrumb nav ol.breadcrumb li.breadcrumb-item a {
+  font-size: 16px;
+  font-weight: 500;
+}
+section.Breadcrumb nav ol.breadcrumb li.breadcrumb-item a:hover {
+  color: #FC747B;
+}
+
+footer {
+  border-top: solid 1px #cccccc;
+  padding-top: 40px;
+}
+footer h5 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #1F3347;
+  margin-bottom: 20px;
+}
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+footer ul li a {
+  font-size: 14px;
+  font-weight: 500;
+}
+footer ul li a i {
+  margin-right: 5px;
+  color: #FC747B;
+}
+footer ul li a:hover {
+  color: #FC747B;
+}
+footer .footer-socials {
+  text-align: center;
+}
+footer .footer-socials .socials {
+  font-size: 35px;
+  width: 80%;
+  margin-inline: auto;
+}
+footer .footer-socials .socials .link-fb {
+  color: #1194F4;
+}
+footer .footer-socials .socials .link-instagram {
+  color: #FC747B;
+}
+footer .footer-socials .socials .link-twitter {
+  color: #1194F4;
+}
+footer .footer-socials .socials .link-youtube {
+  color: #FE2B2B;
+}
+
+body header {
+  position: unset;
+  margin-bottom: 15px;
+}
+body main aside form {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+body main aside form h3 {
+  font-size: 19px;
+  margin-bottom: 1rem;
+}
+body main aside form h3 a:hover {
+  color: #FC747B;
+}
+body main aside form .form-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main aside form .form-control input[type=date] {
+  max-width: 115px;
+}
+body main aside form .form-control input[type=number] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  text-align: center;
+}
+body main aside form .form-control input[type=number]::-webkit-inner-spin-button, body main aside form .form-control input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+body main aside form .form-control button.decrement,
+body main aside form .form-control button.increment {
+  background-color: transparent;
+  font-weight: 600;
+}
+body main aside form .form-control button.decrement:hover,
+body main aside form .form-control button.increment:hover {
+  color: #FC747B;
+}
+body main aside form .total-layout {
+  border: none;
+  padding-inline: 0;
+}
+body main aside form .total-layout span.total {
+  font-weight: 700;
+  color: #FC747B;
+  font-size: 18px;
+}
+body main aside form button[type=submit] {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: #FC747B;
+  border: none;
+  transition: background-color 0.3s linear;
+}
+body main aside form button[type=submit]:hover {
+  background-color: black;
+  border-color: unset;
+}
+body main aside .list-group a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+body main aside .active {
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+  color: unset !important;
+  background-color: unset !important;
+}
+body main article {
+  margin-bottom: 20px;
+}
+body main article .tour-img {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin-bottom: 1rem;
+}
+body main article .tour-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main article .tour-img .container {
+  padding-block: 20px;
+  background-color: aliceblue;
+}
+body main article .tour-img .container .row > * {
+  font-size: 18px;
+}
+body main article .tour-img .container #tour-id {
+  color: #FC747B;
+  font-weight: 500;
+}
+body main article .tour-inner {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.5rem;
+}
+body main article .tour-inner h3 {
+  color: #1F3347;
+  font-family: "Baloo 2", cursive;
+  font-weight: 800;
+}
+body main article .tour-inner h4 {
+  color: #444444;
+  padding-left: 5px;
+}
+body main article .tour-inner p {
+  padding-inline: 10px;
+}
+
+/*# sourceMappingURL=tour.css.map */

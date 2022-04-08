@@ -1,0 +1,7 @@
+const handleForm = () => {
+    
+};
+
+$(() => {
+  handleForm();
+});

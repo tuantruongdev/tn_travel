@@ -1,0 +1,155 @@
+@import './components/varriables';
+@import './components/mixins';
+@import './components/base';
+@import './components/header';
+@import './components/breadcrumb';
+@import './components/footer';
+
+body {
+    header {
+        position: unset;
+        margin-bottom: 15px;
+    }
+
+    main {
+        aside {
+
+            form {
+                border: 1px solid rgba(0, 0, 0, .125);
+                padding: 1rem;
+                margin-bottom: 1rem;
+
+                h3 {
+                    font-size: 19px;
+                    margin-bottom: 1rem;
+
+                    a {
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+
+                .form-control {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    input[type="date"] {
+                        max-width: 115px;
+                    }
+
+                    input[type="number"] {
+                        -webkit-appearance: textfield;
+                        -moz-appearance: textfield;
+                        appearance: textfield;
+                        text-align: center;
+
+                        &::-webkit-inner-spin-button,
+                        &::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                        }
+                    }
+
+                    button.decrement,
+                    button.increment {
+                        background-color: transparent;
+                        font-weight: 600;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+
+                .total-layout {
+                    border: none;
+                    padding-inline: 0;
+
+                    span.total {
+                        font-weight: 700;
+                        color: $primary-color;
+                        font-size: 18px;
+                    }
+                }
+
+                button[type="submit"] {
+                    width: 100%;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    background-color: $primary-color;
+                    border: none;
+                    transition: background-color 0.3s linear;
+
+                    &:hover {
+                        background-color: black;
+                        border-color: unset;
+                    }
+                }
+            }
+
+            .list-group a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: 500;
+            }
+
+            .active {
+                border: 1px solid rgba(0, 0, 0, .125) !important;
+                color: unset !important;
+                background-color: unset !important;
+            }
+        }
+
+        article {
+            margin-bottom: 20px;
+
+            .tour-img {
+                border: 1px solid rgba(0, 0, 0, .125);
+                margin-bottom: 1rem;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .container {
+                    padding-block: 20px;
+                    background-color: aliceblue;
+
+                    .row>* {
+                        font-size: 18px;
+                    }
+
+                    #tour-id {
+                        color: $primary-color;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .tour-inner {
+                border: 1px solid rgba(0, 0, 0, .125);
+                padding: 0.5rem;
+
+                h3 {
+                    color: $text-color;
+                    font-family: "Baloo 2", cursive;
+                    font-weight: 800;
+                }
+
+                h4 {
+                    color: rgb(68, 68, 68);
+                    padding-left: 5px;
+                }
+
+                p {
+                    padding-inline: 10px;
+                }
+            }
+        }
+
+    }
+}
