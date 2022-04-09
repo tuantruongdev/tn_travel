@@ -1,0 +1,91 @@
+@import './components/varriables';
+@import './components/mixins';
+@import './components/base';
+@import './components/header';
+@import './components/breadcrumb';
+@import './components/footer';
+
+header {
+    .header-action {
+        display: none;
+    }
+
+    .account-wrapper {
+        display: block;
+    }
+}
+
+main {
+    padding-top: 135px;
+
+    form {
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            font-family: "Baloo 2", cursive;
+            font-weight: 700;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: 500;
+            color: $desc-color;
+        }
+
+        .form-control,
+        select#gender {
+            @include input-styles;
+            font-size: 18px;
+            color: $text-color;
+            border-radius: 0;
+            line-height: 30px;
+        }
+
+        button[type="submit"] {
+            background-color: $primary-color;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            line-height: 30px;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: white;
+
+            &:hover {
+                background-color: white;
+                color: $primary-color;
+                border: solid 1px $primary-color;
+            }
+        }
+
+        .fullname-wrapper {
+            width: 65%;
+        }
+
+        .gender-wrapper {
+            width: 33%;
+        }
+
+        .dateofbirth-wrapper,
+        .phone-wrapper {
+            width: 49%;
+        }
+
+        .password-wrapper {
+            position: relative;
+
+            .password-toogle {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 1rem;
+                padding: 0;
+                background-color: transparent;
+                display: none;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
