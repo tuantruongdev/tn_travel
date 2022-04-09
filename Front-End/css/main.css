@@ -34,6 +34,9 @@ td > ul > li {
   color: #1194f4;
 }
 
+td,th{
+  text-align: center;
+}
 .navbar {
   padding: 15px 10px;
   background: #efefef;
