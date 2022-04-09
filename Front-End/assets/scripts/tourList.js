@@ -52,6 +52,11 @@ const showTours = async (tours) => {
       <li><a  href="{@edit@}">Sửa </a></li>
     </ul>
   </td>
+  <td>
+  
+  <a style="color: #1194f4;"  href="{@approval@}">Duyệt </a>
+  
+  </td>
 </tr>`;
   let listTourHtml = ``;
   tours.data.tours.forEach((tour) => {
@@ -62,6 +67,11 @@ const showTours = async (tours) => {
     tempTour = tempTour.replace("{@price@}", tour.price);
     tempTour = tempTour.replace("{@waiting@}", tour.waiting);
     tempTour = tempTour.replace("{@allowed@}", tour.accepted);
+    tempTour = tempTour.replace(
+      "{@approval@}",
+      "http://127.0.0.1:5555/Front-End/view-don-hang/QLdonhang.html?id=" +
+        tour._id
+    );
     tempTour = tempTour.replace("{@status@}", tour.status);
     tempTour = tempTour.replace(
       "{@edit@}",
@@ -99,6 +109,9 @@ const findTour = async () => {
 const getAllTour = async () => {
   const tours = await getTours();
   showTours(tours);
+  $(document).ready(function () {
+    $(".table").DataTable();
+  });
 };
 
 (() => {

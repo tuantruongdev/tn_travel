@@ -45,7 +45,7 @@ const addTour = async () => {
   const _id = document.getElementById("tourId").value;
   const name = document.getElementById("tourName").value;
   const overView = document.getElementById("overView").value;
-  const description = document.getElementById("des").value;
+  const description = tinymce.get("des").getContent();
   const price = document.getElementById("price").value;
   const duration = document.getElementById("duration").value;
   const recommend = document.getElementById("recommend").value;
@@ -83,4 +83,14 @@ const addTour = async () => {
 (() => {
   setlocation();
   document.getElementById("submit").onclick = addTour;
+  document.getElementById("des").value = `<h2>Chương trình tour</h2>
+  <h4>NGÀY 1: ĐÓN KHÁCH - SƠN TRÀ - MỸ KHÊ - SUNWHEEL ( ĂN TRƯA, CHIỀU)</h4>
+  <p style="font-size: medium; font-weight: 400;"><strong>Sáng:</strong>&nbsp;Đón quý khách tại....<br><strong>Chiều:</strong>&nbsp;Khởi hành ...</p>
+  <p style="font-size: medium; font-weight: 400;">&nbsp;[image]</p>
+  <h4>NGÀY 2: ĐÓN KHÁCH - SƠN TRÀ - MỸ KHÊ - SUNWHEEL ( ĂN TRƯA, CHIỀU)</h4>
+  <p style="font-size: medium; font-weight: 400;"><strong>Sáng:</strong>&nbsp;Đón quý khách tại....<br><strong>Chiều:</strong>&nbsp;Khởi hành ...</p>
+  <p style="font-size: medium; font-weight: 400;">&nbsp;[image]</p>`;
+  tinymce.init({
+    selector: "#des",
+  });
 })();

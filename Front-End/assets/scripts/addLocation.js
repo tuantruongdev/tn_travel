@@ -80,4 +80,15 @@ const addLocation = async () => {
 };
 (() => {
   document.getElementById("btnXacNhan").onclick = addLocation;
+  document.getElementById("moTa").value = `<h3> <Tên địa danh> </h3>
+  <p>
+     <Một đoạn văn siêu dài về địa danh>
+  </p>
+  <h3>Những trải nghiệm thú vị trong chương trình</h3>
+  <p>
+  <Những trải nghiệm hết sức thú vị trong tour>
+  </p>`;
+  tinymce.init({
+    selector: "#moTa",
+  });
 })();

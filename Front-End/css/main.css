@@ -63,7 +63,7 @@ td > ul > li {
   background: #7386d5;
   color: #fff;
   transition: all 0.3s;
-  position: fixed;
+  position: absolute;
   height: 100%;
   padding-left: 10px;
 }
@@ -162,4 +162,8 @@ a[aria-expanded="true"] {
 .delete:hover {
   cursor: pointer;
 }
+table.dataTable tbody tr {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 /*# sourceMappingURL=main.css.map */

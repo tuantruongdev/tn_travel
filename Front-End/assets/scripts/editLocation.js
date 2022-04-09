@@ -24,7 +24,11 @@ const locationFetch = async () => {
   document.getElementById("maTour").value = tour.data.location._id;
   document.getElementById("tenDiaDanh").value = tour.data.location.name;
   document.getElementById("overView").value = tour.data.location.overView;
+
   document.getElementById("moTa").value = tour.data.location.description;
+  tinymce.init({
+    selector: "#moTa",
+  });
   document.getElementById("imageCover").value = tour.data.location.imageCover;
   let listImage = ``;
   tour.data.location.images.forEach((img) => {
@@ -54,7 +58,7 @@ const editLocation = async () => {
   const _id = document.getElementById("maTour").value;
   const name = document.getElementById("tenDiaDanh").value;
   const overView = document.getElementById("overView").value;
-  const description = document.getElementById("moTa").value;
+  const description = tinymce.get("moTa").getContent();
 
   const imageCover = document.getElementById("imageCover").value;
   if (!validURL(imageCover)) {
@@ -83,13 +87,16 @@ const editLocation = async () => {
 
   //console.log(listImage);
 
-  const _updateLocation = await updateLocation({
-    name,
-    overView,
-    description,
-    imageCover,
-    images: listImage,
-  });
+  const _updateLocation = await updateLocation(
+    {
+      name,
+      overView,
+      description,
+      imageCover,
+      images: listImage,
+    },
+    _id
+  );
   if (_updateLocation.status !== "success") {
     document.getElementById("success").setAttribute("hidden", "");
     document.getElementById("alert").removeAttribute("hidden");
@@ -106,10 +113,10 @@ const editLocation = async () => {
     "http://127.0.0.1:5555/Front-End/view-dia-danh/QLdiadanh.html";
   //console.log(_updateTour);
 };
-const updateLocation = async (obj) => {
+const updateLocation = async (obj, id) => {
   const updateLocation = await ftechAPI(
-    "http://127.0.0.1:3000/api/v1/locations",
-    "POST",
+    "http://127.0.0.1:3000/api/v1/locations/" + id,
+    "PATCH",
     JSON.stringify(obj)
   );
 

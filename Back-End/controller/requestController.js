@@ -1,5 +1,6 @@
 const catchAsync = require("../utils/catchAsync");
 const User = require("../models/userModel");
+const Tour = require("../models/tourModel");
 const Request = require("../models/requestModel");
 const AppError = require("../utils/appError");
 
@@ -18,10 +19,20 @@ exports.getAllRequestByTourId = catchAsync(async (req, res, next) => {
   const requests = await Request.find({ tourId: req.params.id }).sort(
     "-requestAt"
   );
+  const tourInfo = await Tour.findById(req.params.id).select("name");
+  // eslint-disable-next-line no-restricted-syntax
+  for await (const request of requests) {
+    request.userInfo = await User.findById(request.userId)
+      .select("name")
+      .select("email")
+      .select("phoneNum");
+    request.tourInfo = tourInfo;
+  }
   res.status(200).json({
     status: "success",
     results: requests.length,
     data: { requests },
+    tourInfo,
   });
 });
 
@@ -62,7 +73,7 @@ exports.updateRequestById = catchAsync(async (req, res, next) => {
     { new: true, runValidators: true }
   );
   if (!updatedRequest) {
-    return next(AppError("request id not valid!", 404));
+    return next(new AppError("request id not valid!", 404));
   }
   res.status(200).json({
     status: "success",

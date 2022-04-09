@@ -45,6 +45,9 @@ const tourFetch = async () => {
   document.getElementById("tourId").value = tour.data.tours._id;
   document.getElementById("tourName").value = tour.data.tours.name;
   document.getElementById("overView").value = tour.data.tours.overView;
+  tinymce.init({
+    selector: "#des",
+  });
   document.getElementById("des").value = tour.data.tours.description;
   document.getElementById("price").value = tour.data.tours.price;
   document.getElementById("duration").value = tour.data.tours.duration;
@@ -82,7 +85,7 @@ const editTour = async () => {
   const _id = document.getElementById("tourId").value;
   const name = document.getElementById("tourName").value;
   const overView = document.getElementById("overView").value;
-  const description = document.getElementById("des").value;
+  const description = tinymce.get("des").getContent();
   const price = document.getElementById("price").value;
   const duration = document.getElementById("duration").value;
   const recommend = document.getElementById("recommend").value;

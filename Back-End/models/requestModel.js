@@ -38,6 +38,8 @@ const requestSchema = mongoose.Schema({
     enum: [1, 2, 3, 4],
     default: 1,
   },
+  userInfo: Object,
+  tourInfo: Object,
 });
 const Request = mongoose.model("Request", requestSchema);
 module.exports = Request;

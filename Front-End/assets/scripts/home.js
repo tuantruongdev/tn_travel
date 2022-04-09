@@ -59,7 +59,7 @@ const showTour = (data) => {
   //{@imagecover@} {@location@}   {@tourname@} {@duration@} {@ov1@} {@price@}
   const tour_template = `
   <article class="tour">
-  <a class="tour-image" href="#">
+  <a class="tour-image" href="{@tourUrl@}">
     <img class="tour__image" src="{@imagecover@}" alt="Tour" />
     <p class="tour-province">
       <i class="fa-solid fa-location-dot"></i
@@ -67,7 +67,7 @@ const showTour = (data) => {
     </p></a
   >
   <div class="tour-detail">
-    <a class="tour__name" href="#"
+    <a class="tour__name" href="{@tourUrl@}"
       >{@tourname@}</a
     >
     <p class="tour-time">
@@ -92,6 +92,14 @@ const showTour = (data) => {
     );
     tempTour = tempTour.replace("{@location@}", tour.location.name);
     tempTour = tempTour.replace("{@tourname@}", tour.name);
+    tempTour = tempTour.replace(
+      "{@tourUrl@}",
+      `http://127.0.0.1:5555/Front-End/tour.html?id=${tour._id}`
+    );
+    tempTour = tempTour.replace(
+      "{@tourUrl@}",
+      `http://127.0.0.1:5555/Front-End/tour.html?id=${tour._id}`
+    );
     tempTour = tempTour.replace("{@duration@}", tour.duration + " ngày");
     const ovsplit = tour.overView.split("|");
     tempTour = tempTour.replace("{@ov1@}", ovsplit[0]);
@@ -212,9 +220,12 @@ const bind = () => {
 
   handleSlider();
   handleSearch();
-  handleLogout();
+  // handleLogout();
   checklogin();
   getTour();
   getLocations();
   bind();
+  document.getElementsByClassName("username")[0].onclick = () => {
+    window.location.href = "http://127.0.0.1:5555/Front-End/account-page.html";
+  };
 })();

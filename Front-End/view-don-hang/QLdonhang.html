@@ -18,10 +18,10 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
 
   <!-- OWL CAROUSEL -->
-  <link rel="stylesheet" href="./css/owl.carousel.min.css">
-  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+ 
 
   <!-- MAIN CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="../css/main.css">
 
 </head>
@@ -80,24 +80,26 @@
               <th><input type="checkbox"></th>
               <th>Mã đơn</th>
               <th>Tên tour</th>
-              <th>Mã khách</th>
+              <th>Tên khách</th>
+              <th>Email</th>
+              <th>SĐT</th>
               <th>Ngày đặt tour</th>
               <th>Tình trạng</th>
-              <th>Ngày tạo tour</th>
-              <th>
-              </th>
+              <th>HĐ</th>
+             
             </tr>
           </thead>
           <tbody id="tbodyDonHang">
             <tr>
                 <td></td>
                 <th><input type="checkbox"></th>
-                <td>giatri cot 1</td>
-                <td>giatri cot 2</td>
-                <td>giatri cot 3</td>
-                <td>giatri cot 3</td>
-                <td>giatri cot 1</td>
-                <td>giatri cot 2</td>
+                <td>reqId</td>
+                <td>tourName</td>
+                <td>userName</td>
+                <td>userEmail</td>
+                <td>userPhone</td>
+                <td>tour time</td>
+                <td>status</td>
                 <td>
                   <ul>
                     <li><a href="#">Huỷ</a></li>
@@ -105,17 +107,34 @@
                   </ul>                  
                 </td>
               </tr> 
+              
           </tbody>
         </table>
       </div>
 
       </table>
     </div>
+    <div class="toast-container">
+      <div class="toast" data-delay="5000" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="../assets/images/logo.png" style="height: 35px;" class="rounded mr-2" alt="...">
+          <strong class="mr-auto">Xoá địa danh</strong>
+          <small class="text-muted">Vừa xong</small>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="toast-body">
+          Hello, world! This is a toast message.
+        </div>
+      </div>
+    </div>
   </div>
 
 
 
 </body>
+
 <!-- jquery  -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
   integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -129,6 +148,9 @@
   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <!-- OWL JS     -->
-<script src="./js/owl.carousel.min.js"></script>
 
+<!-- page JS     -->
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="../assets/scripts/apiCall.js"></script>
+<script src="../assets/scripts/requestList.js"></script>
 </html>

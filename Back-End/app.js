@@ -42,7 +42,8 @@ app.use(express.json());
 //data protect form nosql query
 app.use(mongoSanitize());
 //data protect against xss
-app.use(xss());
+// but remove due html injection for tour description
+//app.use(xss());
 
 // eslint-disable-next-line no-shadow
 app.use("*", (req, res, next) => {
