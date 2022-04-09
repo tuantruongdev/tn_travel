@@ -229,16 +229,6 @@ main form button[type=submit]:hover {
   color: #FC747B;
   border: solid 1px #FC747B;
 }
-main form .fullname-wrapper {
-  width: 65%;
-}
-main form .gender-wrapper {
-  width: 33%;
-}
-main form .dateofbirth-wrapper,
-main form .phone-wrapper {
-  width: 49%;
-}
 main form .password-wrapper {
   position: relative;
 }

@@ -20,6 +20,7 @@ main form h1 {
   color: #FC747B;
   text-transform: uppercase;
   font-weight: 500;
+  text-align: center;
 }
 main form label {
   font-size: 18px;
@@ -73,21 +74,12 @@ main form button:hover {
   color: #FC747B;
   border: solid 1px #FC747B;
 }
-main form .fullname-wrapper {
-  width: 65%;
-}
-main form .gender-wrapper {
-  width: 33%;
-}
-main form .dateofbirth-wrapper,
-main form .phone-wrapper {
-  width: 49%;
-}
 main form p {
   margin-bottom: 0;
   font-size: 18px;
   font-weight: 500;
   color: #646464;
+  text-align: start;
 }
 main form p a.login-link {
   margin-left: 5px;
