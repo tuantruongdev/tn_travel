@@ -16,7 +16,7 @@ const getAccounts = async () => {
     JSON.stringify({})
   );
   if (fetchaccounts.status !== "success") {
-    console.log("get locations failed");
+    console.log("get account failed");
     //return;
   }
   return fetchaccounts;
