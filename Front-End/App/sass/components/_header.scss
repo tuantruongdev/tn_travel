@@ -101,14 +101,18 @@ header {
     }
 
     .account-wrapper {
+        position: relative;
         display: none;
 
-        a.account-link {
+        .account-link {
             font-size: 18px;
             display: flex;
             justify-content: flex-end;
             align-items: center;
             color: $text-color;
+            padding: 0;
+            background-color: transparent;
+            cursor: pointer;
 
             i:first-child {
                 font-size: 30px;
@@ -123,6 +127,11 @@ header {
             &:hover {
                 color: $primary-color;
             }
+        }
+
+        .account-menu {
+            right: 0;
+            top: 130%;
         }
     }
 }

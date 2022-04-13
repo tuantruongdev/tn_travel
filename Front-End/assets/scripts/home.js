@@ -214,10 +214,23 @@ const find = async () => {
 const bind = () => {
   document.getElementsByClassName("banner__search-bar")[0].onsubmit = find;
 };
+
+const hanldeAccountMenu = () => {
+  let toogle = $(".account-link");
+  let menu = $(".account-menu");
+
+  toogle.mouseenter(() => {
+    menu.slideDown(300, "swing");
+  });
+  menu.mouseleave(function (e) {
+    $(this).slideUp(300, "swing");
+  });
+};
+
 // Hàm main, chạy các hàm vào đây nhé
 (() => {
+  hanldeAccountMenu();
   // getTour();
-
   handleSlider();
   handleSearch();
   // handleLogout();

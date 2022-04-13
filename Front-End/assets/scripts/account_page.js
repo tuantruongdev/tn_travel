@@ -107,9 +107,20 @@ const showAccount = async (account) => {
   document.getElementsByName("address")[0].value = account.data.user.address;
   document.getElementsByName("email")[0].value = account.data.user.email;
 };
+const hanldeAccountMenu = () => {
+  let toogle = $(".account-link");
+  let menu = $(".account-menu");
+
+  toogle.mouseenter(() => {
+    menu.slideDown(300, "swing");
+  });
+  menu.mouseleave(function (e) {
+    $(this).slideUp(300, "swing");
+  });
+};
 $(async () => {
   handleShowPassword();
-
+  hanldeAccountMenu();
   // handleLogout();
   checklogin();
   showAccount(await getAccountsinfo());
