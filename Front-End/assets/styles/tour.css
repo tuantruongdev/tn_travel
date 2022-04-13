@@ -96,25 +96,33 @@ header .header-action a:last-child:hover {
   color: #FC747B;
 }
 header .account-wrapper {
+  position: relative;
   display: none;
 }
-header .account-wrapper a.account-link {
+header .account-wrapper .account-link {
   font-size: 18px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   color: #1F3347;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
-header .account-wrapper a.account-link i:first-child {
+header .account-wrapper .account-link i:first-child {
   font-size: 30px;
   padding-bottom: 5px;
 }
-header .account-wrapper a.account-link span.username {
+header .account-wrapper .account-link span.username {
   padding-left: 5px;
   padding-right: 10px;
 }
-header .account-wrapper a.account-link:hover {
+header .account-wrapper .account-link:hover {
   color: #FC747B;
+}
+header .account-wrapper .account-menu {
+  right: 0;
+  top: 130%;
 }
 
 section.Breadcrumb nav ol.breadcrumb li.breadcrumb-item {

@@ -17,6 +17,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
     crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/styles/list_tour.css">
 </head>
 
@@ -24,17 +26,41 @@
   <header>
     <div class="container">
       <div class="row align-items-center justify-content-between">
-        <div class="col-5 d-flex justify-content-start align-items-center"><a class="header-logo" href="#"> <img
-              src="./assets/images/logo.png" alt="Logo"></a>
+        <div class="col-5 d-flex justify-content-start align-items-center">
+          <a class="header-logo" href="#">
+            <img src="./assets/images/logo.png" alt="Logo" /></a>
           <ul class="nav nav-pills">
-            <li class="nav-item"><a class="nav-link" href="#">Tours<i class="fa-solid fa-angle-down"></i></a></li>
+            <li class="nav-item tour-dropdown">
+              <a class="nav-link" href="#">Tours<i class="fa-solid fa-angle-down"></i></a>
+              <div id="xxnxx" class="list-group">
+                <a class="list-group-item" href="#">Hà Nội</a><a class="list-group-item" href="#">Phú Quốc</a><a
+                  class="list-group-item" href="#">Hạ Long </a><a class="list-group-item" href="#">Đà Nẵng</a>
+              </div>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Giới thiệu</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Giới thiệu</a>
+            </li>
           </ul>
         </div>
-        <div class="col-3 header-action"> <a href="./login.html">Đăng nhập </a><a href="./signup.html">Đăng ký</a></div>
-        <div class="col-2 account-wrapper"><a class="account-link" href="#"><i class="fa-solid fa-circle-user"></i><span
-              class="username">Xuân Trường</span><i class="fa-solid fa-caret-down"></i></a></div>
+        <div id="header-action" class="col-3 header-action">
+          <a href="./login.html">Đăng nhập </a>
+          <a href="./signup.html">Đăng ký</a>
+        </div>
+
+        <div id="header-action-logged-in" class="col-2 account-wrapper">
+          <div class="account-link">
+            <i class="fa-solid fa-circle-user"></i>
+            <span id="username" class="username">Xuân Trường</span>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+          <ul class="dropdown-menu account-menu">
+            <li><a class="dropdown-item" href="#">Chuyển đến trang quản trị</a></li>
+            <li><a class="dropdown-item" href="#">Thay đổi thông tin tài khoản</a></li>
+            <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>

@@ -22,23 +22,46 @@ header a.header-logo {
   display: block;
   width: 100%;
   max-width: 120px;
+  overflow: hidden;
 }
 header a.header-logo img {
   width: 100%;
   height: 100%;
+  max-height: 100px;
   object-fit: cover;
 }
 header ul.nav li.nav-item a.nav-link {
   color: #1F3347;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
 }
 header ul.nav li.nav-item a.nav-link:hover {
   color: #FC747B;
 }
 header ul.nav li.nav-item a.nav-link > i {
   margin-left: 5px;
+}
+header ul.nav .tour-dropdown {
+  position: relative;
+}
+header ul.nav .tour-dropdown .list-group {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 150%;
+  display: none;
+}
+header ul.nav .tour-dropdown .list-group a.list-group-item {
+  font-weight: 400;
+  font-size: 15px;
+}
+header ul.nav .tour-dropdown .list-group a.list-group-item:hover {
+  color: #FC747B;
+  background-color: #f7f7f7;
+}
+header ul.nav .tour-dropdown:hover .list-group {
+  display: block;
 }
 header .header-action {
   display: flex;
@@ -62,8 +85,8 @@ header .header-action a:last-child {
   padding: 0;
   text-transform: uppercase;
   display: block;
-  font-size: 18px;
-  line-height: 40px;
+  font-size: 16px;
+  line-height: 35px;
   background-color: #FC747B;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   border: solid 1px #FC747B;
@@ -73,25 +96,33 @@ header .header-action a:last-child:hover {
   color: #FC747B;
 }
 header .account-wrapper {
+  position: relative;
   display: none;
 }
-header .account-wrapper a.account-link {
+header .account-wrapper .account-link {
   font-size: 18px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   color: #1F3347;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
-header .account-wrapper a.account-link i:first-child {
+header .account-wrapper .account-link i:first-child {
   font-size: 30px;
   padding-bottom: 5px;
 }
-header .account-wrapper a.account-link span.username {
+header .account-wrapper .account-link span.username {
   padding-left: 5px;
   padding-right: 10px;
 }
-header .account-wrapper a.account-link:hover {
+header .account-wrapper .account-link:hover {
   color: #FC747B;
+}
+header .account-wrapper .account-menu {
+  right: 0;
+  top: 130%;
 }
 
 section.Breadcrumb nav ol.breadcrumb li.breadcrumb-item {
@@ -284,9 +315,13 @@ body main .tours article.tour .tour-inner a.tour__name {
   font-size: 24px;
   width: 70%;
   color: #1F3347;
-  display: block;
   font-weight: 700;
   margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body main .tours article.tour .tour-inner a.tour__name:hover {
   color: #FC747B;

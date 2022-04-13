@@ -8,3 +8,4 @@ sass ./forgot_password.scss ../../assets/styles/forgot_password.css --watch
 sass ./list_tour.scss ../../assets/styles/list_tour.css --watch
 sass ./tour.scss ../../assets/styles/tour.css --watch
 sass ./account-page.scss ../../assets/styles/account-page.css --watch
+sass ./change_password.scss ../../assets/styles/change_password.css --watch

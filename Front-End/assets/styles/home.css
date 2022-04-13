@@ -31,13 +31,13 @@ header a.header-logo img {
   object-fit: cover;
 }
 header ul.nav li.nav-item a.nav-link {
-  color: #1f3347;
+  color: #1F3347;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 16px;
 }
 header ul.nav li.nav-item a.nav-link:hover {
-  color: #fc747b;
+  color: #FC747B;
 }
 header ul.nav li.nav-item a.nav-link > i {
   margin-left: 5px;
@@ -57,7 +57,7 @@ header ul.nav .tour-dropdown .list-group a.list-group-item {
   font-size: 15px;
 }
 header ul.nav .tour-dropdown .list-group a.list-group-item:hover {
-  color: #fc747b;
+  color: #FC747B;
   background-color: #f7f7f7;
 }
 header ul.nav .tour-dropdown:hover .list-group {
@@ -69,13 +69,13 @@ header .header-action {
   align-items: center;
 }
 header .header-action a {
-  color: #1f3347;
+  color: #1F3347;
   text-transform: uppercase;
   font-weight: 600;
   width: 40%;
 }
 header .header-action a:hover {
-  color: #fc747b;
+  color: #FC747B;
 }
 header .header-action a:last-child {
   font-weight: 500;
@@ -87,34 +87,42 @@ header .header-action a:last-child {
   display: block;
   font-size: 16px;
   line-height: 35px;
-  background-color: #fc747b;
+  background-color: #FC747B;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  border: solid 1px #fc747b;
+  border: solid 1px #FC747B;
 }
 header .header-action a:last-child:hover {
   background-color: white;
-  color: #fc747b;
+  color: #FC747B;
 }
 header .account-wrapper {
+  position: relative;
   display: none;
 }
-header .account-wrapper a.account-link {
+header .account-wrapper .account-link {
   font-size: 18px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: #1f3347;
+  color: #1F3347;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
-header .account-wrapper a.account-link i:first-child {
+header .account-wrapper .account-link i:first-child {
   font-size: 30px;
   padding-bottom: 5px;
 }
-header .account-wrapper a.account-link span.username {
+header .account-wrapper .account-link span.username {
   padding-left: 5px;
   padding-right: 10px;
 }
-header .account-wrapper a.account-link:hover {
-  color: #fc747b;
+header .account-wrapper .account-link:hover {
+  color: #FC747B;
+}
+header .account-wrapper .account-menu {
+  right: 0;
+  top: 130%;
 }
 
 footer {
@@ -125,7 +133,7 @@ footer h5 {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #1f3347;
+  color: #1F3347;
   margin-bottom: 20px;
 }
 footer ul {
@@ -138,10 +146,10 @@ footer ul li a {
 }
 footer ul li a i {
   margin-right: 5px;
-  color: #fc747b;
+  color: #FC747B;
 }
 footer ul li a:hover {
-  color: #fc747b;
+  color: #FC747B;
 }
 footer .footer-socials {
   text-align: center;
@@ -152,16 +160,16 @@ footer .footer-socials .socials {
   margin-inline: auto;
 }
 footer .footer-socials .socials .link-fb {
-  color: #1194f4;
+  color: #1194F4;
 }
 footer .footer-socials .socials .link-instagram {
-  color: #fc747b;
+  color: #FC747B;
 }
 footer .footer-socials .socials .link-twitter {
-  color: #1194f4;
+  color: #1194F4;
 }
 footer .footer-socials .socials .link-youtube {
-  color: #fe2b2b;
+  color: #FE2B2B;
 }
 
 body {
@@ -172,7 +180,7 @@ body section.banner {
 }
 body section.banner h1 {
   font-size: 60px;
-  color: #1f3347;
+  color: #1F3347;
   font-weight: 900;
   font-family: "Baloo 2", cursive;
   letter-spacing: 2px;
@@ -205,7 +213,7 @@ body section.banner .banner__search-bar select#places {
   outline: none;
   border-radius: 0;
   border: solid 1px #cccccc;
-  color: #1f3347;
+  color: #1F3347;
   padding: 10px;
   line-height: 30px;
 }
@@ -223,7 +231,7 @@ body section.banner .banner__search-bar button {
   padding: 0;
   text-transform: uppercase;
   display: block;
-  background-color: #fc747b;
+  background-color: #FC747B;
   width: 25%;
   height: 52px;
   margin-bottom: 15px;
@@ -232,8 +240,8 @@ body section.banner .banner__search-bar button {
 }
 body section.banner .banner__search-bar button:hover {
   background-color: white;
-  color: #fc747b;
-  border: solid 1px #fc747b;
+  color: #FC747B;
+  border: solid 1px #FC747B;
 }
 body section.banner .banner__img img {
   width: 100%;
@@ -245,14 +253,13 @@ body h2.section-heading {
   font-family: "Baloo 2", cursive;
   margin-bottom: 15px;
   font-weight: 900;
-  color: #1f3347;
+  color: #1F3347;
 }
 body .list-product {
   margin-inline: -15px;
   margin-bottom: 25px;
 }
 body .list-product article.tour {
-  width: fit-content;
   padding-inline: 15px;
   position: relative;
   margin-bottom: 50px;
@@ -265,22 +272,16 @@ body .list-product article.tour a.tour-image {
   border: solid 1px #cccccc;
   border-bottom: unset;
 }
-body .list-product article.tour a.tour-image {
-  max-width: 100%;
-  object-fit: cover;
-}
-body img.tour__image {
+body .list-product article.tour a.tour-image img.tour__image {
   width: 100%;
-  height: 218px;
+  height: 100%;
   object-fit: cover;
 }
-
 body .list-product article.tour a.tour-image p.tour-province {
   display: inline-block;
   position: absolute;
   bottom: 0;
   left: 0;
-
   color: white;
   padding-inline: 10px;
   text-align: center;
@@ -290,7 +291,7 @@ body .list-product article.tour a.tour-image p.tour-province {
   margin-bottom: 0;
 }
 body .list-product article.tour a.tour-image p.tour-province i {
-  color: #fc747b;
+  color: #FC747B;
   margin-right: 5px;
   font-size: 14px;
 }
@@ -305,7 +306,7 @@ body .list-product article.tour .tour-detail {
 body .list-product article.tour .tour-detail a.tour__name {
   font-size: 18px;
   text-decoration: none;
-  color: #1f3347;
+  color: #1F3347;
   font-weight: 500;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -315,11 +316,11 @@ body .list-product article.tour .tour-detail a.tour__name {
   margin-bottom: 5px;
 }
 body .list-product article.tour .tour-detail a.tour__name:hover {
-  color: #fc747b;
+  color: #FC747B;
 }
 body .list-product article.tour .tour-detail p.tour-time {
   margin-bottom: 5px;
-  color: #1f3347;
+  color: #1F3347;
 }
 body .list-product article.tour .tour-detail p.tour-time i {
   margin-right: 5px;
@@ -334,12 +335,12 @@ body .list-product article.tour .tour-detail ul.tour__overview {
   margin-bottom: 10px;
 }
 body .list-product article.tour .tour-detail ul.tour__overview li {
-  color: #1194f4;
+  color: #1194F4;
   font-weight: 500;
   font-size: 12px;
 }
 body .list-product article.tour .tour-detail h3.tour__price {
-  color: #fc747b;
+  color: #FC747B;
   font-size: 18px;
   font-weight: 600;
   display: inline-block;
@@ -362,10 +363,10 @@ body .list-product button.slick-prev {
   right: 50px;
   background-color: transparent;
   font-size: 40px;
-  color: #1f3347;
+  color: #1F3347;
 }
 body .list-product button.slick-prev:hover {
-  color: #fc747b;
+  color: #FC747B;
 }
 body .list-product button.slick-next {
   position: absolute;
@@ -373,28 +374,28 @@ body .list-product button.slick-next {
   right: 12px;
   background-color: transparent;
   font-size: 40px;
-  color: #1f3347;
+  color: #1F3347;
 }
 body .list-product button.slick-next:hover {
-  color: #fc747b;
+  color: #FC747B;
 }
 body a.show-all {
   display: block;
   width: 15%;
   text-align: center;
   margin-inline: auto;
-  background-color: #fc747b;
+  background-color: #FC747B;
   color: white;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 40px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  border: solid 1px #fc747b;
+  border: solid 1px #FC747B;
 }
 body a.show-all:hover {
   background-color: white;
-  color: #fc747b;
+  color: #FC747B;
 }
 body section.hot-tours,
 body section.tours-first,
