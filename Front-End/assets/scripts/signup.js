@@ -35,16 +35,16 @@ const handleSignUp = async () => {
       const phoneNum = document.getElementsByName("phone")[0].value;
       const email = document.getElementsByName("email")[0].value;
       const password = document.getElementsByName("password")[0].value;
-      const gender = document.getElementsByName("gender")[0].value;
-      const dob = document.getElementsByName("dateofbirth")[0].value;
+      // const gender = document.getElementsByName("gender")[0].value;
+      //  const dob = document.getElementsByName("dateofbirth")[0].value;
       const username = Math.random().toString(36).substr(2, 5);
       const fetchsignUp = await signup(
         fullname,
         username,
         password,
         email,
-        phoneNum,
-        dob
+        phoneNum
+        //dob
       );
       //  console.log(fetchsignUp);
 

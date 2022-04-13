@@ -165,13 +165,38 @@ const hanldeAccountMenu = () => {
     $(this).slideUp(300, "swing");
   });
 };
+
+const bindHeader = async () => {
+  const headermenu = document.getElementsByClassName("dropdown-item");
+  const userinfo = JSON.parse(localStorage.getItem("userData"));
+  // console.log(userinfo);
+  // alert(userinfo.role);
+  if (userinfo.role != "admin") {
+    headermenu[0].setAttribute("hidden", "");
+  }
+  headermenu[0].href = "http://127.0.0.1:5555/Front-End/view-tour/QLtour.html";
+  headermenu[1].href = "http://127.0.0.1:5555/Front-End/account-page.html";
+  headermenu[2].href = "http://127.0.0.1:5555/Front-End/change_password.html";
+  headermenu[3].onclick = () => {
+    document.cookie.split(";").forEach(function (c) {
+      document.cookie = c
+        .replace(/^ +/, "")
+        .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+    });
+    location.reload();
+  };
+};
 (() => {
   hanldeAccountMenu();
   getOneTour();
   // handleLogout();
   checklogin();
+
   document.getElementsByClassName("username")[0].onclick = () => {
     window.location.href = "http://127.0.0.1:5555/Front-End/account-page.html";
   };
+  document.getElementsByClassName("header-logo")[0].href =
+    "http://127.0.0.1:5555/Front-End";
+  bindHeader();
   handleCheckout();
 })();

@@ -179,7 +179,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
   //4 log the user in. send jwt
 });
 exports.updatePassword = catchAsync(async (req, res, next) => {
-  console.log(req.user.id);
+  //console.log(req.user.id);
   const user = await User.findOne({
     id: req.user.id,
   }).select("+password");
