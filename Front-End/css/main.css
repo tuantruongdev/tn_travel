@@ -68,7 +68,7 @@ td,th{
   transition: all 0.3s;
   position: absolute;
   height: 100%;
-  padding-left: 10px;
+  padding-inline: 10px;
 }
 
 #sidebar.active {
@@ -81,7 +81,7 @@ td,th{
 }
 
 #sidebar ul.components {
-  padding: 20px 0;
+  padding-bottom: 20px;
   border-bottom: 1px solid #47748b;
 }
 
@@ -90,10 +90,18 @@ td,th{
   padding: 10px;
 }
 
+#sidebar ul li{
+  display: block;
+  width: 100%;
+}
+
+
+
 #sidebar ul li a {
-  padding: 10px;
   font-size: 1.1em;
   display: block;
+  line-height: 45px;
+  padding-left: 5px;
 }
 
 #sidebar ul li a:hover {
