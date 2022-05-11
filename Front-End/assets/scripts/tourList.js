@@ -54,7 +54,7 @@ const showTours = async (tours) => {
   </td>
   <td>
   
-  <a style="color: #1194f4;"  href="{@approval@}">Duyệt </a>
+  <a style="color: #1194f4;"  href="{@approval@}">DS Đặt</a>
   
   </td>
 </tr>`;

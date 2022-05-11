@@ -149,7 +149,7 @@ const handleCheckout = async () => {
     const checkout = await checkoutTour(code);
     if (checkout.status === "success") {
       alert(
-        "Đặt tour thành công, Vui lòng xem lịch sử đặt tour để xem trạng thái đơn của bạn! "
+        "Đăng ký tour thành công, vui lòng kiểm tra email của bạn để nhận thông báo mới nhất từ chúng tôi \nMọi thắc mắc vui lòng liên hệ hotline 0931529903 để được hỗ trợ"
       );
     }
   });
