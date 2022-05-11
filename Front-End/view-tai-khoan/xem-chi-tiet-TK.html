@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>Chi tiết tài khoản</title>
 
     <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="../css/main.css">
-</head>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
 
-<body>
-
-
-
+  <body>
     <div class="wrapper">
-        <!-- Sidebar Holder -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Admin</h3>
-            </div>
-
-            <ul class="list-unstyled components">
-                <p>Trang chủ</p>
-                <li>
-                    <a href="../view-tour/QLtour.html">Quản lý tour</a>
-                </li>
-                <li>
-                    <a href="../view-dia-danh/QLdiadanh.html">Quản lý địa danh</a>
-                </li>
-                <li class="active">
-                    <a href="./xem-chi-tiet-TK.html">Quản lý tài khoản</a>
-                </li>
-                <li>
-                    <a href="../view-don-hang/QLdonhang.html">Quản lý đơn hàng</a>
-                </li>
-                <li>
-                    <a href="#">Đăng xuất</a>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- Page Content Holder -->
-        <div id="content" class="container">
-            <div class="container">
-
-                <a href="./QLtaikhoan.html">Quản lý tài khoản </a><span>> Xem chi tiết tài khoản</span>
-                <h3 class="text-center display-4">Chi tiết tài khoản</h3>
-
-                <p>Mã tài khoản : <span id="txtMaTaiKhoan" style="font-weight: bold;"></span></p>
-                <p>Tên tài khoản: <span id="txtTenTaiKhoan" style="font-weight: bold;"></span></p>
-                <p>Email: <span id="txtEmail" style="font-weight: bold;"></span></p>
-                <p>Phân quyền: <span id="txtPhanQuyen" style="font-weight: bold;"></span></p>
-                <p>Tình trạng: <span id="txtTinhTrang" style="font-weight: bold;"></span></p>
-
-            </div>
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Admin</h3>
         </div>
+
+        <ul class="list-unstyled components">
+          <p>Trang chủ</p>
+          <li>
+            <a href="../view-tour/QLtour.html">Quản lý tour</a>
+          </li>
+          <li>
+            <a href="../view-dia-danh/QLdiadanh.html">Quản lý địa danh</a>
+          </li>
+          <li class="active">
+            <a href="./xem-chi-tiet-TK.html">Quản lý tài khoản</a>
+          </li>
+          <li>
+            <a href="../view-don-hang/QLdonhang.html">Quản lý đơn hàng</a>
+          </li>
+          <li>
+            <a href="http://127.0.0.1:5555/Front-End/index.html"
+              >Về trang chủ</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content Holder -->
+      <div id="content" class="container">
+        <div class="container">
+          <a href="./QLtaikhoan.html">Quản lý tài khoản </a
+          ><span>> Xem chi tiết tài khoản</span>
+          <h3 class="text-center display-4">Chi tiết tài khoản</h3>
+
+          <p>
+            Mã tài khoản :
+            <span id="txtMaTaiKhoan" style="font-weight: bold"></span>
+          </p>
+          <p>
+            Tên tài khoản:
+            <span id="txtTenTaiKhoan" style="font-weight: bold"></span>
+          </p>
+          <p>Email: <span id="txtEmail" style="font-weight: bold"></span></p>
+          <p>
+            Phân quyền:
+            <span id="txtPhanQuyen" style="font-weight: bold"></span>
+          </p>
+          <p>
+            Tình trạng:
+            <span id="txtTinhTrang" style="font-weight: bold"></span>
+          </p>
+        </div>
+      </div>
     </div>
-
-
-
-
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -72,16 +80,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
+      $(document).ready(function () {
+        $("#sidebarCollapse").on("click", function () {
+          $("#sidebar").toggleClass("active");
         });
+      });
     </script>
 
     <script type="text/javascript" src="js/Tour.js"></script>
     <script type="text/javascript" src="js/DanhSachTour.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-</body>
-
+  </body>
 </html>

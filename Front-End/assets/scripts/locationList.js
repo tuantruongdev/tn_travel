@@ -89,6 +89,9 @@ const showLocations = async (tours) => {
 const getAllLocations = async () => {
   const locations = await getLocations();
   showLocations(locations);
+  $(document).ready(function () {
+    $(".table").DataTable();
+  });
 };
 (() => {
   getAllLocations();
