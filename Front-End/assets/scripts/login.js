@@ -30,7 +30,7 @@ const validatePassword = (password) => {
     return { message: "Mật khẩu phải quá dài !", result: false };
   else if (password.length < 6)
     return {
-      message: "Mật khẩu phải có độ dài ít nhất 6 ký tự !",
+      message: "Mật khẩu yếu!",
       result: false,
     };
   else
