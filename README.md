@@ -1,7 +1,7 @@
 
 # TN-Travel
 
-(This project is imported from bitbucket some commit might be missing)
+(This project is imported from bitbucket,so some commit might be missing)
 
 Đây là một project (khá là) căn bản của môn dự án phát triển phần mềm 
 
