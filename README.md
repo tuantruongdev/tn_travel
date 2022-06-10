@@ -1,5 +1,5 @@
 
-# TN-Travel
+# TN-Travel (LƯU Ý:Project có tính năng xss không phải lỗi :D)
 
 (This project is imported from bitbucket,so some commit might be missing)
 
